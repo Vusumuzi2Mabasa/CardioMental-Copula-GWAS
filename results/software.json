@@ -1,0 +1,10 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.18.1",
+  "matplotlib": "3.11.2",
+  "platform": "Windows",
+  "execution": "Two independent worker processes; native Windows execution",
+  "core_source_commit": "fe4bb394d4a33847d00d7559f2a1371b5342afad",
+  "r": "4.5.1; always invoked with --vanilla"
+}

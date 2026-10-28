@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "author": "Vusumuzi Mabasa",
+  "figures": 7,
+  "tables": 6,
+  "native_math": true,
+  "word_tables_match_manuscript": true,
+  "portable_links": true,
+  "rendered_pages": 13,
+  "source_sha256": "2b177ab00c874cec95bb1d3c249a25fdf3561c08201e4d963d51fe1e4032f42b",
+  "word_sha256": "cb9f7e870937ce1467a6a1f82db47dc84689a45f5f3dff036c82943bfa77c419",
+  "credential_scan_passed": true
+}

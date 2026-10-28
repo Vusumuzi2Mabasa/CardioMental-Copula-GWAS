@@ -1,0 +1,82 @@
+[
+  {
+    "cell": 0,
+    "evaluation_datasets": 800,
+    "mean_case_fraction": 0.1505140625
+  },
+  {
+    "cell": 1,
+    "evaluation_datasets": 800,
+    "mean_case_fraction": 0.1500640625
+  },
+  {
+    "cell": 2,
+    "evaluation_datasets": 800,
+    "mean_case_fraction": 0.1497734375
+  },
+  {
+    "cell": 3,
+    "evaluation_datasets": 800,
+    "mean_case_fraction": 0.149646875
+  },
+  {
+    "cell": 4,
+    "evaluation_datasets": 800,
+    "mean_case_fraction": 0.15026796875
+  },
+  {
+    "cell": 5,
+    "evaluation_datasets": 800,
+    "mean_case_fraction": 0.1491171875
+  },
+  {
+    "cell": 6,
+    "evaluation_datasets": 800,
+    "mean_case_fraction": 0.15021093749999997
+  },
+  {
+    "cell": 7,
+    "evaluation_datasets": 800,
+    "mean_case_fraction": 0.14984609375
+  },
+  {
+    "cell": 8,
+    "evaluation_datasets": 440,
+    "mean_case_fraction": 0.05027556818181818
+  },
+  {
+    "cell": 9,
+    "evaluation_datasets": 440,
+    "mean_case_fraction": 0.050017045454545446
+  },
+  {
+    "cell": 10,
+    "evaluation_datasets": 440,
+    "mean_case_fraction": 0.3000142045454545
+  },
+  {
+    "cell": 11,
+    "evaluation_datasets": 440,
+    "mean_case_fraction": 0.3009488636363637
+  },
+  {
+    "cell": 12,
+    "evaluation_datasets": 440,
+    "mean_case_fraction": 0.15011079545454548
+  },
+  {
+    "cell": 13,
+    "evaluation_datasets": 440,
+    "mean_case_fraction": 0.15029261363636362
+  },
+  {
+    "cell": 14,
+    "evaluation_datasets": 440,
+    "mean_case_fraction": 0.1498380681818182
+  },
+  {
+    "cell": 15,
+    "evaluation_datasets": 440,
+    "mean_case_fraction": 0.15058522727272725
+  }
+]

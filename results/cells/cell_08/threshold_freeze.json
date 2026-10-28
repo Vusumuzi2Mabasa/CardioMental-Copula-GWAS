@@ -1,0 +1,23 @@
+{
+  "code_sha256": "3d14add8018d5d42169bebe7e74f6a79b6b88c10e4a73b9f481a774a7e984c91",
+  "calibration_sha256": "ef3377713e4f153011a6e41d17dd5aca7cf3532db52cb2b46a7f35428d04cdec",
+  "thresholds": {
+    "Marginal Bonferroni": 0.04552964895720144,
+    "Marginal covariance-aware": 0.053444511337720546,
+    "Independence likelihood": 0.057814412318014465,
+    "Constant model score": 0.03281858450193819,
+    "Constant sandwich score": 0.04951811130768416,
+    "Varying model score": 0.03326801938242828,
+    "Varying sandwich score": 0.04474548695921293
+  },
+  "calibration_failures": {
+    "Marginal Bonferroni": 0,
+    "Marginal covariance-aware": 0,
+    "Independence likelihood": 0,
+    "Constant model score": 0,
+    "Constant sandwich score": 0,
+    "Varying model score": 0,
+    "Varying sandwich score": 0
+  },
+  "frozen_before_evaluation_utc": "2026-10-28T19:29:26.124252+00:00"
+}

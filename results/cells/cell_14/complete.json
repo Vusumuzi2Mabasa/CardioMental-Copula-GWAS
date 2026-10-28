@@ -1,0 +1,29 @@
+{
+  "cell": {
+    "n": 800,
+    "environment": "constant",
+    "prevalence": 0.15,
+    "maf": 0.25,
+    "ld": 0.6,
+    "group": "sensitivity",
+    "setting": "LD",
+    "cal": 200,
+    "null": 200,
+    "alt": 60,
+    "effect_reps": 10,
+    "id": 14
+  },
+  "code_sha256": "3d14add8018d5d42169bebe7e74f6a79b6b88c10e4a73b9f481a774a7e984c91",
+  "outputs": {
+    "calibration.csv": "6cf4a15e7185dfe37d659376d098a9673833bfebd7ad58a6070e7def2d2cfbd8",
+    "datasets.csv": "1d8b6b1ea5e5616e0ffec3a22386362e24975516139917c0dbd91f690003fbb7",
+    "effects.csv": "89cc14ca772781cb43607c50de07f6939c0ad11654b91f362d9b55d6e6e8be9b",
+    "null_fits.csv": "c38773c23d11dcbe68892b09a879715891e08254318872305a61a5dd67a58d86",
+    "scores.csv": "94395475682ae30f8810e66279b92f833cbf84a49e6d6cbff94e6da627a3a859",
+    "threshold_freeze.json": "9ce13ff440374dcc60983439db1eb9adbe2e9f3d24367599fdfad70fb51241b1"
+  },
+  "evaluation_datasets": 440,
+  "score_records": 3080,
+  "seconds": 107.29527000000235,
+  "completed_utc": "2026-10-28T19:36:11.665236+00:00"
+}

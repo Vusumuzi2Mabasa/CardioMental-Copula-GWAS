@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "protocol_commit": "fe4bb394d4a33847d00d7559f2a1371b5342afad",
+  "code_sha256": "3d14add8018d5d42169bebe7e74f6a79b6b88c10e4a73b9f481a774a7e984c91",
+  "calibration_datasets": 3200,
+  "evaluation_datasets": 9920,
+  "total_datasets": 13120,
+  "evaluation_score_records": 69440,
+  "variant_scores": 555520,
+  "unique_evaluation_fingerprints": 9920,
+  "calibration_score_failures": 0,
+  "evaluation_focal_score_failures": 0,
+  "evaluation_panel_score_failures": 0,
+  "effect_interval_records": 6400,
+  "effect_fit_failures": 0,
+  "replayed_datasets": 32,
+  "replay_max_p_error": 0.0,
+  "limitation": "Independent R controls validate numerical calculations, not all statistical operating properties"
+}

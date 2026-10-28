@@ -1,0 +1,1401 @@
+replicate,method,p,status
+0,Marginal Bonferroni,0.11058768919574279,ok
+0,Marginal covariance-aware,0.05830801133675931,ok
+0,Independence likelihood,0.03073249419555528,ok
+0,Constant model score,0.062392418605748685,ok
+0,Constant sandwich score,0.062025457647754,ok
+0,Varying model score,0.06179881264268915,ok
+0,Varying sandwich score,0.06124057094707317,ok
+1,Marginal Bonferroni,0.42480518399576667,ok
+1,Marginal covariance-aware,0.44953472949980133,ok
+1,Independence likelihood,0.4234552708723983,ok
+1,Constant model score,0.5011394360160233,ok
+1,Constant sandwich score,0.49063883465351155,ok
+1,Varying model score,0.4621658128475682,ok
+1,Varying sandwich score,0.455831686698681,ok
+2,Marginal Bonferroni,0.8829861576002276,ok
+2,Marginal covariance-aware,0.7259140764006989,ok
+2,Independence likelihood,0.7089118068687312,ok
+2,Constant model score,0.7573241353972866,ok
+2,Constant sandwich score,0.7336391969298024,ok
+2,Varying model score,0.7544777151895655,ok
+2,Varying sandwich score,0.7300069715350056,ok
+3,Marginal Bonferroni,0.26331025156599425,ok
+3,Marginal covariance-aware,0.262888749158956,ok
+3,Independence likelihood,0.296204857748981,ok
+3,Constant model score,0.19740208221260916,ok
+3,Constant sandwich score,0.22585908448244632,ok
+3,Varying model score,0.20131419100762699,ok
+3,Varying sandwich score,0.22777310070116946,ok
+4,Marginal Bonferroni,0.23844872839843748,ok
+4,Marginal covariance-aware,0.2852950242038084,ok
+4,Independence likelihood,0.30148462990401975,ok
+4,Constant model score,0.2334952829442061,ok
+4,Constant sandwich score,0.23976089045699867,ok
+4,Varying model score,0.22143426210693257,ok
+4,Varying sandwich score,0.227070810147911,ok
+5,Marginal Bonferroni,0.10517109429927715,ok
+5,Marginal covariance-aware,0.08233029728870146,ok
+5,Independence likelihood,0.03466821807706308,ok
+5,Constant model score,0.09586899565180233,ok
+5,Constant sandwich score,0.09196516732988397,ok
+5,Varying model score,0.09522663951814832,ok
+5,Varying sandwich score,0.09061121618371068,ok
+6,Marginal Bonferroni,0.8009244697653728,ok
+6,Marginal covariance-aware,0.5921219109191554,ok
+6,Independence likelihood,0.5241038137857101,ok
+6,Constant model score,0.571951776150506,ok
+6,Constant sandwich score,0.5656563857536479,ok
+6,Varying model score,0.5714507101399711,ok
+6,Varying sandwich score,0.5689315678248098,ok
+7,Marginal Bonferroni,0.7777564642269836,ok
+7,Marginal covariance-aware,0.6898529614271351,ok
+7,Independence likelihood,0.6917480681741237,ok
+7,Constant model score,0.7274534613295423,ok
+7,Constant sandwich score,0.7153333517805124,ok
+7,Varying model score,0.7219911888280869,ok
+7,Varying sandwich score,0.710544160416587,ok
+8,Marginal Bonferroni,0.9561053897664711,ok
+8,Marginal covariance-aware,0.7670097262772197,ok
+8,Independence likelihood,0.7652688570768602,ok
+8,Constant model score,0.8759217209235566,ok
+8,Constant sandwich score,0.878154915647135,ok
+8,Varying model score,0.8738438200877693,ok
+8,Varying sandwich score,0.8763641223115131,ok
+9,Marginal Bonferroni,0.21083862229430297,ok
+9,Marginal covariance-aware,0.23619269715587804,ok
+9,Independence likelihood,0.28100621631968686,ok
+9,Constant model score,0.2390687302172838,ok
+9,Constant sandwich score,0.24044293328229452,ok
+9,Varying model score,0.26986365296029696,ok
+9,Varying sandwich score,0.26687649674775443,ok
+10,Marginal Bonferroni,0.08714635659965456,ok
+10,Marginal covariance-aware,0.07474785595639233,ok
+10,Independence likelihood,0.03658512603576062,ok
+10,Constant model score,0.05929367611912001,ok
+10,Constant sandwich score,0.07025683487678476,ok
+10,Varying model score,0.0678469055312665,ok
+10,Varying sandwich score,0.07630806853108398,ok
+11,Marginal Bonferroni,0.10887448308266133,ok
+11,Marginal covariance-aware,0.07899361245363856,ok
+11,Independence likelihood,0.1417889662128812,ok
+11,Constant model score,0.09245427036937191,ok
+11,Constant sandwich score,0.08267738430135724,ok
+11,Varying model score,0.09252504004802789,ok
+11,Varying sandwich score,0.08284479396901895,ok
+12,Marginal Bonferroni,0.672240242311348,ok
+12,Marginal covariance-aware,0.6062021299907886,ok
+12,Independence likelihood,0.6175627390813212,ok
+12,Constant model score,0.631660358748291,ok
+12,Constant sandwich score,0.6284296377795417,ok
+12,Varying model score,0.6697517573291316,ok
+12,Varying sandwich score,0.6672154363839569,ok
+13,Marginal Bonferroni,0.47398225124364557,ok
+13,Marginal covariance-aware,0.35476818638615576,ok
+13,Independence likelihood,0.4378740759030848,ok
+13,Constant model score,0.32217290587498937,ok
+13,Constant sandwich score,0.33569287893414634,ok
+13,Varying model score,0.32277331702956014,ok
+13,Varying sandwich score,0.33591369352151496,ok
+14,Marginal Bonferroni,0.2468852561807486,ok
+14,Marginal covariance-aware,0.29906890093990035,ok
+14,Independence likelihood,0.24563785976260974,ok
+14,Constant model score,0.2999678389723291,ok
+14,Constant sandwich score,0.30306137545132444,ok
+14,Varying model score,0.2859698235933012,ok
+14,Varying sandwich score,0.28821639679270566,ok
+15,Marginal Bonferroni,0.9711279660753003,ok
+15,Marginal covariance-aware,0.7823395872901144,ok
+15,Independence likelihood,0.7744436123247591,ok
+15,Constant model score,0.7754491826648998,ok
+15,Constant sandwich score,0.7801763221801861,ok
+15,Varying model score,0.7750548519025091,ok
+15,Varying sandwich score,0.7804509710394592,ok
+16,Marginal Bonferroni,0.8504901114691561,ok
+16,Marginal covariance-aware,0.7274339920868138,ok
+16,Independence likelihood,0.7043975000829503,ok
+16,Constant model score,0.7198194986260851,ok
+16,Constant sandwich score,0.7264711473934138,ok
+16,Varying model score,0.721536816084497,ok
+16,Varying sandwich score,0.7280377386800048,ok
+17,Marginal Bonferroni,0.5823609859660366,ok
+17,Marginal covariance-aware,0.551756627630436,ok
+17,Independence likelihood,0.5590004224935535,ok
+17,Constant model score,0.5084649677058926,ok
+17,Constant sandwich score,0.5158717403125834,ok
+17,Varying model score,0.5042395618874966,ok
+17,Varying sandwich score,0.5105317933202982,ok
+18,Marginal Bonferroni,0.13403589044050312,ok
+18,Marginal covariance-aware,0.12078744877126245,ok
+18,Independence likelihood,0.10051375947877346,ok
+18,Constant model score,0.19796258054535898,ok
+18,Constant sandwich score,0.15971415222228072,ok
+18,Varying model score,0.20572550913304585,ok
+18,Varying sandwich score,0.1668401431843823,ok
+19,Marginal Bonferroni,0.4995332285891913,ok
+19,Marginal covariance-aware,0.4934514344652179,ok
+19,Independence likelihood,0.49058702350965744,ok
+19,Constant model score,0.5565876409179411,ok
+19,Constant sandwich score,0.5869208411905439,ok
+19,Varying model score,0.5504773889536312,ok
+19,Varying sandwich score,0.5800698743414382,ok
+20,Marginal Bonferroni,0.653991679658537,ok
+20,Marginal covariance-aware,0.590958743405207,ok
+20,Independence likelihood,0.6536734423805962,ok
+20,Constant model score,0.6308191134477663,ok
+20,Constant sandwich score,0.5887495246037402,ok
+20,Varying model score,0.6282715455252577,ok
+20,Varying sandwich score,0.5855097742116777,ok
+21,Marginal Bonferroni,1.0,ok
+21,Marginal covariance-aware,0.9889082919542584,ok
+21,Independence likelihood,0.9852001312193608,ok
+21,Constant model score,0.967003871142376,ok
+21,Constant sandwich score,0.9691482873870503,ok
+21,Varying model score,0.9216333165534336,ok
+21,Varying sandwich score,0.9250379085080059,ok
+22,Marginal Bonferroni,0.10107262056486238,ok
+22,Marginal covariance-aware,0.1475975030444497,ok
+22,Independence likelihood,0.13814293655937862,ok
+22,Constant model score,0.1451823379725927,ok
+22,Constant sandwich score,0.14723473881702223,ok
+22,Varying model score,0.1672827164742581,ok
+22,Varying sandwich score,0.16874910981346836,ok
+23,Marginal Bonferroni,0.534538486761578,ok
+23,Marginal covariance-aware,0.515852917581834,ok
+23,Independence likelihood,0.5620337227273273,ok
+23,Constant model score,0.5360668660198299,ok
+23,Constant sandwich score,0.5165831198583549,ok
+23,Varying model score,0.5946265665734054,ok
+23,Varying sandwich score,0.5765887869065751,ok
+24,Marginal Bonferroni,0.6735356554465737,ok
+24,Marginal covariance-aware,0.2526374076423447,ok
+24,Independence likelihood,0.43334921016647976,ok
+24,Constant model score,0.24245575772574524,ok
+24,Constant sandwich score,0.2095440004563467,ok
+24,Varying model score,0.22822913924555885,ok
+24,Varying sandwich score,0.19446435237333676,ok
+25,Marginal Bonferroni,1.0,ok
+25,Marginal covariance-aware,0.9405221883355301,ok
+25,Independence likelihood,0.952652934145721,ok
+25,Constant model score,0.9327584683699668,ok
+25,Constant sandwich score,0.9321875156517381,ok
+25,Varying model score,0.9331863594529352,ok
+25,Varying sandwich score,0.932612038253411,ok
+26,Marginal Bonferroni,0.20207651562753118,ok
+26,Marginal covariance-aware,0.2477383549424426,ok
+26,Independence likelihood,0.27660205566879764,ok
+26,Constant model score,0.2836580725416778,ok
+26,Constant sandwich score,0.2619645202691849,ok
+26,Varying model score,0.28282524782591023,ok
+26,Varying sandwich score,0.2609123746108306,ok
+27,Marginal Bonferroni,0.0702646816885232,ok
+27,Marginal covariance-aware,0.0650399046915358,ok
+27,Independence likelihood,0.08978808345753773,ok
+27,Constant model score,0.05290014496129486,ok
+27,Constant sandwich score,0.05759073996895263,ok
+27,Varying model score,0.05308577444698021,ok
+27,Varying sandwich score,0.06091529189370206,ok
+28,Marginal Bonferroni,0.34725258394716957,ok
+28,Marginal covariance-aware,0.38483357938957585,ok
+28,Independence likelihood,0.2675954461245428,ok
+28,Constant model score,0.3387375156955544,ok
+28,Constant sandwich score,0.39473273361202643,ok
+28,Varying model score,0.3223295836272225,ok
+28,Varying sandwich score,0.37759905744561956,ok
+29,Marginal Bonferroni,0.03636987797647494,ok
+29,Marginal covariance-aware,0.061008475851945805,ok
+29,Independence likelihood,0.026173707359389568,ok
+29,Constant model score,0.08474652330713732,ok
+29,Constant sandwich score,0.1093655991022377,ok
+29,Varying model score,0.08850359614941873,ok
+29,Varying sandwich score,0.11210496015423298,ok
+30,Marginal Bonferroni,0.6019091982903908,ok
+30,Marginal covariance-aware,0.27800374893263446,ok
+30,Independence likelihood,0.40182061946059733,ok
+30,Constant model score,0.23541742676881391,ok
+30,Constant sandwich score,0.22871230139107726,ok
+30,Varying model score,0.23841628603170784,ok
+30,Varying sandwich score,0.23248530552334581,ok
+31,Marginal Bonferroni,1.0,ok
+31,Marginal covariance-aware,0.8841183010809499,ok
+31,Independence likelihood,0.8977738212474445,ok
+31,Constant model score,0.8919862976858046,ok
+31,Constant sandwich score,0.892049369016087,ok
+31,Varying model score,0.8873285424403108,ok
+31,Varying sandwich score,0.8868162772175017,ok
+32,Marginal Bonferroni,1.0,ok
+32,Marginal covariance-aware,0.7963281987385993,ok
+32,Independence likelihood,0.7504895958078927,ok
+32,Constant model score,0.7862535160096447,ok
+32,Constant sandwich score,0.7931122821179188,ok
+32,Varying model score,0.7805014696855643,ok
+32,Varying sandwich score,0.787022935377397,ok
+33,Marginal Bonferroni,0.5257752969024763,ok
+33,Marginal covariance-aware,0.4284576737801179,ok
+33,Independence likelihood,0.36248477475966945,ok
+33,Constant model score,0.48943171283736553,ok
+33,Constant sandwich score,0.471862512512891,ok
+33,Varying model score,0.4916673283030393,ok
+33,Varying sandwich score,0.47429934784799965,ok
+34,Marginal Bonferroni,0.39675703198481405,ok
+34,Marginal covariance-aware,0.4357982629105641,ok
+34,Independence likelihood,0.42097973057561944,ok
+34,Constant model score,0.43865114410104844,ok
+34,Constant sandwich score,0.43701926591859996,ok
+34,Varying model score,0.447681058473126,ok
+34,Varying sandwich score,0.4469553212553081,ok
+35,Marginal Bonferroni,0.25481306358730926,ok
+35,Marginal covariance-aware,0.19970012808302637,ok
+35,Independence likelihood,0.29128283736522415,ok
+35,Constant model score,0.200311686108276,ok
+35,Constant sandwich score,0.19927935258368487,ok
+35,Varying model score,0.193591153165238,ok
+35,Varying sandwich score,0.19029992237751145,ok
+36,Marginal Bonferroni,0.2722354316743132,ok
+36,Marginal covariance-aware,0.2711864766194058,ok
+36,Independence likelihood,0.298936369696854,ok
+36,Constant model score,0.3109462969829735,ok
+36,Constant sandwich score,0.30950829602516955,ok
+36,Varying model score,0.3175554646098468,ok
+36,Varying sandwich score,0.31633750731499044,ok
+37,Marginal Bonferroni,0.012375762736170026,ok
+37,Marginal covariance-aware,0.023214205451916284,ok
+37,Independence likelihood,0.015977783830538814,ok
+37,Constant model score,0.01416740198775991,ok
+37,Constant sandwich score,0.015095291455921471,ok
+37,Varying model score,0.014217780308931142,ok
+37,Varying sandwich score,0.01524677353433315,ok
+38,Marginal Bonferroni,1.0,ok
+38,Marginal covariance-aware,0.7769510193228008,ok
+38,Independence likelihood,0.8326327039059375,ok
+38,Constant model score,0.7016191152777825,ok
+38,Constant sandwich score,0.6906504856629607,ok
+38,Varying model score,0.6983402582585244,ok
+38,Varying sandwich score,0.6886331961032144,ok
+39,Marginal Bonferroni,1.0,ok
+39,Marginal covariance-aware,0.8633233518224447,ok
+39,Independence likelihood,0.8390397649834744,ok
+39,Constant model score,0.962624724992857,ok
+39,Constant sandwich score,0.9637422976083359,ok
+39,Varying model score,0.9670142290967955,ok
+39,Varying sandwich score,0.96800354410793,ok
+40,Marginal Bonferroni,0.30975102069240723,ok
+40,Marginal covariance-aware,0.16073741405675673,ok
+40,Independence likelihood,0.24909770239109286,ok
+40,Constant model score,0.11720923920594156,ok
+40,Constant sandwich score,0.10403493266176675,ok
+40,Varying model score,0.11927402094997248,ok
+40,Varying sandwich score,0.10439915259047089,ok
+41,Marginal Bonferroni,1.0,ok
+41,Marginal covariance-aware,0.9877553972766785,ok
+41,Independence likelihood,0.9900452641875239,ok
+41,Constant model score,0.987502760785456,ok
+41,Constant sandwich score,0.9880580715970584,ok
+41,Varying model score,0.9904414688939618,ok
+41,Varying sandwich score,0.9908743879442592,ok
+42,Marginal Bonferroni,1.0,ok
+42,Marginal covariance-aware,0.624862406312616,ok
+42,Independence likelihood,0.713027772848805,ok
+42,Constant model score,0.699533362631397,ok
+42,Constant sandwich score,0.6796229917480321,ok
+42,Varying model score,0.68894827277119,ok
+42,Varying sandwich score,0.6690642299819851,ok
+43,Marginal Bonferroni,0.2293886218173942,ok
+43,Marginal covariance-aware,0.26782558596041944,ok
+43,Independence likelihood,0.29013615988010133,ok
+43,Constant model score,0.2085421243945167,ok
+43,Constant sandwich score,0.17065523836070073,ok
+43,Varying model score,0.22246301151760117,ok
+43,Varying sandwich score,0.185256316043954,ok
+44,Marginal Bonferroni,0.6351796467252753,ok
+44,Marginal covariance-aware,0.5104146517511257,ok
+44,Independence likelihood,0.6059972922410368,ok
+44,Constant model score,0.5985723120589368,ok
+44,Constant sandwich score,0.560370717130136,ok
+44,Varying model score,0.5735796886761602,ok
+44,Varying sandwich score,0.5353450021007939,ok
+45,Marginal Bonferroni,0.9620343960728828,ok
+45,Marginal covariance-aware,0.707218656647755,ok
+45,Independence likelihood,0.650367672394572,ok
+45,Constant model score,0.693169400107425,ok
+45,Constant sandwich score,0.6833567045166604,ok
+45,Varying model score,0.6933766926506149,ok
+45,Varying sandwich score,0.683575513923323,ok
+46,Marginal Bonferroni,0.01509253854172647,ok
+46,Marginal covariance-aware,0.028180591510332774,ok
+46,Independence likelihood,0.025192137114028852,ok
+46,Constant model score,0.030966677812649498,ok
+46,Constant sandwich score,0.0275925929504749,ok
+46,Varying model score,0.031089882650538407,ok
+46,Varying sandwich score,0.027764609154118484,ok
+47,Marginal Bonferroni,0.6926697424120041,ok
+47,Marginal covariance-aware,0.6408664404254951,ok
+47,Independence likelihood,0.6467184456003334,ok
+47,Constant model score,0.729471509449807,ok
+47,Constant sandwich score,0.7191491118878779,ok
+47,Varying model score,0.7356660582988392,ok
+47,Varying sandwich score,0.7249435153741097,ok
+48,Marginal Bonferroni,0.3074115028981932,ok
+48,Marginal covariance-aware,0.3434005047288258,ok
+48,Independence likelihood,0.2487005970287911,ok
+48,Constant model score,0.34451306225949907,ok
+48,Constant sandwich score,0.35085338078357836,ok
+48,Varying model score,0.3464889545171662,ok
+48,Varying sandwich score,0.35232153897058077,ok
+49,Marginal Bonferroni,1.0,ok
+49,Marginal covariance-aware,0.8938612747080876,ok
+49,Independence likelihood,0.8831085081372966,ok
+49,Constant model score,0.8920715615400145,ok
+49,Constant sandwich score,0.8943433544643943,ok
+49,Varying model score,0.8815744778492636,ok
+49,Varying sandwich score,0.8840404426159032,ok
+50,Marginal Bonferroni,0.5152397964939148,ok
+50,Marginal covariance-aware,0.3184400710811121,ok
+50,Independence likelihood,0.3890244006649442,ok
+50,Constant model score,0.31590499704081265,ok
+50,Constant sandwich score,0.337072717700595,ok
+50,Varying model score,0.3315958802440595,ok
+50,Varying sandwich score,0.34906271936533373,ok
+51,Marginal Bonferroni,0.41173329090097255,ok
+51,Marginal covariance-aware,0.27299954841959817,ok
+51,Independence likelihood,0.378875082702819,ok
+51,Constant model score,0.2180956043560816,ok
+51,Constant sandwich score,0.18988695091544538,ok
+51,Varying model score,0.2221653177239445,ok
+51,Varying sandwich score,0.1938830670233357,ok
+52,Marginal Bonferroni,0.4676400991711975,ok
+52,Marginal covariance-aware,0.32698246861515456,ok
+52,Independence likelihood,0.4287083511102876,ok
+52,Constant model score,0.28226553719631,ok
+52,Constant sandwich score,0.24814556462516799,ok
+52,Varying model score,0.3035345016954005,ok
+52,Varying sandwich score,0.26337743802712393,ok
+53,Marginal Bonferroni,0.06091742938566321,ok
+53,Marginal covariance-aware,0.073764846410187,ok
+53,Independence likelihood,0.1093829627410845,ok
+53,Constant model score,0.09277108012845764,ok
+53,Constant sandwich score,0.08127495743664417,ok
+53,Varying model score,0.09581947698529363,ok
+53,Varying sandwich score,0.08339366554435616,ok
+54,Marginal Bonferroni,1.0,ok
+54,Marginal covariance-aware,0.8783083230634527,ok
+54,Independence likelihood,0.8983260911495297,ok
+54,Constant model score,0.8496754361073888,ok
+54,Constant sandwich score,0.8482350794020272,ok
+54,Varying model score,0.8484064630607843,ok
+54,Varying sandwich score,0.8467793941994919,ok
+55,Marginal Bonferroni,0.40063209641962394,ok
+55,Marginal covariance-aware,0.429172350906627,ok
+55,Independence likelihood,0.4027400276083315,ok
+55,Constant model score,0.4455854462906307,ok
+55,Constant sandwich score,0.4266134492297814,ok
+55,Varying model score,0.4439909793144038,ok
+55,Varying sandwich score,0.4286942282602255,ok
+56,Marginal Bonferroni,0.24432863915727562,ok
+56,Marginal covariance-aware,0.2518078789116509,ok
+56,Independence likelihood,0.23390198335513998,ok
+56,Constant model score,0.2543474579845536,ok
+56,Constant sandwich score,0.2182951337967972,ok
+56,Varying model score,0.24363680979495536,ok
+56,Varying sandwich score,0.2113891695346776,ok
+57,Marginal Bonferroni,0.16847156574432617,ok
+57,Marginal covariance-aware,0.20725892453221056,ok
+57,Independence likelihood,0.15841938758848728,ok
+57,Constant model score,0.1685487816856034,ok
+57,Constant sandwich score,0.17103570942951574,ok
+57,Varying model score,0.1749898843210711,ok
+57,Varying sandwich score,0.17421236994945122,ok
+58,Marginal Bonferroni,0.5904638057548935,ok
+58,Marginal covariance-aware,0.499786032432157,ok
+58,Independence likelihood,0.5458211264466101,ok
+58,Constant model score,0.5230942360450999,ok
+58,Constant sandwich score,0.5315900094162862,ok
+58,Varying model score,0.5119594128847573,ok
+58,Varying sandwich score,0.5202969531339866,ok
+59,Marginal Bonferroni,1.0,ok
+59,Marginal covariance-aware,0.8443235549561967,ok
+59,Independence likelihood,0.8247384973004261,ok
+59,Constant model score,0.8971296184164735,ok
+59,Constant sandwich score,0.8890499138305725,ok
+59,Varying model score,0.8908141058187131,ok
+59,Varying sandwich score,0.8815503333760031,ok
+60,Marginal Bonferroni,0.24225899299955161,ok
+60,Marginal covariance-aware,0.29469768066580715,ok
+60,Independence likelihood,0.25787567960090724,ok
+60,Constant model score,0.2945941765080655,ok
+60,Constant sandwich score,0.2838716761853631,ok
+60,Varying model score,0.3005087313669546,ok
+60,Varying sandwich score,0.2902211781301436,ok
+61,Marginal Bonferroni,0.2612637226712407,ok
+61,Marginal covariance-aware,0.20595803868332205,ok
+61,Independence likelihood,0.31199395281205367,ok
+61,Constant model score,0.20665764859840333,ok
+61,Constant sandwich score,0.17250971284251945,ok
+61,Varying model score,0.224513116178731,ok
+61,Varying sandwich score,0.1857800704083598,ok
+62,Marginal Bonferroni,0.22819028967026897,ok
+62,Marginal covariance-aware,0.2659281781439827,ok
+62,Independence likelihood,0.16147820819110134,ok
+62,Constant model score,0.2930753717695733,ok
+62,Constant sandwich score,0.3431037316158376,ok
+62,Varying model score,0.3072856920233931,ok
+62,Varying sandwich score,0.35401772256201164,ok
+63,Marginal Bonferroni,0.5205797208463623,ok
+63,Marginal covariance-aware,0.19729080867482438,ok
+63,Independence likelihood,0.30007313133283275,ok
+63,Constant model score,0.1651342179885556,ok
+63,Constant sandwich score,0.17025715760481883,ok
+63,Varying model score,0.1658796774003157,ok
+63,Varying sandwich score,0.17189438214096758,ok
+64,Marginal Bonferroni,0.46156012997702883,ok
+64,Marginal covariance-aware,0.3723572164201333,ok
+64,Independence likelihood,0.2723596492523853,ok
+64,Constant model score,0.26527279427181355,ok
+64,Constant sandwich score,0.2593181713114453,ok
+64,Varying model score,0.2781911564120502,ok
+64,Varying sandwich score,0.27652160603396475,ok
+65,Marginal Bonferroni,0.3429965173641607,ok
+65,Marginal covariance-aware,0.18189780834134778,ok
+65,Independence likelihood,0.26036657079128117,ok
+65,Constant model score,0.2040062248536775,ok
+65,Constant sandwich score,0.1883938717682427,ok
+65,Varying model score,0.20469231491733697,ok
+65,Varying sandwich score,0.18930222610529546,ok
+66,Marginal Bonferroni,0.23641380674454485,ok
+66,Marginal covariance-aware,0.2568477263875839,ok
+66,Independence likelihood,0.17518950290792518,ok
+66,Constant model score,0.1983642874435404,ok
+66,Constant sandwich score,0.20704544065883884,ok
+66,Varying model score,0.19809383913285245,ok
+66,Varying sandwich score,0.20650951503766446,ok
+67,Marginal Bonferroni,0.05777361678760817,ok
+67,Marginal covariance-aware,0.08970900849644631,ok
+67,Independence likelihood,0.08327374279742696,ok
+67,Constant model score,0.10691069085499423,ok
+67,Constant sandwich score,0.12413441766231799,ok
+67,Varying model score,0.11554199613302767,ok
+67,Varying sandwich score,0.13091253086530533,ok
+68,Marginal Bonferroni,0.38342562435291333,ok
+68,Marginal covariance-aware,0.41907514324103734,ok
+68,Independence likelihood,0.38745659283395684,ok
+68,Constant model score,0.4168052353873336,ok
+68,Constant sandwich score,0.4438949872228014,ok
+68,Varying model score,0.4117877572744951,ok
+68,Varying sandwich score,0.44036974692976827,ok
+69,Marginal Bonferroni,0.5006035711501278,ok
+69,Marginal covariance-aware,0.40989958295210915,ok
+69,Independence likelihood,0.3191652049672797,ok
+69,Constant model score,0.3975846067890272,ok
+69,Constant sandwich score,0.4135324931121569,ok
+69,Varying model score,0.40113200382456354,ok
+69,Varying sandwich score,0.4164894924289849,ok
+70,Marginal Bonferroni,0.26711115804618113,ok
+70,Marginal covariance-aware,0.31305973833856793,ok
+70,Independence likelihood,0.2987859286656255,ok
+70,Constant model score,0.2083649939594174,ok
+70,Constant sandwich score,0.21568122220784103,ok
+70,Varying model score,0.21035174534320739,ok
+70,Varying sandwich score,0.21631664398741593,ok
+71,Marginal Bonferroni,1.0,ok
+71,Marginal covariance-aware,0.9653024160770606,ok
+71,Independence likelihood,0.9604873913909653,ok
+71,Constant model score,0.9645362732701119,ok
+71,Constant sandwich score,0.9640773372674866,ok
+71,Varying model score,0.9597224699343491,ok
+71,Varying sandwich score,0.9599796895152355,ok
+72,Marginal Bonferroni,1.0,ok
+72,Marginal covariance-aware,0.9668334118426952,ok
+72,Independence likelihood,0.9627824499826976,ok
+72,Constant model score,0.9894800431468631,ok
+72,Constant sandwich score,0.9894683013420013,ok
+72,Varying model score,0.9887342796153528,ok
+72,Varying sandwich score,0.9886868048521418,ok
+73,Marginal Bonferroni,0.5027577369398097,ok
+73,Marginal covariance-aware,0.4282525279697169,ok
+73,Independence likelihood,0.37444455110455044,ok
+73,Constant model score,0.4467678679973349,ok
+73,Constant sandwich score,0.43149696571172336,ok
+73,Varying model score,0.4495141789967826,ok
+73,Varying sandwich score,0.43581624184635714,ok
+74,Marginal Bonferroni,0.8803066478664126,ok
+74,Marginal covariance-aware,0.6146614365246327,ok
+74,Independence likelihood,0.711037448594831,ok
+74,Constant model score,0.576237156478295,ok
+74,Constant sandwich score,0.5496514971825763,ok
+74,Varying model score,0.5580064602538686,ok
+74,Varying sandwich score,0.5331687819376596,ok
+75,Marginal Bonferroni,0.05316017070630227,ok
+75,Marginal covariance-aware,0.08123020249888273,ok
+75,Independence likelihood,0.06900617204927972,ok
+75,Constant model score,0.13438721686735325,ok
+75,Constant sandwich score,0.13399869464464953,ok
+75,Varying model score,0.14312974165418155,ok
+75,Varying sandwich score,0.1433160886646108,ok
+76,Marginal Bonferroni,0.3122399441477459,ok
+76,Marginal covariance-aware,0.274011651906193,ok
+76,Independence likelihood,0.2937442147574245,ok
+76,Constant model score,0.2600505963791911,ok
+76,Constant sandwich score,0.33686563867192953,ok
+76,Varying model score,0.25673278888653545,ok
+76,Varying sandwich score,0.3331454110274562,ok
+77,Marginal Bonferroni,1.0,ok
+77,Marginal covariance-aware,0.9674603426252922,ok
+77,Independence likelihood,0.965877078148714,ok
+77,Constant model score,0.9230887566986229,ok
+77,Constant sandwich score,0.9265827625545582,ok
+77,Varying model score,0.8882444978865662,ok
+77,Varying sandwich score,0.8921031831472338,ok
+78,Marginal Bonferroni,1.0,ok
+78,Marginal covariance-aware,0.8388616641722163,ok
+78,Independence likelihood,0.8243123405503525,ok
+78,Constant model score,0.8861982047044363,ok
+78,Constant sandwich score,0.8744474781937912,ok
+78,Varying model score,0.8850000536017641,ok
+78,Varying sandwich score,0.8733029175975442,ok
+79,Marginal Bonferroni,0.07461319538251668,ok
+79,Marginal covariance-aware,0.04186554654907495,ok
+79,Independence likelihood,0.09087326006473795,ok
+79,Constant model score,0.051417898852885495,ok
+79,Constant sandwich score,0.034795483041047744,ok
+79,Varying model score,0.051760223577510485,ok
+79,Varying sandwich score,0.036588956165431334,ok
+80,Marginal Bonferroni,1.0,ok
+80,Marginal covariance-aware,0.7852870996760464,ok
+80,Independence likelihood,0.8199795151742159,ok
+80,Constant model score,0.7955069950859377,ok
+80,Constant sandwich score,0.814931715048593,ok
+80,Varying model score,0.8004583848744425,ok
+80,Varying sandwich score,0.8180530451923005,ok
+81,Marginal Bonferroni,0.7201179735240535,ok
+81,Marginal covariance-aware,0.657452035816681,ok
+81,Independence likelihood,0.6626610914295612,ok
+81,Constant model score,0.7403696185548906,ok
+81,Constant sandwich score,0.7239489227107871,ok
+81,Varying model score,0.7468176803059218,ok
+81,Varying sandwich score,0.730996271964395,ok
+82,Marginal Bonferroni,0.7237247716275139,ok
+82,Marginal covariance-aware,0.6035251285991736,ok
+82,Independence likelihood,0.5123158440574687,ok
+82,Constant model score,0.5709989237506656,ok
+82,Constant sandwich score,0.5885273761393316,ok
+82,Varying model score,0.5695373888744075,ok
+82,Varying sandwich score,0.5832719113043828,ok
+83,Marginal Bonferroni,0.272133523252711,ok
+83,Marginal covariance-aware,0.3109672057666097,ok
+83,Independence likelihood,0.3064414669615482,ok
+83,Constant model score,0.34513796902000354,ok
+83,Constant sandwich score,0.3389617240971632,ok
+83,Varying model score,0.35747431000429136,ok
+83,Varying sandwich score,0.3537014797389112,ok
+84,Marginal Bonferroni,0.3445646033991582,ok
+84,Marginal covariance-aware,0.2115591435232043,ok
+84,Independence likelihood,0.29143724917897423,ok
+84,Constant model score,0.21986816837574885,ok
+84,Constant sandwich score,0.2262292881431548,ok
+84,Varying model score,0.22520127644379812,ok
+84,Varying sandwich score,0.22716066685789094,ok
+85,Marginal Bonferroni,1.0,ok
+85,Marginal covariance-aware,0.9742427846367434,ok
+85,Independence likelihood,0.9821554494308545,ok
+85,Constant model score,0.9854032364682418,ok
+85,Constant sandwich score,0.9857524079370307,ok
+85,Varying model score,0.9709273895721565,ok
+85,Varying sandwich score,0.9709759313053263,ok
+86,Marginal Bonferroni,1.0,ok
+86,Marginal covariance-aware,0.7922805308878968,ok
+86,Independence likelihood,0.7343239869460297,ok
+86,Constant model score,0.63597747275275,ok
+86,Constant sandwich score,0.6251815305694766,ok
+86,Varying model score,0.6328625542419534,ok
+86,Varying sandwich score,0.6239313884133375,ok
+87,Marginal Bonferroni,0.6951078233890526,ok
+87,Marginal covariance-aware,0.6349321496317823,ok
+87,Independence likelihood,0.6761174020611733,ok
+87,Constant model score,0.6925673438749584,ok
+87,Constant sandwich score,0.675539172418838,ok
+87,Varying model score,0.7074839356938184,ok
+87,Varying sandwich score,0.689588645181284,ok
+88,Marginal Bonferroni,0.6929517973938437,ok
+88,Marginal covariance-aware,0.6416449857893436,ok
+88,Independence likelihood,0.6273539606191465,ok
+88,Constant model score,0.6339587200497088,ok
+88,Constant sandwich score,0.6254581080806765,ok
+88,Varying model score,0.6375020246877567,ok
+88,Varying sandwich score,0.6265923730673129,ok
+89,Marginal Bonferroni,0.006169516433011996,ok
+89,Marginal covariance-aware,0.0124351171042004,ok
+89,Independence likelihood,0.010247689454418932,ok
+89,Constant model score,0.012199760109502775,ok
+89,Constant sandwich score,0.012275950689954533,ok
+89,Varying model score,0.012004198387094312,ok
+89,Varying sandwich score,0.01218684169736708,ok
+90,Marginal Bonferroni,0.2191507988053688,ok
+90,Marginal covariance-aware,0.22945877734615364,ok
+90,Independence likelihood,0.25096042981822214,ok
+90,Constant model score,0.20354328944610298,ok
+90,Constant sandwich score,0.2368513388318439,ok
+90,Varying model score,0.19427630827619394,ok
+90,Varying sandwich score,0.22439531902641807,ok
+91,Marginal Bonferroni,1.0,ok
+91,Marginal covariance-aware,0.8635172265788402,ok
+91,Independence likelihood,0.8401618589916522,ok
+91,Constant model score,0.8649551528014676,ok
+91,Constant sandwich score,0.8641974886125423,ok
+91,Varying model score,0.8096819701599529,ok
+91,Varying sandwich score,0.8071987936131234,ok
+92,Marginal Bonferroni,0.42867393558645134,ok
+92,Marginal covariance-aware,0.43275278281689644,ok
+92,Independence likelihood,0.4818808818405931,ok
+92,Constant model score,0.4639141127241817,ok
+92,Constant sandwich score,0.46422830505980117,ok
+92,Varying model score,0.40826356298041544,ok
+92,Varying sandwich score,0.4038403335843629,ok
+93,Marginal Bonferroni,0.04350874819105,ok
+93,Marginal covariance-aware,0.06759174747663461,ok
+93,Independence likelihood,0.044138527500621305,ok
+93,Constant model score,0.03247583432297522,ok
+93,Constant sandwich score,0.051102709206715835,ok
+93,Varying model score,0.03429771144659952,ok
+93,Varying sandwich score,0.051327446197112866,ok
+94,Marginal Bonferroni,0.9956452779146068,ok
+94,Marginal covariance-aware,0.7263441041951213,ok
+94,Independence likelihood,0.6685542043823534,ok
+94,Constant model score,0.6093116642351033,ok
+94,Constant sandwich score,0.6106930792581564,ok
+94,Varying model score,0.6129796420988118,ok
+94,Varying sandwich score,0.6131374400167422,ok
+95,Marginal Bonferroni,1.0,ok
+95,Marginal covariance-aware,0.9863056341358227,ok
+95,Independence likelihood,0.989144515098334,ok
+95,Constant model score,0.986541639543643,ok
+95,Constant sandwich score,0.9857135686597163,ok
+95,Varying model score,0.9865910643132785,ok
+95,Varying sandwich score,0.9857271111794176,ok
+96,Marginal Bonferroni,0.512472422157663,ok
+96,Marginal covariance-aware,0.4198416825654324,ok
+96,Independence likelihood,0.4745334061822186,ok
+96,Constant model score,0.31992031829012935,ok
+96,Constant sandwich score,0.33540598692137535,ok
+96,Varying model score,0.31932531534635483,ok
+96,Varying sandwich score,0.334179045502248,ok
+97,Marginal Bonferroni,0.5101121428807507,ok
+97,Marginal covariance-aware,0.39455610296045457,ok
+97,Independence likelihood,0.47294082149968864,ok
+97,Constant model score,0.33499193151073353,ok
+97,Constant sandwich score,0.3508897354830984,ok
+97,Varying model score,0.3276982474364839,ok
+97,Varying sandwich score,0.34554692600407505,ok
+98,Marginal Bonferroni,0.875034962896152,ok
+98,Marginal covariance-aware,0.7343613506435622,ok
+98,Independence likelihood,0.7411718904686055,ok
+98,Constant model score,0.7091686363985981,ok
+98,Constant sandwich score,0.7059291904091882,ok
+98,Varying model score,0.7493858843175903,ok
+98,Varying sandwich score,0.740943305264516,ok
+99,Marginal Bonferroni,0.16900688955864296,ok
+99,Marginal covariance-aware,0.062041286878922144,ok
+99,Independence likelihood,0.14334976130259608,ok
+99,Constant model score,0.04829913249198716,ok
+99,Constant sandwich score,0.043601090426426646,ok
+99,Varying model score,0.046675495110230454,ok
+99,Varying sandwich score,0.0419149535093519,ok
+100,Marginal Bonferroni,1.0,ok
+100,Marginal covariance-aware,0.7088669037771107,ok
+100,Independence likelihood,0.7582661553250964,ok
+100,Constant model score,0.7619541239465414,ok
+100,Constant sandwich score,0.7803871414052133,ok
+100,Varying model score,0.7614769101033033,ok
+100,Varying sandwich score,0.7786866449385694,ok
+101,Marginal Bonferroni,1.0,ok
+101,Marginal covariance-aware,0.8269534189584911,ok
+101,Independence likelihood,0.8112829856481876,ok
+101,Constant model score,0.9016130324181685,ok
+101,Constant sandwich score,0.8901969563788068,ok
+101,Varying model score,0.8848527143386504,ok
+101,Varying sandwich score,0.870094984685817,ok
+102,Marginal Bonferroni,0.32673161394004624,ok
+102,Marginal covariance-aware,0.37791581464420443,ok
+102,Independence likelihood,0.3534308625891874,ok
+102,Constant model score,0.29742699962342173,ok
+102,Constant sandwich score,0.29438926029129353,ok
+102,Varying model score,0.2928648596499884,ok
+102,Varying sandwich score,0.29090736062787215,ok
+103,Marginal Bonferroni,1.0,ok
+103,Marginal covariance-aware,0.7330346020903213,ok
+103,Independence likelihood,0.6874806432738161,ok
+103,Constant model score,0.7881926967636151,ok
+103,Constant sandwich score,0.7755389911779217,ok
+103,Varying model score,0.7845784698528195,ok
+103,Varying sandwich score,0.7714132303384117,ok
+104,Marginal Bonferroni,1.0,ok
+104,Marginal covariance-aware,0.9075680280630949,ok
+104,Independence likelihood,0.8819468308569721,ok
+104,Constant model score,0.8116917033103306,ok
+104,Constant sandwich score,0.8139094763919483,ok
+104,Varying model score,0.8291358871122617,ok
+104,Varying sandwich score,0.8323131854695569,ok
+105,Marginal Bonferroni,0.5609310902620774,ok
+105,Marginal covariance-aware,0.41111454025952854,ok
+105,Independence likelihood,0.35139280932394,ok
+105,Constant model score,0.3989285928644361,ok
+105,Constant sandwich score,0.36678310225710264,ok
+105,Varying model score,0.4238601475385654,ok
+105,Varying sandwich score,0.39171933252937274,ok
+106,Marginal Bonferroni,0.004561011820083356,ok
+106,Marginal covariance-aware,0.0005189368953467064,ok
+106,Independence likelihood,0.00671046210658093,ok
+106,Constant model score,0.002473214052815791,ok
+106,Constant sandwich score,0.0007427422832133383,ok
+106,Varying model score,0.0026949462124596555,ok
+106,Varying sandwich score,0.0008567218366468572,ok
+107,Marginal Bonferroni,0.2502762832790342,ok
+107,Marginal covariance-aware,0.28854909294208275,ok
+107,Independence likelihood,0.35613255442446107,ok
+107,Constant model score,0.2948381251789063,ok
+107,Constant sandwich score,0.2345742340257273,ok
+107,Varying model score,0.28033583145936525,ok
+107,Varying sandwich score,0.21862185274190649,ok
+108,Marginal Bonferroni,0.5986603790219278,ok
+108,Marginal covariance-aware,0.465002395675002,ok
+108,Independence likelihood,0.5511242773810663,ok
+108,Constant model score,0.4879651603064753,ok
+108,Constant sandwich score,0.45806212540820135,ok
+108,Varying model score,0.44354082802208117,ok
+108,Varying sandwich score,0.4083667213902682,ok
+109,Marginal Bonferroni,1.0,ok
+109,Marginal covariance-aware,0.8307990171829986,ok
+109,Independence likelihood,0.8638471030920492,ok
+109,Constant model score,0.9037355899775532,ok
+109,Constant sandwich score,0.8967608673867149,ok
+109,Varying model score,0.9114366375500395,ok
+109,Varying sandwich score,0.9049178460039516,ok
+110,Marginal Bonferroni,1.0,ok
+110,Marginal covariance-aware,0.8424222763933618,ok
+110,Independence likelihood,0.8144291744487446,ok
+110,Constant model score,0.933479446478578,ok
+110,Constant sandwich score,0.9370215149429963,ok
+110,Varying model score,0.934322140960273,ok
+110,Varying sandwich score,0.9376905020542443,ok
+111,Marginal Bonferroni,0.5972748193620105,ok
+111,Marginal covariance-aware,0.5696911557622595,ok
+111,Independence likelihood,0.5225039028060838,ok
+111,Constant model score,0.5761878076687116,ok
+111,Constant sandwich score,0.5825224941055649,ok
+111,Varying model score,0.5899353379094014,ok
+111,Varying sandwich score,0.5943441281913899,ok
+112,Marginal Bonferroni,1.0,ok
+112,Marginal covariance-aware,0.8776205294786764,ok
+112,Independence likelihood,0.9096401676912595,ok
+112,Constant model score,0.7831460760124915,ok
+112,Constant sandwich score,0.7735059443952907,ok
+112,Varying model score,0.7821981661529922,ok
+112,Varying sandwich score,0.7721937433725943,ok
+113,Marginal Bonferroni,0.39675206525219053,ok
+113,Marginal covariance-aware,0.40897275347145867,ok
+113,Independence likelihood,0.3722926892933003,ok
+113,Constant model score,0.39044360739718403,ok
+113,Constant sandwich score,0.3661071402121211,ok
+113,Varying model score,0.39191382281358295,ok
+113,Varying sandwich score,0.3675152739631453,ok
+114,Marginal Bonferroni,0.8319073057430089,ok
+114,Marginal covariance-aware,0.7052263618909558,ok
+114,Independence likelihood,0.6779276482680279,ok
+114,Constant model score,0.707373006722236,ok
+114,Constant sandwich score,0.7001620772928601,ok
+114,Varying model score,0.7281849679701928,ok
+114,Varying sandwich score,0.7216635349570079,ok
+115,Marginal Bonferroni,0.245751398629878,ok
+115,Marginal covariance-aware,0.19657383660460936,ok
+115,Independence likelihood,0.16151482114396112,ok
+115,Constant model score,0.2163749714539896,ok
+115,Constant sandwich score,0.18003339311340058,ok
+115,Varying model score,0.218834126009754,ok
+115,Varying sandwich score,0.1843788094413469,ok
+116,Marginal Bonferroni,0.070770700521538,ok
+116,Marginal covariance-aware,0.10930422537521453,ok
+116,Independence likelihood,0.07887683748805821,ok
+116,Constant model score,0.08842084303359407,ok
+116,Constant sandwich score,0.10458205561366911,ok
+116,Varying model score,0.08838780054672428,ok
+116,Varying sandwich score,0.10448503357086124,ok
+117,Marginal Bonferroni,1.0,ok
+117,Marginal covariance-aware,0.8413203185229526,ok
+117,Independence likelihood,0.870402600762888,ok
+117,Constant model score,0.8377772614789096,ok
+117,Constant sandwich score,0.8357420360418298,ok
+117,Varying model score,0.8675824218911277,ok
+117,Varying sandwich score,0.8667218271942252,ok
+118,Marginal Bonferroni,0.7652087781694092,ok
+118,Marginal covariance-aware,0.6246437966458903,ok
+118,Independence likelihood,0.6841944925560309,ok
+118,Constant model score,0.7155481450342585,ok
+118,Constant sandwich score,0.7038079549996583,ok
+118,Varying model score,0.7170589055300803,ok
+118,Varying sandwich score,0.7052839304299112,ok
+119,Marginal Bonferroni,0.0851175707292007,ok
+119,Marginal covariance-aware,0.12641114316677646,ok
+119,Independence likelihood,0.08448494231485085,ok
+119,Constant model score,0.08765280102361471,ok
+119,Constant sandwich score,0.10784865404024782,ok
+119,Varying model score,0.0856851806930985,ok
+119,Varying sandwich score,0.10455537285460663,ok
+120,Marginal Bonferroni,0.4387064680613781,ok
+120,Marginal covariance-aware,0.2167176087117165,ok
+120,Independence likelihood,0.3385767895748821,ok
+120,Constant model score,0.21344758733658376,ok
+120,Constant sandwich score,0.21767148792806917,ok
+120,Varying model score,0.20455334413503518,ok
+120,Varying sandwich score,0.21061277982350712,ok
+121,Marginal Bonferroni,0.5072247591635266,ok
+121,Marginal covariance-aware,0.43713476408296115,ok
+121,Independence likelihood,0.3916291578482212,ok
+121,Constant model score,0.4366492549900062,ok
+121,Constant sandwich score,0.4085669202654145,ok
+121,Varying model score,0.43370719993879936,ok
+121,Varying sandwich score,0.4056309986798897,ok
+122,Marginal Bonferroni,0.3773161165813912,ok
+122,Marginal covariance-aware,0.33431325050222704,ok
+122,Independence likelihood,0.23918080427116717,ok
+122,Constant model score,0.35570107235266485,ok
+122,Constant sandwich score,0.36426972855719436,ok
+122,Varying model score,0.35912227532511437,ok
+122,Varying sandwich score,0.3677697648139139,ok
+123,Marginal Bonferroni,1.0,ok
+123,Marginal covariance-aware,0.9559994926173763,ok
+123,Independence likelihood,0.9446716471740041,ok
+123,Constant model score,0.9602970181335668,ok
+123,Constant sandwich score,0.9603133485339478,ok
+123,Varying model score,0.9624635356571668,ok
+123,Varying sandwich score,0.962517325396373,ok
+124,Marginal Bonferroni,0.5968251591808691,ok
+124,Marginal covariance-aware,0.3086413829239939,ok
+124,Independence likelihood,0.3893358053379471,ok
+124,Constant model score,0.24090250744076777,ok
+124,Constant sandwich score,0.241735643719376,ok
+124,Varying model score,0.2362336797986024,ok
+124,Varying sandwich score,0.23907454134288156,ok
+125,Marginal Bonferroni,1.0,ok
+125,Marginal covariance-aware,0.8012074049114047,ok
+125,Independence likelihood,0.8069751311314317,ok
+125,Constant model score,0.8539406703776456,ok
+125,Constant sandwich score,0.8508534619278874,ok
+125,Varying model score,0.8784943418124752,ok
+125,Varying sandwich score,0.8765103490716615,ok
+126,Marginal Bonferroni,0.8949486232986543,ok
+126,Marginal covariance-aware,0.5295856488725122,ok
+126,Independence likelihood,0.6194369460366251,ok
+126,Constant model score,0.5130202531404278,ok
+126,Constant sandwich score,0.508968313270328,ok
+126,Varying model score,0.5074377050960572,ok
+126,Varying sandwich score,0.5023147527424194,ok
+127,Marginal Bonferroni,0.8036630757939489,ok
+127,Marginal covariance-aware,0.6442308234252073,ok
+127,Independence likelihood,0.6968890781221435,ok
+127,Constant model score,0.5495164966407775,ok
+127,Constant sandwich score,0.5187841360080636,ok
+127,Varying model score,0.5373657944088862,ok
+127,Varying sandwich score,0.503891927956913,ok
+128,Marginal Bonferroni,1.0,ok
+128,Marginal covariance-aware,0.8964919735421405,ok
+128,Independence likelihood,0.9098604913997831,ok
+128,Constant model score,0.9085178523414789,ok
+128,Constant sandwich score,0.9175429787937543,ok
+128,Varying model score,0.9105429099701294,ok
+128,Varying sandwich score,0.919240507581049,ok
+129,Marginal Bonferroni,0.6620535171686911,ok
+129,Marginal covariance-aware,0.5721089447866333,ok
+129,Independence likelihood,0.4826948476467967,ok
+129,Constant model score,0.5880638753876074,ok
+129,Constant sandwich score,0.6135388127058718,ok
+129,Varying model score,0.5853636323960163,ok
+129,Varying sandwich score,0.610928674420524,ok
+130,Marginal Bonferroni,1.0,ok
+130,Marginal covariance-aware,0.8120304267948494,ok
+130,Independence likelihood,0.8589599449960431,ok
+130,Constant model score,0.7759780079153571,ok
+130,Constant sandwich score,0.7739989085007017,ok
+130,Varying model score,0.7791001627923589,ok
+130,Varying sandwich score,0.7772127993329976,ok
+131,Marginal Bonferroni,0.6413765093736418,ok
+131,Marginal covariance-aware,0.5267412627246129,ok
+131,Independence likelihood,0.5646234005731263,ok
+131,Constant model score,0.479073147791921,ok
+131,Constant sandwich score,0.5184420281207456,ok
+131,Varying model score,0.4810754768697044,ok
+131,Varying sandwich score,0.5218992332020634,ok
+132,Marginal Bonferroni,0.6266528980319748,ok
+132,Marginal covariance-aware,0.2308862889465051,ok
+132,Independence likelihood,0.3863286501213513,ok
+132,Constant model score,0.23942053026120202,ok
+132,Constant sandwich score,0.18881940393786326,ok
+132,Varying model score,0.2590965359873066,ok
+132,Varying sandwich score,0.2108731297887054,ok
+133,Marginal Bonferroni,0.12160810491608227,ok
+133,Marginal covariance-aware,0.09805381595445548,ok
+133,Independence likelihood,0.035280137301619836,ok
+133,Constant model score,0.057295944269112865,ok
+133,Constant sandwich score,0.08306075901995742,ok
+133,Varying model score,0.05277355099058369,ok
+133,Varying sandwich score,0.08017323262424575,ok
+134,Marginal Bonferroni,0.7845957301779709,ok
+134,Marginal covariance-aware,0.4561633650919853,ok
+134,Independence likelihood,0.5645584211850527,ok
+134,Constant model score,0.5509128504692508,ok
+134,Constant sandwich score,0.5284058778541715,ok
+134,Varying model score,0.5745761527217005,ok
+134,Varying sandwich score,0.5524869386139268,ok
+135,Marginal Bonferroni,0.06659579981877765,ok
+135,Marginal covariance-aware,0.10379164555367353,ok
+135,Independence likelihood,0.06077686154050211,ok
+135,Constant model score,0.05565190658539887,ok
+135,Constant sandwich score,0.0944421981041848,ok
+135,Varying model score,0.05753245350672477,ok
+135,Varying sandwich score,0.09710512733054817,ok
+136,Marginal Bonferroni,1.0,ok
+136,Marginal covariance-aware,0.8715831483510067,ok
+136,Independence likelihood,0.9116262850928702,ok
+136,Constant model score,0.872238728977552,ok
+136,Constant sandwich score,0.8573064392407135,ok
+136,Varying model score,0.8801650748928471,ok
+136,Varying sandwich score,0.868801624729682,ok
+137,Marginal Bonferroni,0.5709387553086176,ok
+137,Marginal covariance-aware,0.5629805209194814,ok
+137,Independence likelihood,0.5172102911811194,ok
+137,Constant model score,0.6940279367210891,ok
+137,Constant sandwich score,0.6996246181524922,ok
+137,Varying model score,0.6885558436844267,ok
+137,Varying sandwich score,0.6936661565388101,ok
+138,Marginal Bonferroni,1.0,ok
+138,Marginal covariance-aware,0.9364452897094462,ok
+138,Independence likelihood,0.9329766172703293,ok
+138,Constant model score,0.9368697642396665,ok
+138,Constant sandwich score,0.9411830879252667,ok
+138,Varying model score,0.932711155944616,ok
+138,Varying sandwich score,0.9367875073341211,ok
+139,Marginal Bonferroni,0.3495690272136973,ok
+139,Marginal covariance-aware,0.3460597339740886,ok
+139,Independence likelihood,0.35093259983951736,ok
+139,Constant model score,0.3626696513563865,ok
+139,Constant sandwich score,0.4252612563942304,ok
+139,Varying model score,0.36402768625285153,ok
+139,Varying sandwich score,0.4263061860382399,ok
+140,Marginal Bonferroni,0.931832485985457,ok
+140,Marginal covariance-aware,0.7398233913744546,ok
+140,Independence likelihood,0.7217767414902815,ok
+140,Constant model score,0.7556458333629255,ok
+140,Constant sandwich score,0.7465778784062537,ok
+140,Varying model score,0.7416234140027071,ok
+140,Varying sandwich score,0.7337879707325203,ok
+141,Marginal Bonferroni,0.9777147288363242,ok
+141,Marginal covariance-aware,0.7833196975805133,ok
+141,Independence likelihood,0.7339051771378464,ok
+141,Constant model score,0.8573811810910241,ok
+141,Constant sandwich score,0.8735184876697087,ok
+141,Varying model score,0.8432119624222175,ok
+141,Varying sandwich score,0.8623815567796957,ok
+142,Marginal Bonferroni,1.0,ok
+142,Marginal covariance-aware,0.8968853919853652,ok
+142,Independence likelihood,0.8862653700776655,ok
+142,Constant model score,0.8683620899577479,ok
+142,Constant sandwich score,0.8563580339746558,ok
+142,Varying model score,0.8693205051041986,ok
+142,Varying sandwich score,0.8580033511355359,ok
+143,Marginal Bonferroni,1.0,ok
+143,Marginal covariance-aware,0.8145886669962459,ok
+143,Independence likelihood,0.7648419529893624,ok
+143,Constant model score,0.8216742001769178,ok
+143,Constant sandwich score,0.8261491675047715,ok
+143,Varying model score,0.8342403057625227,ok
+143,Varying sandwich score,0.8384170454473531,ok
+144,Marginal Bonferroni,0.15799984578327222,ok
+144,Marginal covariance-aware,0.16215713892607356,ok
+144,Independence likelihood,0.16570856828836278,ok
+144,Constant model score,0.12325480362625366,ok
+144,Constant sandwich score,0.1632585106113447,ok
+144,Varying model score,0.13091013372055296,ok
+144,Varying sandwich score,0.17056321980666433,ok
+145,Marginal Bonferroni,1.0,ok
+145,Marginal covariance-aware,0.7789325397144482,ok
+145,Independence likelihood,0.7240551525871997,ok
+145,Constant model score,0.8279628747582781,ok
+145,Constant sandwich score,0.843232029080258,ok
+145,Varying model score,0.8302788710177182,ok
+145,Varying sandwich score,0.8447009180742043,ok
+146,Marginal Bonferroni,1.0,ok
+146,Marginal covariance-aware,0.8139103690955163,ok
+146,Independence likelihood,0.8548226142386188,ok
+146,Constant model score,0.7309261745178313,ok
+146,Constant sandwich score,0.720584281767169,ok
+146,Varying model score,0.7291862048525044,ok
+146,Varying sandwich score,0.7178498333103969,ok
+147,Marginal Bonferroni,0.10391054503355955,ok
+147,Marginal covariance-aware,0.11007045138166187,ok
+147,Independence likelihood,0.05280835521463805,ok
+147,Constant model score,0.08058382137740046,ok
+147,Constant sandwich score,0.09043438003356968,ok
+147,Varying model score,0.07789879963297323,ok
+147,Varying sandwich score,0.08730101231695213,ok
+148,Marginal Bonferroni,0.34989351664276447,ok
+148,Marginal covariance-aware,0.34591997907981487,ok
+148,Independence likelihood,0.3631154455815585,ok
+148,Constant model score,0.20827949058622144,ok
+148,Constant sandwich score,0.2302208151835009,ok
+148,Varying model score,0.18814678839737015,ok
+148,Varying sandwich score,0.2105696332888469,ok
+149,Marginal Bonferroni,0.733541106106921,ok
+149,Marginal covariance-aware,0.6566320881859076,ok
+149,Independence likelihood,0.6876206340641337,ok
+149,Constant model score,0.6454047129238231,ok
+149,Constant sandwich score,0.6181852204424765,ok
+149,Varying model score,0.6562678125645002,ok
+149,Varying sandwich score,0.6291217989340747,ok
+150,Marginal Bonferroni,1.0,ok
+150,Marginal covariance-aware,0.8153010990969111,ok
+150,Independence likelihood,0.7735906643396553,ok
+150,Constant model score,0.8112167091343254,ok
+150,Constant sandwich score,0.8065095307993426,ok
+150,Varying model score,0.8346853691728322,ok
+150,Varying sandwich score,0.8276002210119633,ok
+151,Marginal Bonferroni,1.0,ok
+151,Marginal covariance-aware,0.8473574388781943,ok
+151,Independence likelihood,0.868827491344786,ok
+151,Constant model score,0.8962343370286698,ok
+151,Constant sandwich score,0.9034174994432445,ok
+151,Varying model score,0.8979352872951282,ok
+151,Varying sandwich score,0.9050333093474394,ok
+152,Marginal Bonferroni,0.4561566544102952,ok
+152,Marginal covariance-aware,0.41329900443225376,ok
+152,Independence likelihood,0.46751920913850264,ok
+152,Constant model score,0.42069172696815205,ok
+152,Constant sandwich score,0.4209810258331902,ok
+152,Varying model score,0.4290991486928125,ok
+152,Varying sandwich score,0.42848639228672725,ok
+153,Marginal Bonferroni,0.8774193754924022,ok
+153,Marginal covariance-aware,0.7381361386741934,ok
+153,Independence likelihood,0.7542398239114457,ok
+153,Constant model score,0.840719730162656,ok
+153,Constant sandwich score,0.8323203566878989,ok
+153,Varying model score,0.8440496127226924,ok
+153,Varying sandwich score,0.8353730091569397,ok
+154,Marginal Bonferroni,0.5294222205735843,ok
+154,Marginal covariance-aware,0.5195004931206229,ok
+154,Independence likelihood,0.5348647781931004,ok
+154,Constant model score,0.4813037980720759,ok
+154,Constant sandwich score,0.46082337125113826,ok
+154,Varying model score,0.47971374585784177,ok
+154,Varying sandwich score,0.4599074643437072,ok
+155,Marginal Bonferroni,0.3939970744095867,ok
+155,Marginal covariance-aware,0.4149970093735378,ok
+155,Independence likelihood,0.3536873378138409,ok
+155,Constant model score,0.4334409329753983,ok
+155,Constant sandwich score,0.42926854701349726,ok
+155,Varying model score,0.43363847222194685,ok
+155,Varying sandwich score,0.4296283886667942,ok
+156,Marginal Bonferroni,0.11268752247922405,ok
+156,Marginal covariance-aware,0.04466695657113413,ok
+156,Independence likelihood,0.147190419442619,ok
+156,Constant model score,0.09833241612508287,ok
+156,Constant sandwich score,0.05894315589563538,ok
+156,Varying model score,0.07424890097478082,ok
+156,Varying sandwich score,0.043144626195685445,ok
+157,Marginal Bonferroni,0.4917340124309116,ok
+157,Marginal covariance-aware,0.2870566796009606,ok
+157,Independence likelihood,0.37791792969103716,ok
+157,Constant model score,0.2589845953350555,ok
+157,Constant sandwich score,0.23990013120733517,ok
+157,Varying model score,0.26070829188752537,ok
+157,Varying sandwich score,0.24108575560808654,ok
+158,Marginal Bonferroni,0.34615076274769985,ok
+158,Marginal covariance-aware,0.39495103046429053,ok
+158,Independence likelihood,0.4201712339563449,ok
+158,Constant model score,0.5258710209524442,ok
+158,Constant sandwich score,0.49548994282400927,ok
+158,Varying model score,0.5235028248465938,ok
+158,Varying sandwich score,0.49394398643389104,ok
+159,Marginal Bonferroni,0.20033496466280407,ok
+159,Marginal covariance-aware,0.21852174933881538,ok
+159,Independence likelihood,0.21491763013032447,ok
+159,Constant model score,0.1892922992205063,ok
+159,Constant sandwich score,0.23466632520083983,ok
+159,Varying model score,0.1921549110153711,ok
+159,Varying sandwich score,0.2380166273801856,ok
+160,Marginal Bonferroni,0.4034623358977827,ok
+160,Marginal covariance-aware,0.38905084478142077,ok
+160,Independence likelihood,0.30590917624426506,ok
+160,Constant model score,0.3618064043599899,ok
+160,Constant sandwich score,0.3729520545272985,ok
+160,Varying model score,0.3967996010712578,ok
+160,Varying sandwich score,0.409197030673747,ok
+161,Marginal Bonferroni,0.7808790046077869,ok
+161,Marginal covariance-aware,0.5990970200940764,ok
+161,Independence likelihood,0.5574084562307615,ok
+161,Constant model score,0.6201534366183243,ok
+161,Constant sandwich score,0.5857218852896892,ok
+161,Varying model score,0.6309962085191405,ok
+161,Varying sandwich score,0.5957957732146422,ok
+162,Marginal Bonferroni,0.7876646671517944,ok
+162,Marginal covariance-aware,0.5279848379360645,ok
+162,Independence likelihood,0.6036473985384291,ok
+162,Constant model score,0.613478272976417,ok
+162,Constant sandwich score,0.6083955950924882,ok
+162,Varying model score,0.6200403679123722,ok
+162,Varying sandwich score,0.6222319279794107,ok
+163,Marginal Bonferroni,0.4210682144408485,ok
+163,Marginal covariance-aware,0.3171213920127711,ok
+163,Independence likelihood,0.2139841290307381,ok
+163,Constant model score,0.2952375382169188,ok
+163,Constant sandwich score,0.322235463404595,ok
+163,Varying model score,0.2940528726041912,ok
+163,Varying sandwich score,0.32033168320623384,ok
+164,Marginal Bonferroni,1.0,ok
+164,Marginal covariance-aware,0.8478391270244758,ok
+164,Independence likelihood,0.8749115450196103,ok
+164,Constant model score,0.7749665553486006,ok
+164,Constant sandwich score,0.7795455162445654,ok
+164,Varying model score,0.7634960990104397,ok
+164,Varying sandwich score,0.7667167092594379,ok
+165,Marginal Bonferroni,0.09547226858381667,ok
+165,Marginal covariance-aware,0.13903460202586768,ok
+165,Independence likelihood,0.1602777201440582,ok
+165,Constant model score,0.18975069142397719,ok
+165,Constant sandwich score,0.15883757333793017,ok
+165,Varying model score,0.22949627870331574,ok
+165,Varying sandwich score,0.1956243668174565,ok
+166,Marginal Bonferroni,0.8537019136912773,ok
+166,Marginal covariance-aware,0.6234998313600004,ok
+166,Independence likelihood,0.6962747737720689,ok
+166,Constant model score,0.6521119344316852,ok
+166,Constant sandwich score,0.6269675302280295,ok
+166,Varying model score,0.6911094175065411,ok
+166,Varying sandwich score,0.6675561770149491,ok
+167,Marginal Bonferroni,1.0,ok
+167,Marginal covariance-aware,0.8783702464745952,ok
+167,Independence likelihood,0.8556886673204627,ok
+167,Constant model score,0.8831376773208734,ok
+167,Constant sandwich score,0.898704632229145,ok
+167,Varying model score,0.8901404958015369,ok
+167,Varying sandwich score,0.9044695769907736,ok
+168,Marginal Bonferroni,0.39631576444795014,ok
+168,Marginal covariance-aware,0.37712914487682075,ok
+168,Independence likelihood,0.34141415398532604,ok
+168,Constant model score,0.3720466296305162,ok
+168,Constant sandwich score,0.3558100124055296,ok
+168,Varying model score,0.37410748416523043,ok
+168,Varying sandwich score,0.35759845872558266,ok
+169,Marginal Bonferroni,0.07686387585049972,ok
+169,Marginal covariance-aware,0.053445138014069644,ok
+169,Independence likelihood,0.11640285398341461,ok
+169,Constant model score,0.09480867837853348,ok
+169,Constant sandwich score,0.07131616809614637,ok
+169,Varying model score,0.10702364494046716,ok
+169,Varying sandwich score,0.08512396149709246,ok
+170,Marginal Bonferroni,0.6455472416812907,ok
+170,Marginal covariance-aware,0.581720761009396,ok
+170,Independence likelihood,0.6322025900640064,ok
+170,Constant model score,0.5827462370357834,ok
+170,Constant sandwich score,0.5572878210939884,ok
+170,Varying model score,0.5871639906382653,ok
+170,Varying sandwich score,0.5662957586020024,ok
+171,Marginal Bonferroni,1.0,ok
+171,Marginal covariance-aware,0.9482729956390165,ok
+171,Independence likelihood,0.9493302400836041,ok
+171,Constant model score,0.9428890331048444,ok
+171,Constant sandwich score,0.9451687294408899,ok
+171,Varying model score,0.9334244111801541,ok
+171,Varying sandwich score,0.9360272132559935,ok
+172,Marginal Bonferroni,1.0,ok
+172,Marginal covariance-aware,0.9708193995812526,ok
+172,Independence likelihood,0.9625233379654097,ok
+172,Constant model score,0.9706402228458595,ok
+172,Constant sandwich score,0.9717575491581346,ok
+172,Varying model score,0.9498709076585221,ok
+172,Varying sandwich score,0.9521478235513081,ok
+173,Marginal Bonferroni,0.6946533302952917,ok
+173,Marginal covariance-aware,0.5856442097659972,ok
+173,Independence likelihood,0.5134143666169901,ok
+173,Constant model score,0.5542438955621939,ok
+173,Constant sandwich score,0.5548533095166118,ok
+173,Varying model score,0.5360169631388141,ok
+173,Varying sandwich score,0.5420146485331463,ok
+174,Marginal Bonferroni,1.0,ok
+174,Marginal covariance-aware,0.8875875566421142,ok
+174,Independence likelihood,0.8927976824110369,ok
+174,Constant model score,0.8553394329204811,ok
+174,Constant sandwich score,0.8620554765946082,ok
+174,Varying model score,0.8502421421921764,ok
+174,Varying sandwich score,0.858023963305478,ok
+175,Marginal Bonferroni,0.6138026552907176,ok
+175,Marginal covariance-aware,0.517532641294697,ok
+175,Independence likelihood,0.40668246739391645,ok
+175,Constant model score,0.5328625858101981,ok
+175,Constant sandwich score,0.5604474975444034,ok
+175,Varying model score,0.5345926986885916,ok
+175,Varying sandwich score,0.560980790382539,ok
+176,Marginal Bonferroni,0.8059110616621603,ok
+176,Marginal covariance-aware,0.6249615253964911,ok
+176,Independence likelihood,0.7119696549607035,ok
+176,Constant model score,0.5405886859065302,ok
+176,Constant sandwich score,0.5360741031838201,ok
+176,Varying model score,0.5454032674097841,ok
+176,Varying sandwich score,0.5413482861233859,ok
+177,Marginal Bonferroni,0.7582826487869474,ok
+177,Marginal covariance-aware,0.5997663987543804,ok
+177,Independence likelihood,0.6632221700829406,ok
+177,Constant model score,0.5888239631510767,ok
+177,Constant sandwich score,0.5815570589143315,ok
+177,Varying model score,0.5079025084624464,ok
+177,Varying sandwich score,0.4910411976597151,ok
+178,Marginal Bonferroni,0.5971510923474647,ok
+178,Marginal covariance-aware,0.39773028333291893,ok
+178,Independence likelihood,0.42410639176018206,ok
+178,Constant model score,0.3748815029225297,ok
+178,Constant sandwich score,0.4052866437409054,ok
+178,Varying model score,0.3673488156982137,ok
+178,Varying sandwich score,0.3970937138610134,ok
+179,Marginal Bonferroni,0.8451262360753544,ok
+179,Marginal covariance-aware,0.6347574423295167,ok
+179,Independence likelihood,0.7186411255759708,ok
+179,Constant model score,0.4040777139180767,ok
+179,Constant sandwich score,0.40912544483904134,ok
+179,Varying model score,0.3939384483634679,ok
+179,Varying sandwich score,0.40173026945485046,ok
+180,Marginal Bonferroni,0.6759231312116194,ok
+180,Marginal covariance-aware,0.5682159404408174,ok
+180,Independence likelihood,0.5939889964048559,ok
+180,Constant model score,0.576893329335639,ok
+180,Constant sandwich score,0.5882018027552083,ok
+180,Varying model score,0.5936749851291672,ok
+180,Varying sandwich score,0.6018244307252592,ok
+181,Marginal Bonferroni,1.0,ok
+181,Marginal covariance-aware,0.8780019664191263,ok
+181,Independence likelihood,0.9045670327103902,ok
+181,Constant model score,0.8262740025656867,ok
+181,Constant sandwich score,0.8209164583412345,ok
+181,Varying model score,0.8154788644502243,ok
+181,Varying sandwich score,0.8086564054837873,ok
+182,Marginal Bonferroni,0.03566087929214405,ok
+182,Marginal covariance-aware,0.01762745324878637,ok
+182,Independence likelihood,0.006101142832797291,ok
+182,Constant model score,0.02651949441002824,ok
+182,Constant sandwich score,0.022459824641096877,ok
+182,Varying model score,0.025047801193351704,ok
+182,Varying sandwich score,0.021293863488595542,ok
+183,Marginal Bonferroni,0.4104795249522972,ok
+183,Marginal covariance-aware,0.413033942205538,ok
+183,Independence likelihood,0.44496848165225966,ok
+183,Constant model score,0.381115649406887,ok
+183,Constant sandwich score,0.3924448675797937,ok
+183,Varying model score,0.3783674597218871,ok
+183,Varying sandwich score,0.38689652641120087,ok
+184,Marginal Bonferroni,1.0,ok
+184,Marginal covariance-aware,0.6713096071147903,ok
+184,Independence likelihood,0.7742422191548071,ok
+184,Constant model score,0.782430868347727,ok
+184,Constant sandwich score,0.7645757810804719,ok
+184,Varying model score,0.7517642363490552,ok
+184,Varying sandwich score,0.7345327338204741,ok
+185,Marginal Bonferroni,0.013621804859440267,ok
+185,Marginal covariance-aware,0.01393672907005187,ok
+185,Independence likelihood,0.03266900998712422,ok
+185,Constant model score,0.022540946264371694,ok
+185,Constant sandwich score,0.017727067742684274,ok
+185,Varying model score,0.0227908959346969,ok
+185,Varying sandwich score,0.01775735439448161,ok
+186,Marginal Bonferroni,0.06733120748730127,ok
+186,Marginal covariance-aware,0.10417446901708992,ok
+186,Independence likelihood,0.06116376777735667,ok
+186,Constant model score,0.1054319135947341,ok
+186,Constant sandwich score,0.13554350215555497,ok
+186,Varying model score,0.1054387475795772,ok
+186,Varying sandwich score,0.13593167099215872,ok
+187,Marginal Bonferroni,0.7712114231253542,ok
+187,Marginal covariance-aware,0.6863232207110854,ok
+187,Independence likelihood,0.6907295763330064,ok
+187,Constant model score,0.6848924637425684,ok
+187,Constant sandwich score,0.6794275281030905,ok
+187,Varying model score,0.6816358291626077,ok
+187,Varying sandwich score,0.6760386410749738,ok
+188,Marginal Bonferroni,0.1380798982750521,ok
+188,Marginal covariance-aware,0.15724455895374154,ok
+188,Independence likelihood,0.20586040271335665,ok
+188,Constant model score,0.1784717156405954,ok
+188,Constant sandwich score,0.1571733321114268,ok
+188,Varying model score,0.1687046922153596,ok
+188,Varying sandwich score,0.147661889891718,ok
+189,Marginal Bonferroni,0.15471081486578667,ok
+189,Marginal covariance-aware,0.19884520400215613,ok
+189,Independence likelihood,0.15858751682662778,ok
+189,Constant model score,0.20391549416383611,ok
+189,Constant sandwich score,0.19852919381637502,ok
+189,Varying model score,0.24120371480582103,ok
+189,Varying sandwich score,0.23863425089222992,ok
+190,Marginal Bonferroni,1.0,ok
+190,Marginal covariance-aware,0.8009633780645882,ok
+190,Independence likelihood,0.7583105148826642,ok
+190,Constant model score,0.7765237927183327,ok
+190,Constant sandwich score,0.7851318446125272,ok
+190,Varying model score,0.7787568835673294,ok
+190,Varying sandwich score,0.7877986389695915,ok
+191,Marginal Bonferroni,0.8700626267821994,ok
+191,Marginal covariance-aware,0.6660199250081875,ok
+191,Independence likelihood,0.5806453616070748,ok
+191,Constant model score,0.6394359510855951,ok
+191,Constant sandwich score,0.6569750742800975,ok
+191,Varying model score,0.6784766799191495,ok
+191,Varying sandwich score,0.6980445252030207,ok
+192,Marginal Bonferroni,1.0,ok
+192,Marginal covariance-aware,0.9047816222139471,ok
+192,Independence likelihood,0.9133849548772284,ok
+192,Constant model score,0.8500425763239932,ok
+192,Constant sandwich score,0.8417525453313821,ok
+192,Varying model score,0.8789794722635551,ok
+192,Varying sandwich score,0.8754694196387253,ok
+193,Marginal Bonferroni,1.0,ok
+193,Marginal covariance-aware,0.817801002568379,ok
+193,Independence likelihood,0.8103116520912694,ok
+193,Constant model score,0.808354711825419,ok
+193,Constant sandwich score,0.807910857542439,ok
+193,Varying model score,0.8095287706651996,ok
+193,Varying sandwich score,0.8093325867422733,ok
+194,Marginal Bonferroni,0.4575828861040666,ok
+194,Marginal covariance-aware,0.48415897837750455,ok
+194,Independence likelihood,0.4947915198761682,ok
+194,Constant model score,0.4982320088787173,ok
+194,Constant sandwich score,0.48356500262317337,ok
+194,Varying model score,0.4923100675093822,ok
+194,Varying sandwich score,0.4791347508413498,ok
+195,Marginal Bonferroni,1.0,ok
+195,Marginal covariance-aware,0.85127440492373,ok
+195,Independence likelihood,0.8850505548465761,ok
+195,Constant model score,0.8204989335070741,ok
+195,Constant sandwich score,0.8342227935239273,ok
+195,Varying model score,0.812765342120211,ok
+195,Varying sandwich score,0.8277839648241296,ok
+196,Marginal Bonferroni,0.4356784047869728,ok
+196,Marginal covariance-aware,0.33241927286536005,ok
+196,Independence likelihood,0.4210192595710416,ok
+196,Constant model score,0.42180664695502446,ok
+196,Constant sandwich score,0.4213549374047769,ok
+196,Varying model score,0.40578046115157695,ok
+196,Varying sandwich score,0.4069646180559473,ok
+197,Marginal Bonferroni,1.0,ok
+197,Marginal covariance-aware,0.7585618320075557,ok
+197,Independence likelihood,0.8028700721655522,ok
+197,Constant model score,0.7590446530823789,ok
+197,Constant sandwich score,0.7560273242007953,ok
+197,Varying model score,0.7742740612386476,ok
+197,Varying sandwich score,0.7712865279294385,ok
+198,Marginal Bonferroni,0.8757857538625597,ok
+198,Marginal covariance-aware,0.6793885524153598,ok
+198,Independence likelihood,0.6445474910580693,ok
+198,Constant model score,0.6041660633446646,ok
+198,Constant sandwich score,0.5783901625035668,ok
+198,Varying model score,0.604486797503514,ok
+198,Varying sandwich score,0.5778113203522312,ok
+199,Marginal Bonferroni,1.0,ok
+199,Marginal covariance-aware,0.994891073821693,ok
+199,Independence likelihood,0.9944026607415567,ok
+199,Constant model score,0.9987364943737572,ok
+199,Constant sandwich score,0.9986872696613772,ok
+199,Varying model score,0.9992633494439105,ok
+199,Varying sandwich score,0.9992338999078559,ok

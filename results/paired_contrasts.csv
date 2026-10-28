@@ -1,0 +1,641 @@
+id,group,setting,n,environment,prevalence,maf,ld,scenario,method_a,method_b,metric,attempted_pairs,valid_pairs,difference,mcse,lower,upper
+0,primary,primary,800,independent,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,nominal_05,400,400,-0.0025,0.0025,-0.0074,0.0024
+0,primary,primary,800,independent,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,400,400,0.005,0.0035311006328336203,-0.0019209572403538957,0.011920957240353896
+0,primary,primary,800,independent,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,400,400,-0.0025,0.0025,-0.0074,0.0024
+0,primary,primary,800,independent,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,400,400,0.005,0.0035311006328336203,-0.0019209572403538957,0.011920957240353896
+0,primary,primary,800,independent,0.15,0.25,0,null,Varying model score,Constant model score,nominal_05,400,400,0.005,0.0035311006328336203,-0.0019209572403538957,0.011920957240353896
+0,primary,primary,800,independent,0.15,0.25,0,null,Varying model score,Constant model score,calibrated_05,400,400,0.0025,0.004333742992010717,-0.0059941362643410045,0.010994136264341006
+0,primary,primary,800,independent,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,nominal_05,400,400,-0.0175,0.006564457728034959,-0.030366337146948523,-0.004633662853051482
+0,primary,primary,800,independent,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,calibrated_05,400,400,-0.0125,0.007483272909201158,-0.02716721490203427,0.002167214902034269
+0,primary,primary,800,independent,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+0,primary,primary,800,independent,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+0,primary,primary,800,independent,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,continuous_only,Varying model score,Constant model score,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+0,primary,primary,800,independent,0.15,0.25,0,continuous_only,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+0,primary,primary,800,independent,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,-0.01,0.009999999999999998,-0.029599999999999994,0.009599999999999996
+0,primary,primary,800,independent,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,binary_only,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,binary_only,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+0,primary,primary,800,independent,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,shared,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,shared,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+0,primary,primary,800,independent,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,opposing,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,opposing,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+0,primary,primary,800,independent,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+0,primary,primary,800,independent,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,nominal_05,400,400,0.0075,0.004319260936502214,-0.000965751435544341,0.01596575143554434
+1,primary,primary,800,constant,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,400,400,0.0025,0.0025,-0.0024,0.0074
+1,primary,primary,800,constant,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,400,400,0.0075,0.006612009655104717,-0.0054595389240052455,0.020459538924005247
+1,primary,primary,800,constant,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,400,400,0.0,0.007079923254047887,-0.013876649577933858,0.013876649577933858
+1,primary,primary,800,constant,0.15,0.25,0,null,Varying model score,Constant model score,nominal_05,400,400,0.0025,0.0025,-0.0024,0.0074
+1,primary,primary,800,constant,0.15,0.25,0,null,Varying model score,Constant model score,calibrated_05,400,400,0.0025,0.004333742992010717,-0.0059941362643410045,0.010994136264341006
+1,primary,primary,800,constant,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,nominal_05,400,400,0.01,0.007899747783163333,-0.005483505655000132,0.025483505655000134
+1,primary,primary,800,constant,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,calibrated_05,400,400,0.0,0.0086710996952412,-0.01699535540267275,0.01699535540267275
+1,primary,primary,800,constant,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,continuous_only,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,continuous_only,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.02,0.014070529413628968,-0.007578237650712777,0.04757823765071278
+1,primary,primary,800,constant,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.02,0.014070529413628968,-0.007578237650712777,0.04757823765071278
+1,primary,primary,800,constant,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,-0.02,0.014070529413628966,-0.04757823765071277,0.007578237650712773
+1,primary,primary,800,constant,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+1,primary,primary,800,constant,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,-0.01,0.009999999999999998,-0.029599999999999994,0.009599999999999996
+1,primary,primary,800,constant,0.15,0.25,0,binary_only,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,binary_only,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.02,0.014070529413628968,-0.007578237650712777,0.04757823765071278
+1,primary,primary,800,constant,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.02,0.014070529413628968,-0.007578237650712777,0.04757823765071278
+1,primary,primary,800,constant,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,shared,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,shared,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,opposing,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,opposing,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+1,primary,primary,800,constant,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,nominal_05,400,400,-0.015,0.01059330189850086,-0.035762871721061684,0.005762871721061685
+2,primary,primary,800,varying,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,400,400,-0.0225,0.008954598656150472,-0.04005101336605492,-0.004948986633945076
+2,primary,primary,800,varying,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,400,400,-0.0125,0.010301683683592308,-0.03269130001984093,0.007691300019840922
+2,primary,primary,800,varying,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,400,400,-0.0325,0.010191616536106899,-0.05247556841076952,-0.01252443158923048
+2,primary,primary,800,varying,0.15,0.25,0,null,Varying model score,Constant model score,nominal_05,400,400,-0.0225,0.010852595176046042,-0.04377108654505024,-0.0012289134549497566
+2,primary,primary,800,varying,0.15,0.25,0,null,Varying model score,Constant model score,calibrated_05,400,400,-0.025,0.009281857691513793,-0.04319244107536704,-0.006807558924632966
+2,primary,primary,800,varying,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,nominal_05,400,400,-0.0225,0.010852595176046042,-0.04377108654505024,-0.0012289134549497566
+2,primary,primary,800,varying,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,calibrated_05,400,400,-0.015,0.007879894150911795,-0.030444592535787116,0.0004445925357871184
+2,primary,primary,800,varying,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.04,0.028141058827257932,-0.015156475301425547,0.09515647530142554
+2,primary,primary,800,varying,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.02842676218074806,-0.0557164538742662,0.0557164538742662
+2,primary,primary,800,varying,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.03,0.026419307295608603,-0.02178184229939286,0.08178184229939287
+2,primary,primary,800,varying,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,-0.02,0.02453609997575413,-0.0680907559524781,0.028090755952478095
+2,primary,primary,800,varying,0.15,0.25,0,continuous_only,Varying model score,Constant model score,nominal_05,100,100,0.03,0.026419307295608603,-0.02178184229939286,0.08178184229939287
+2,primary,primary,800,varying,0.15,0.25,0,continuous_only,Varying model score,Constant model score,calibrated_05,100,100,0.03,0.0361114996094098,-0.040778539234443203,0.1007785392344432
+2,primary,primary,800,varying,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.05,0.029729419500528147,-0.008269662221035166,0.10826966222103518
+2,primary,primary,800,varying,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.01,0.030134379171982424,-0.04906338317708555,0.06906338317708555
+2,primary,primary,800,varying,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+2,primary,primary,800,varying,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,-0.01,0.009999999999999998,-0.029599999999999994,0.009599999999999996
+2,primary,primary,800,varying,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.02,0.014070529413628966,-0.007578237650712773,0.04757823765071277
+2,primary,primary,800,varying,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,-0.01,0.009999999999999998,-0.029599999999999994,0.009599999999999996
+2,primary,primary,800,varying,0.15,0.25,0,binary_only,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,binary_only,Varying model score,Constant model score,calibrated_05,100,100,-0.01,0.009999999999999998,-0.029599999999999994,0.009599999999999996
+2,primary,primary,800,varying,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+2,primary,primary,800,varying,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.04,0.01969463855669324,0.0013985084288812497,0.07860149157111876
+2,primary,primary,800,varying,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,shared,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,shared,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+2,primary,primary,800,varying,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+2,primary,primary,800,varying,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,opposing,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,opposing,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+2,primary,primary,800,varying,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+3,primary,primary,800,t_varying,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,nominal_05,400,400,0.0075,0.008293450929546881,-0.008755163821911886,0.023755163821911885
+3,primary,primary,800,t_varying,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,400,400,0.0175,0.008255589736945622,0.0013190441155865838,0.033680955884413416
+3,primary,primary,800,t_varying,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,400,400,0.0075,0.00901735308400442,-0.010174012044648663,0.025174012044648662
+3,primary,primary,800,t_varying,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,400,400,0.0125,0.008278327231656524,-0.0037255213740467856,0.028725521374046787
+3,primary,primary,800,t_varying,0.15,0.25,0,null,Varying model score,Constant model score,nominal_05,400,400,0.01,0.00935246874783327,-0.008330838745753208,0.028330838745753206
+3,primary,primary,800,t_varying,0.15,0.25,0,null,Varying model score,Constant model score,calibrated_05,400,400,0.015,0.009984323552047977,-0.004569274162014036,0.03456927416201404
+3,primary,primary,800,t_varying,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,nominal_05,400,400,0.0125,0.010892934179439165,-0.00885015099170076,0.03385015099170076
+3,primary,primary,800,t_varying,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,calibrated_05,400,400,0.025,0.010545877813018592,0.004330079486483562,0.04566992051351644
+3,primary,primary,800,t_varying,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.02,0.02453609997575413,-0.028090755952478095,0.0680907559524781
+3,primary,primary,800,t_varying,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.07,0.02564323999762428,0.019739249604656416,0.12026075039534359
+3,primary,primary,800,t_varying,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.01,0.02245084417211086,-0.03400365457733728,0.05400365457733729
+3,primary,primary,800,t_varying,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.06,0.023868325657594204,0.01321808171111536,0.10678191828888464
+3,primary,primary,800,t_varying,0.15,0.25,0,continuous_only,Varying model score,Constant model score,nominal_05,100,100,0.02,0.02453609997575413,-0.028090755952478095,0.0680907559524781
+3,primary,primary,800,t_varying,0.15,0.25,0,continuous_only,Varying model score,Constant model score,calibrated_05,100,100,0.03,0.026419307295608603,-0.02178184229939286,0.08178184229939287
+3,primary,primary,800,t_varying,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,-0.01,0.009999999999999998,-0.029599999999999994,0.009599999999999996
+3,primary,primary,800,t_varying,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.02,0.019999999999999997,-0.01919999999999999,0.05919999999999999
+3,primary,primary,800,t_varying,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.02,0.019999999999999997,-0.01919999999999999,0.05919999999999999
+3,primary,primary,800,t_varying,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.07,0.029318866956210287,0.012535020765827846,0.12746497923417216
+3,primary,primary,800,t_varying,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.03,0.022270150335361363,-0.013649494657308268,0.07364949465730827
+3,primary,primary,800,t_varying,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.06,0.02777979790634143,0.005551596103570797,0.1144484038964292
+3,primary,primary,800,t_varying,0.15,0.25,0,binary_only,Varying model score,Constant model score,nominal_05,100,100,0.02,0.019999999999999997,-0.01919999999999999,0.05919999999999999
+3,primary,primary,800,t_varying,0.15,0.25,0,binary_only,Varying model score,Constant model score,calibrated_05,100,100,0.02,0.019999999999999997,-0.01919999999999999,0.05919999999999999
+3,primary,primary,800,t_varying,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.03,0.02227015033536136,-0.013649494657308262,0.07364949465730826
+3,primary,primary,800,t_varying,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.05,0.026111648393354676,-0.001178830850975164,0.10117883085097518
+3,primary,primary,800,t_varying,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+3,primary,primary,800,t_varying,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.02,0.014070529413628968,-0.007578237650712777,0.04757823765071278
+3,primary,primary,800,t_varying,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+3,primary,primary,800,t_varying,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.02,0.014070529413628968,-0.007578237650712777,0.04757823765071278
+3,primary,primary,800,t_varying,0.15,0.25,0,shared,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+3,primary,primary,800,t_varying,0.15,0.25,0,shared,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+3,primary,primary,800,t_varying,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+3,primary,primary,800,t_varying,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+3,primary,primary,800,t_varying,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+3,primary,primary,800,t_varying,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+3,primary,primary,800,t_varying,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+3,primary,primary,800,t_varying,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+3,primary,primary,800,t_varying,0.15,0.25,0,opposing,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+3,primary,primary,800,t_varying,0.15,0.25,0,opposing,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+3,primary,primary,800,t_varying,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+3,primary,primary,800,t_varying,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,nominal_05,400,400,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,400,400,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,400,400,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,400,400,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,null,Varying model score,Constant model score,nominal_05,400,400,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,null,Varying model score,Constant model score,calibrated_05,400,400,0.0025,0.0025,-0.0024,0.0074
+4,primary,primary,1600,independent,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,nominal_05,400,400,-0.0025,0.007508349571191263,-0.017216365159534876,0.012216365159534875
+4,primary,primary,1600,independent,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,calibrated_05,400,400,0.0025,0.00559577131784386,-0.008467711782973964,0.013467711782973965
+4,primary,primary,1600,independent,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,continuous_only,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,continuous_only,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,binary_only,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,binary_only,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,shared,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,shared,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,opposing,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,opposing,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+4,primary,primary,1600,independent,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,nominal_05,400,400,-0.0025,0.0025,-0.0074,0.0024
+5,primary,primary,1600,constant,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,400,400,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,400,400,-0.0075,0.0043192609365022136,-0.015965751435544337,0.0009657514355443392
+5,primary,primary,1600,constant,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,400,400,-0.0075,0.0043192609365022136,-0.015965751435544337,0.0009657514355443392
+5,primary,primary,1600,constant,0.15,0.25,0,null,Varying model score,Constant model score,nominal_05,400,400,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,null,Varying model score,Constant model score,calibrated_05,400,400,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,nominal_05,400,400,-0.01,0.007899747783163333,-0.025483505655000134,0.005483505655000132
+5,primary,primary,1600,constant,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,calibrated_05,400,400,-0.0025,0.0066214790615395,-0.01547809896061742,0.010478098960617419
+5,primary,primary,1600,constant,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,continuous_only,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,continuous_only,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,binary_only,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,binary_only,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+5,primary,primary,1600,constant,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,shared,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,shared,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,opposing,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,opposing,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+5,primary,primary,1600,constant,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,nominal_05,400,400,0.01,0.010608078446203251,-0.010791833754558373,0.030791833754558372
+6,primary,primary,1600,varying,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,400,400,0.0275,0.010228437188461184,0.007452263110616079,0.04754773688938392
+6,primary,primary,1600,varying,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,400,400,0.0175,0.010283420971017764,-0.0026555051031948163,0.03765550510319482
+6,primary,primary,1600,varying,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,400,400,0.03,0.010513149660756938,0.009394226664916402,0.05060577333508359
+6,primary,primary,1600,varying,0.15,0.25,0,null,Varying model score,Constant model score,nominal_05,400,400,0.01,0.01,-0.0096,0.0296
+6,primary,primary,1600,varying,0.15,0.25,0,null,Varying model score,Constant model score,calibrated_05,400,400,0.015,0.00933570503342827,-0.0032979818655194115,0.03329798186551941
+6,primary,primary,1600,varying,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,nominal_05,400,400,0.0025,0.010319914077472547,-0.017727031591846194,0.022727031591846192
+6,primary,primary,1600,varying,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,calibrated_05,400,400,0.015,0.01059330189850086,-0.005762871721061685,0.035762871721061684
+6,primary,primary,1600,varying,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+6,primary,primary,1600,varying,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+6,primary,primary,1600,varying,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+6,primary,primary,1600,varying,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+6,primary,primary,1600,varying,0.15,0.25,0,continuous_only,Varying model score,Constant model score,nominal_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+6,primary,primary,1600,varying,0.15,0.25,0,continuous_only,Varying model score,Constant model score,calibrated_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+6,primary,primary,1600,varying,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.02,0.014070529413628968,-0.007578237650712777,0.04757823765071278
+6,primary,primary,1600,varying,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.03,0.01714466079977653,-0.003603535167561997,0.063603535167562
+6,primary,primary,1600,varying,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,binary_only,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,binary_only,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,shared,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,shared,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,opposing,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,opposing,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+6,primary,primary,1600,varying,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,nominal_05,400,400,-0.005,0.01000939408380008,-0.024618412404248155,0.014618412404248153
+7,primary,primary,1600,t_varying,0.15,0.25,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,400,400,-0.0075,0.00829345092954688,-0.02375516382191188,0.008755163821911882
+7,primary,primary,1600,t_varying,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,400,400,0.005,0.010616934503217677,-0.015809191626306646,0.025809191626306648
+7,primary,primary,1600,t_varying,0.15,0.25,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,400,400,-0.0075,0.009017353084004419,-0.02517401204464866,0.01017401204464866
+7,primary,primary,1600,t_varying,0.15,0.25,0,null,Varying model score,Constant model score,nominal_05,400,400,-0.0075,0.009687310512335508,-0.026487128604177596,0.011487128604177596
+7,primary,primary,1600,t_varying,0.15,0.25,0,null,Varying model score,Constant model score,calibrated_05,400,400,0.005,0.007911636048404022,-0.010506806654871883,0.02050680665487188
+7,primary,primary,1600,t_varying,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,nominal_05,400,400,-0.005,0.011738055839329527,-0.028006589445085873,0.01800658944508587
+7,primary,primary,1600,t_varying,0.15,0.25,0,null,Varying model score,Marginal Bonferroni,calibrated_05,400,400,0.0025,0.009693776263439034,-0.016499801476340507,0.021499801476340504
+7,primary,primary,1600,t_varying,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+7,primary,primary,1600,t_varying,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+7,primary,primary,1600,t_varying,0.15,0.25,0,continuous_only,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,continuous_only,Varying model score,Constant model score,calibrated_05,100,100,0.01,0.009999999999999998,-0.009599999999999996,0.029599999999999994
+7,primary,primary,1600,t_varying,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,binary_only,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,binary_only,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,shared,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,shared,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,opposing,Varying model score,Constant model score,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,opposing,Varying model score,Constant model score,calibrated_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,100,100,0.0,0.0,0.0,0.0
+7,primary,primary,1600,t_varying,0.15,0.25,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,100,100,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,null,Varying sandwich score,Constant sandwich score,nominal_05,200,200,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,200,200,-0.005,0.005,-0.0148,0.0048
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,200,200,0.005,0.008674748197003014,-0.012002506466125905,0.022002506466125907
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,200,200,-0.01,0.01,-0.0296,0.0096
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,null,Varying model score,Constant model score,nominal_05,200,200,-0.005,0.005,-0.0148,0.0048
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,null,Varying model score,Constant model score,calibrated_05,200,200,0.0,0.007088812050083359,-0.013894071618163384,0.013894071618163384
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,null,Varying model score,Marginal Bonferroni,nominal_05,200,200,0.015,0.013219256549390098,-0.010909742836804591,0.04090974283680459
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,null,Varying model score,Marginal Bonferroni,calibrated_05,200,200,0.01,0.014159890979905674,-0.01775338632061512,0.03775338632061512
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,continuous_only,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,continuous_only,Varying model score,Constant model score,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,-0.016666666666666666,0.016666666666666666,-0.049333333333333326,0.015999999999999997
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,-0.016666666666666666,0.016666666666666663,-0.049333333333333326,0.01599999999999999
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.023769134427076417,-0.046587503477069775,0.046587503477069775
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,-0.016666666666666666,0.02903014862501064,-0.07356575797168752,0.04023242463835419
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,binary_only,Varying model score,Constant model score,nominal_05,60,60,0.0,0.023769134427076417,-0.046587503477069775,0.046587503477069775
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,binary_only,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.03333333333333333,0.03333333333333333,-0.031999999999999994,0.09866666666666665
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.06666666666666667,0.04673924944620663,-0.024942262247898334,0.15827559558123167
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,-0.05,0.028374015326751195,-0.10561307004043234,0.005613070040432336
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.05,0.028374015326751195,-0.005613070040432336,0.10561307004043234
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,-0.016666666666666666,0.016666666666666666,-0.049333333333333326,0.015999999999999997
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,shared,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,shared,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,shared,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.0,0.023769134427076417,-0.046587503477069775,0.046587503477069775
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,opposing,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,opposing,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.0,0.0,0.0,0.0
+8,sensitivity,low_prevalence,800,constant,0.05,0.25,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,60,60,-0.016666666666666666,0.016666666666666666,-0.049333333333333326,0.015999999999999997
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,null,Varying sandwich score,Constant sandwich score,nominal_05,200,200,0.005,0.01325721572745277,-0.020984142825807427,0.03098414282580743
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,200,200,-0.01,0.012257701916811609,-0.03402509575695075,0.014025095756950752
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,200,200,0.025,0.013143009300283425,-0.0007602982285555109,0.05076029822855552
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,200,200,-0.015,0.013219256549390093,-0.04090974283680458,0.01090974283680458
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,null,Varying model score,Constant model score,nominal_05,200,200,-0.015,0.011157844211010742,-0.036869374653581054,0.006869374653581055
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,null,Varying model score,Constant model score,calibrated_05,200,200,-0.035,0.014831549965255125,-0.06406983793190005,-0.005930162068099959
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,null,Varying model score,Marginal Bonferroni,nominal_05,200,200,-0.02,0.012196053402349662,-0.043904264668605336,0.003904264668605339
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,null,Varying model score,Marginal Bonferroni,calibrated_05,200,200,-0.04,0.015595386510183391,-0.07056695755995945,-0.009433042440040555
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.03333333333333333,0.023369624723103312,-0.01247113112394916,0.07913779779061583
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.03333333333333333,0.023369624723103312,-0.01247113112394916,0.07913779779061583
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.03333333333333333,0.023369624723103312,-0.01247113112394916,0.07913779779061583
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.03333333333333333,0.023369624723103312,-0.01247113112394916,0.07913779779061583
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,continuous_only,Varying model score,Constant model score,nominal_05,60,60,0.05,0.02837401532675119,-0.005613070040432329,0.10561307004043233
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,continuous_only,Varying model score,Constant model score,calibrated_05,60,60,0.03333333333333333,0.033333333333333326,-0.03199999999999998,0.09866666666666665
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.03333333333333333,0.03333333333333333,-0.031999999999999994,0.09866666666666665
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,-0.03333333333333333,0.04093999099320297,-0.11357571568001115,0.04690904901334448
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.05,0.037014274235423576,-0.0225479775014302,0.1225479775014302
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.06666666666666667,0.04024407642600706,-0.012211723128307164,0.1455450564616405
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.08333333333333333,0.03598231413236439,0.01280799763389913,0.15385866903276751
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.05,0.02837401532675119,-0.005613070040432329,0.10561307004043233
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,binary_only,Varying model score,Constant model score,nominal_05,60,60,0.08333333333333333,0.03598231413236439,0.01280799763389913,0.15385866903276751
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,binary_only,Varying model score,Constant model score,calibrated_05,60,60,0.05,0.02837401532675119,-0.005613070040432329,0.10561307004043233
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.13333333333333333,0.044255719836307654,0.046592122454170326,0.22007454421249634
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.1,0.039056673294247155,0.023448920343275587,0.17655107965672442
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,60,60,-0.016666666666666666,0.016666666666666666,-0.049333333333333326,0.015999999999999997
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,-0.016666666666666666,0.016666666666666666,-0.049333333333333326,0.015999999999999997
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.0,0.0,0.0
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,-0.016666666666666666,0.016666666666666666,-0.049333333333333326,0.015999999999999997
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,shared,Varying model score,Constant model score,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,shared,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.023769134427076417,-0.046587503477069775,0.046587503477069775
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,shared,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.06666666666666667,0.03247482002983031,0.003016019408199247,0.13031731392513407
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.05,0.02837401532675119,-0.005613070040432329,0.10561307004043233
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.0,0.0,0.0
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.0,0.0,0.0
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,opposing,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,opposing,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.0,0.0,0.0,0.0
+9,sensitivity,low_prevalence,800,varying,0.05,0.25,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,null,Varying sandwich score,Constant sandwich score,nominal_05,200,200,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,200,200,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,200,200,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,200,200,-0.01,0.007053278933842965,-0.023824426710332212,0.003824426710332212
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,null,Varying model score,Constant model score,nominal_05,200,200,0.005,0.005000000000000001,-0.004800000000000001,0.0148
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,null,Varying model score,Constant model score,calibrated_05,200,200,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,null,Varying model score,Marginal Bonferroni,nominal_05,200,200,0.005,0.008674748197003014,-0.012002506466125905,0.022002506466125907
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,null,Varying model score,Marginal Bonferroni,calibrated_05,200,200,-0.005,0.008674748197003014,-0.022002506466125907,0.012002506466125905
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,continuous_only,Varying model score,Constant model score,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,continuous_only,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.05,0.02837401532675119,-0.005613070040432329,0.10561307004043233
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.0,0.033614632272640714,-0.0658846792543758,0.0658846792543758
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,binary_only,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,binary_only,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,shared,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,shared,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,shared,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,opposing,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,opposing,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.0,0.0,0.0,0.0
+10,sensitivity,high_prevalence,800,constant,0.3,0.25,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,null,Varying sandwich score,Constant sandwich score,nominal_05,200,200,0.005,0.01325721572745277,-0.020984142825807427,0.03098414282580743
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,200,200,0.0,0.01227818263605087,-0.024065237966659707,0.024065237966659707
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,200,200,0.01,0.015835206624614063,-0.02103700498424356,0.041037004984243564
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,200,200,0.005,0.01325721572745277,-0.020984142825807427,0.03098414282580743
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,null,Varying model score,Constant model score,nominal_05,200,200,-0.005,0.011202790391809268,-0.026957469167946165,0.016957469167946163
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,null,Varying model score,Constant model score,calibrated_05,200,200,-0.005,0.011202790391809268,-0.026957469167946165,0.016957469167946163
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,null,Varying model score,Marginal Bonferroni,nominal_05,200,200,0.005,0.013257215727452771,-0.02098414282580743,0.030984142825807432
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,null,Varying model score,Marginal Bonferroni,calibrated_05,200,200,0.02,0.01578753404290166,-0.010943566724087254,0.05094356672408726
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,continuous_only,Varying model score,Constant model score,nominal_05,60,60,-0.016666666666666666,0.016666666666666666,-0.049333333333333326,0.015999999999999997
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,continuous_only,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,-0.016666666666666666,0.016666666666666666,-0.049333333333333326,0.015999999999999997
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.03333333333333333,0.023369624723103312,-0.01247113112394916,0.07913779779061583
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.03333333333333333,0.023369624723103312,-0.01247113112394916,0.07913779779061583
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,binary_only,Varying model score,Constant model score,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,binary_only,Varying model score,Constant model score,calibrated_05,60,60,0.03333333333333333,0.023369624723103312,-0.01247113112394916,0.07913779779061583
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.03333333333333333,0.023369624723103312,-0.01247113112394916,0.07913779779061583
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,shared,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,shared,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,shared,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,opposing,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,opposing,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.0,0.0,0.0,0.0
+11,sensitivity,high_prevalence,800,varying,0.3,0.25,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.0,0.0,0.0,0.0
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,null,Varying sandwich score,Constant sandwich score,nominal_05,200,200,0.0,0.0,0.0,0.0
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,200,200,0.0,0.0,0.0,0.0
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,200,200,-0.005,0.005000000000000001,-0.0148,0.004800000000000001
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,200,200,-0.015,0.008616625276509296,-0.03188858554195822,0.0018885855419582195
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,null,Varying model score,Constant model score,nominal_05,200,200,0.005,0.005000000000000001,-0.004800000000000001,0.0148
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,null,Varying model score,Constant model score,calibrated_05,200,200,0.0,0.0,0.0,0.0
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,null,Varying model score,Marginal Bonferroni,nominal_05,200,200,-0.005,0.01325721572745277,-0.03098414282580743,0.020984142825807427
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,null,Varying model score,Marginal Bonferroni,calibrated_05,200,200,-0.015,0.014999999999999998,-0.044399999999999995,0.014399999999999996
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.06666666666666667,0.03247482002983031,0.003016019408199247,0.13031731392513407
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.016666666666666666,0.016666666666666663,-0.01599999999999999,0.049333333333333326
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,continuous_only,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,continuous_only,Varying model score,Constant model score,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.03333333333333333,0.033333333333333326,-0.03199999999999998,0.09866666666666665
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.016666666666666666,0.02903014862501064,-0.04023242463835419,0.07356575797168752
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.033614632272640714,-0.0658846792543758,0.0658846792543758
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,binary_only,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,binary_only,Varying model score,Constant model score,calibrated_05,60,60,0.03333333333333333,0.023369624723103315,-0.012471131123949167,0.07913779779061583
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.18333333333333332,0.050375239785310166,0.08459786335412539,0.28206880331254125
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.16666666666666666,0.0485185424782985,0.0715703234092016,0.2617630099241317
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,-0.016666666666666666,0.02903014862501064,-0.07356575797168752,0.04023242463835419
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.0,0.0,0.0
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,shared,Varying model score,Constant model score,nominal_05,60,60,-0.016666666666666666,0.016666666666666666,-0.049333333333333326,0.015999999999999997
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,shared,Varying model score,Constant model score,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,shared,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.06666666666666667,0.04024407642600706,-0.012211723128307164,0.1455450564616405
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.06666666666666667,0.04024407642600706,-0.012211723128307164,0.1455450564616405
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,60,60,-0.03333333333333333,0.023369624723103312,-0.07913779779061583,0.01247113112394916
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.016666666666666666,0.016666666666666663,-0.01599999999999999,0.049333333333333326
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.023769134427076417,-0.046587503477069775,0.046587503477069775
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,-0.016666666666666666,0.016666666666666666,-0.049333333333333326,0.015999999999999997
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,opposing,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,opposing,Varying model score,Constant model score,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.13333333333333333,0.06044405671748913,0.014862982167054645,0.251803684499612
+12,sensitivity,low_maf,800,constant,0.15,0.05,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.11666666666666667,0.05866531842313124,0.0016826425573294446,0.2316506907760039
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,null,Varying sandwich score,Constant sandwich score,nominal_05,200,200,-0.005,0.01662095910009513,-0.03757707983618645,0.027577079836186454
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,null,Varying sandwich score,Constant sandwich score,calibrated_05,200,200,-0.005,0.01662095910009513,-0.03757707983618645,0.027577079836186454
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,null,Varying sandwich score,Marginal covariance-aware,nominal_05,200,200,0.01,0.015835206624614063,-0.02103700498424356,0.041037004984243564
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,200,200,0.01,0.015835206624614063,-0.02103700498424356,0.041037004984243564
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,null,Varying model score,Constant model score,nominal_05,200,200,0.01,0.015835206624614063,-0.02103700498424356,0.041037004984243564
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,null,Varying model score,Constant model score,calibrated_05,200,200,0.0,0.015851065623706036,-0.03106808862246383,0.03106808862246383
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,null,Varying model score,Marginal Bonferroni,nominal_05,200,200,-0.005,0.01941027547382698,-0.043044139928700875,0.03304413992870088
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,null,Varying model score,Marginal Bonferroni,calibrated_05,200,200,0.01,0.018741832391925693,-0.026733991488174354,0.04673399148817436
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.03333333333333333,0.033333333333333326,-0.03199999999999998,0.09866666666666665
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.03333333333333333,0.033333333333333326,-0.03199999999999998,0.09866666666666665
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.05,0.02837401532675119,-0.005613070040432329,0.10561307004043233
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.05,0.02837401532675119,-0.005613070040432329,0.10561307004043233
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,continuous_only,Varying model score,Constant model score,nominal_05,60,60,0.0,0.04116934847963091,-0.08069192302007659,0.08069192302007659
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,continuous_only,Varying model score,Constant model score,calibrated_05,60,60,-0.016666666666666666,0.04441500908493733,-0.10372008447314383,0.07038675113981051
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.016666666666666666,0.03751961194632264,-0.056871772748125715,0.09020510608145904
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.016666666666666666,0.03751961194632264,-0.056871772748125715,0.09020510608145904
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.1,0.04572084295183094,0.010387147814411371,0.18961285218558865
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.016666666666666666,0.04441500908493733,-0.07038675113981051,0.10372008447314383
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.1,0.04572084295183094,0.010387147814411371,0.18961285218558865
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.05,0.043988955984287356,-0.03621835372920322,0.1362183537292032
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,binary_only,Varying model score,Constant model score,nominal_05,60,60,0.1,0.05674803065350239,-0.011226140080864672,0.21122614008086468
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,binary_only,Varying model score,Constant model score,calibrated_05,60,60,0.05,0.05,-0.048,0.14800000000000002
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,binary_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.23333333333333334,0.05506373639622878,0.12540840999672492,0.34125825666994175
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.26666666666666666,0.05757170261178304,0.1538261295475719,0.3795072037857614
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,shared,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.016666666666666666,0.04441500908493733,-0.07038675113981051,0.10372008447314383
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,shared,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.016666666666666666,0.04441500908493733,-0.07038675113981051,0.10372008447314383
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.03333333333333333,0.040939990993202974,-0.04690904901334449,0.11357571568001115
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.06666666666666667,0.04673924944620663,-0.024942262247898334,0.15827559558123167
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,shared,Varying model score,Constant model score,nominal_05,60,60,-0.016666666666666666,0.03751961194632264,-0.09020510608145904,0.056871772748125715
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,shared,Varying model score,Constant model score,calibrated_05,60,60,-0.05,0.04999999999999999,-0.14799999999999996,0.04799999999999997
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,shared,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.08333333333333333,0.0546776205092855,-0.02383480286486625,0.1905014695315329
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,shared,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.13333333333333333,0.05557438475642005,0.024407539210750034,0.24225912745591663
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,opposing,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.05,0.05536218701796767,-0.058509886555216634,0.15850988655521664
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.058222250973958195,-0.11411561190895805,0.11411561190895805
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.05,0.05536218701796767,-0.058509886555216634,0.15850988655521664
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.058222250973958195,-0.11411561190895805,0.11411561190895805
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,opposing,Varying model score,Constant model score,nominal_05,60,60,0.06666666666666667,0.06228541316417524,-0.05541274313511681,0.18874607646845015
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,opposing,Varying model score,Constant model score,calibrated_05,60,60,0.016666666666666666,0.05037523978531015,-0.08206880331254124,0.11540213664587456
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,opposing,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.03333333333333333,0.0670890573758917,-0.09816121912341441,0.16482788579008106
+13,sensitivity,low_maf,800,varying,0.15,0.05,0,opposing,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.06666666666666667,0.06666666666666667,-0.06399999999999999,0.1973333333333333
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,null,Varying sandwich score,Constant sandwich score,nominal_05,200,200,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,null,Varying sandwich score,Constant sandwich score,calibrated_05,200,200,0.005,0.005000000000000001,-0.004800000000000001,0.0148
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,null,Varying sandwich score,Marginal covariance-aware,nominal_05,200,200,-0.005,0.011202790391809268,-0.026957469167946165,0.016957469167946163
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,200,200,0.0,0.007088812050083359,-0.013894071618163384,0.013894071618163384
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,null,Varying model score,Constant model score,nominal_05,200,200,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,null,Varying model score,Constant model score,calibrated_05,200,200,0.005,0.005000000000000001,-0.004800000000000001,0.0148
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,null,Varying model score,Marginal Bonferroni,nominal_05,200,200,-0.005,0.011202790391809268,-0.026957469167946165,0.016957469167946163
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,null,Varying model score,Marginal Bonferroni,calibrated_05,200,200,0.005,0.011202790391809268,-0.016957469167946163,0.026957469167946165
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,-0.016666666666666666,0.016666666666666666,-0.049333333333333326,0.015999999999999997
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,continuous_only,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,continuous_only,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,-0.03333333333333333,0.03333333333333333,-0.09866666666666665,0.031999999999999994
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.0,0.023769134427076417,-0.046587503477069775,0.046587503477069775
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,binary_only,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,binary_only,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,binary_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.03333333333333333,0.023369624723103312,-0.01247113112394916,0.07913779779061583
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.05,0.028374015326751195,-0.005613070040432336,0.10561307004043234
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,shared,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,shared,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,shared,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,shared,Varying model score,Constant model score,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,shared,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,shared,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,opposing,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,opposing,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,opposing,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,opposing,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.0,0.0,0.0,0.0
+14,sensitivity,LD,800,constant,0.15,0.25,0.6,opposing,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.0,0.0,0.0,0.0
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,null,Varying sandwich score,Constant sandwich score,nominal_05,200,200,-0.005,0.011202790391809268,-0.026957469167946165,0.016957469167946163
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,null,Varying sandwich score,Constant sandwich score,calibrated_05,200,200,0.005,0.011202790391809268,-0.016957469167946163,0.026957469167946165
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,null,Varying sandwich score,Marginal covariance-aware,nominal_05,200,200,-0.005,0.011202790391809268,-0.026957469167946165,0.016957469167946163
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,null,Varying sandwich score,Marginal covariance-aware,calibrated_05,200,200,0.0,0.010025094142341711,-0.019649184518989754,0.019649184518989754
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,null,Varying model score,Constant model score,nominal_05,200,200,0.005,0.01325721572745277,-0.020984142825807427,0.03098414282580743
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,null,Varying model score,Constant model score,calibrated_05,200,200,0.01,0.01225770191681161,-0.014025095756950755,0.03402509575695076
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,null,Varying model score,Marginal Bonferroni,nominal_05,200,200,0.015,0.016590697884097793,-0.017517767852831677,0.047517767852831676
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,null,Varying model score,Marginal Bonferroni,calibrated_05,200,200,0.01,0.015835206624614063,-0.02103700498424356,0.041037004984243564
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,continuous_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.08333333333333333,0.03598231413236439,0.01280799763389913,0.15385866903276751
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,continuous_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.08333333333333333,0.03598231413236439,0.01280799763389913,0.15385866903276751
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,continuous_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.08333333333333333,0.03598231413236439,0.01280799763389913,0.15385866903276751
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,continuous_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.08333333333333333,0.03598231413236439,0.01280799763389913,0.15385866903276751
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,continuous_only,Varying model score,Constant model score,nominal_05,60,60,0.08333333333333333,0.03598231413236439,0.01280799763389913,0.15385866903276751
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,continuous_only,Varying model score,Constant model score,calibrated_05,60,60,0.08333333333333333,0.03598231413236439,0.01280799763389913,0.15385866903276751
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,continuous_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.06666666666666667,0.03247482002983031,0.003016019408199247,0.13031731392513407
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,continuous_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.06666666666666667,0.03247482002983031,0.003016019408199247,0.13031731392513407
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,binary_only,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,binary_only,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,binary_only,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,binary_only,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,binary_only,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,binary_only,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,binary_only,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,binary_only,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,shared,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,shared,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,shared,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,shared,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,shared,Varying model score,Constant model score,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,shared,Varying model score,Constant model score,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,shared,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,shared,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,opposing,Varying sandwich score,Constant sandwich score,nominal_05,60,60,0.0,0.0,0.0,0.0
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,opposing,Varying sandwich score,Constant sandwich score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,opposing,Varying sandwich score,Marginal covariance-aware,nominal_05,60,60,0.0,0.0,0.0,0.0
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,opposing,Varying sandwich score,Marginal covariance-aware,calibrated_05,60,60,0.0,0.0,0.0,0.0
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,opposing,Varying model score,Constant model score,nominal_05,60,60,0.0,0.0,0.0,0.0
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,opposing,Varying model score,Constant model score,calibrated_05,60,60,0.0,0.0,0.0,0.0
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,opposing,Varying model score,Marginal Bonferroni,nominal_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326
+15,sensitivity,LD,800,varying,0.15,0.25,0.6,opposing,Varying model score,Marginal Bonferroni,calibrated_05,60,60,0.016666666666666666,0.016666666666666666,-0.015999999999999997,0.049333333333333326

@@ -1,0 +1,7 @@
+n,method,seconds
+800,Marginal covariance-aware,0.0438314781243389
+800,Constant model score,0.05907101199816679
+800,Varying model score,0.06545846806446207
+1600,Marginal covariance-aware,0.055727160876776906
+1600,Constant model score,0.07808289074862841
+1600,Varying model score,0.0864877043134038
