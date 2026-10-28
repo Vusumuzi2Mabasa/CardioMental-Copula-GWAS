@@ -1,0 +1,5 @@
+* -text
+*.png binary
+*.docx binary
+*.json whitespace=cr-at-eol
+*.csv whitespace=cr-at-eol

@@ -1,0 +1,9 @@
+work/
+__pycache__/
+*.pyc
+.venv/
+.Renviron
+.Rprofile
+.Rhistory
+.RData
+~$*

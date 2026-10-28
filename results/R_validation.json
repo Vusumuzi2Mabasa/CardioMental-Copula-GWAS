@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "engine": "R version 4.5.1 (2025-06-13 ucrt)",
+  "engine_md5": "23c24b73343a6544409fc26405860dc8",
+  "max_score_p_error": 7.9299e-13,
+  "full_effect_max_error": 2.3331e-07,
+  "sandwich_se_max_error": 6.6615e-08,
+  "calculation": "Independent base-R likelihood, BFGS fits and numerical derivatives"
+}

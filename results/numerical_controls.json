@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "engine_sha256": "35a1b4f29c2ef4c040fd72b1b5277994996d22d48c2f442c7e9d3769634d58e6",
+  "gradient_max_error": 4.14856621278048e-11,
+  "independence_loglik_max_error": 8.881784197001252e-16,
+  "hessian_max_error": 3.538466444297228e-07,
+  "score_hessian_max_error": 2.8344414388925543e-06,
+  "allele_flip_max_error": 2.220446049250313e-16,
+  "null_fits": [
+    {
+      "columns": 0,
+      "gradient": 6.545921486906973e-10,
+      "nll": 1219.874885052906,
+      "seconds": 0.2740997999208048
+    },
+    {
+      "columns": 1,
+      "gradient": 7.562522052347352e-08,
+      "nll": 1198.5342754393728,
+      "seconds": 0.07781129993963987
+    },
+    {
+      "columns": 2,
+      "gradient": 3.8616750032032074e-08,
+      "nll": 1162.2485012406719,
+      "seconds": 0.24769480002578348
+    }
+  ],
+  "elapsed_seconds": 3.55777960002888
+}
