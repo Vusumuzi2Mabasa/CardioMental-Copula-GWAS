@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "summary_rows": 1620,
+  "paired_rows": 216,
+  "replayed_bootstrap_scenario_draws": 108,
+  "Wilson_checked_with_independent_scipy": true,
+  "all_bootstrap_quantiles_verified": true,
+  "information_predictions_verified": true
+}

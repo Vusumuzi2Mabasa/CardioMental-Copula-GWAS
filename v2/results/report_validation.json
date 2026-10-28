@@ -1,0 +1,22 @@
+{
+  "author": "Vusumuzi Mabasa",
+  "source_sha256": "05eef98bae26953ef6c45e0bb51224446451ea9bee61a46a30db61c896a2f540",
+  "word_sha256": "1ec75322faebf580441b55848c6d7c877f4fe8fb1cd8313c75156bb953209bc3",
+  "pages": 13,
+  "rendered_pages_inspected": 13,
+  "renderer": "Packaged render_docx.py with portable LibreOffice and Poppler",
+  "render_directory": "v2/work/render_report_final",
+  "native_equations": 14,
+  "figures": 7,
+  "tables": 5,
+  "visual_checks": [
+    "Every final page visually inspected",
+    "Native equations readable and no raw TeX",
+    "No clipping overlap or missing glyphs",
+    "Figure legends do not conceal observations",
+    "Repeated table headers and captions accompany final rows",
+    "Interpretations precede figures",
+    "Simulated data disclosure author and page numbers present"
+  ],
+  "all_passed": true
+}

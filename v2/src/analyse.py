@@ -139,13 +139,16 @@ def main():
     from matplotlib.lines import Line2D
     fig.legend(handles=[Line2D([0],[0],color='#333333',label='Conditional Wilson'),Line2D([0],[0],color='#b84b4b',label='Calibration plus evaluation bootstrap')],loc='upper center',ncol=2,bbox_to_anchor=(.5,1.0))
     fig.suptitle('SIMULATED varying dependence | n=800',y=1.07);fig.tight_layout();save(fig,'calibration_uncertainty.png')
-    fig,axes=plt.subplots(1,2,figsize=(12,4.5))
+    fig,axes=plt.subplots(1,2,figsize=(12,5.2))
     for ax,scenario in zip(axes,['null','moderate_binary_only']):
         for j,color in zip(SHOW,COLORS):
             z=[r for r in banks if r['id']==1 and r['scenario']==scenario and r['method']==METHODS[j]]
             ax.plot([r['bank']+1 for r in z],[r['evaluation_rate'] for r in z],marker='o',color=color,label=SHORT[j])
-        ax.set_xticks(range(1,6));ax.set_xlabel('Independent calibration subbank of 1,000');ax.set_ylabel('Held-out rejection');ax.set_title(scenario.replace('_',' ').title());ax.legend(fontsize=12)
-    fig.suptitle('SIMULATED varying dependence | n=800 | shared held-out evaluations across subbanks');fig.tight_layout();save(fig,'subbank_sensitivity.png')
+        ax.set_xticks(range(1,6));ax.set_xlabel('Independent calibration subbank of 1,000');ax.set_ylabel('Held-out rejection');ax.set_title(scenario.replace('_',' ').title())
+    handles,labels_legend=axes[0].get_legend_handles_labels()
+    fig.legend(handles,labels_legend,loc='upper center',bbox_to_anchor=(.5,.98),ncol=3,fontsize=12)
+    fig.suptitle('SIMULATED varying dependence | n=800 | shared held-out evaluations across subbanks',y=1.05)
+    fig.tight_layout(rect=(0,0,1,.83));save(fig,'subbank_sensitivity.png')
     prediction=read(ROOT/'results/information_predictions.csv')
     fig,axes=plt.subplots(2,2,figsize=(13,8),sharey=True)
     for ax,cell in zip(axes.flat,cells()):
@@ -158,8 +161,10 @@ def main():
                 yerr=[[r['nominal_rate']-r['nominal_lower'] for r in rr],[r['nominal_upper']-r['nominal_rate'] for r in rr]],
                 fmt='o',ms=3,capsize=1,color=color,label=SHORT[j]+' nominal')
         ax.set_xticks(range(8),labels,rotation=25);ax.set_ylabel('Nominal association power');ax.set_ylim(0,1.03);ax.set_title(f"n={cell['n']} | {cell['environment']}")
-    axes[0,0].legend(fontsize=12);fig.suptitle('SIMULATED data | asymptotic information predictions and finite-sample nominal power')
-    fig.tight_layout();save(fig,'information_predictions.png')
+    handles,labels_legend=axes[0,0].get_legend_handles_labels()
+    fig.legend(handles,labels_legend,loc='upper center',bbox_to_anchor=(.5,.99),ncol=3,fontsize=12)
+    fig.suptitle('SIMULATED data | asymptotic information predictions and finite-sample nominal power',y=1.04)
+    fig.tight_layout(rect=(0,0,1,.87));save(fig,'information_predictions.png')
     import scipy
     result=dict(python=sys.version.split()[0],numpy=np.__version__,scipy=scipy.__version__,matplotlib=matplotlib.__version__,platform=platform.platform(),
                 execution='Native Windows; calibration started with three workers, reduced to two under memory pressure; source and design unchanged; completed chunks verified and resumed',bootstrap_replicates=cfg['bootstrap_replicates'])

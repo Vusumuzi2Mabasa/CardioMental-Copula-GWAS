@@ -1,0 +1,13 @@
+{
+  "cell": 3,
+  "phase": "evaluation",
+  "scenario": "null",
+  "start": 8100,
+  "stop": 8200,
+  "rows": 900,
+  "failures": 0,
+  "code_sha256": "fa6e25dac5855ce8fce522713a9762d5fec52efe4a5442d0e149fcc002cf045b",
+  "csv_sha256": "f98fe4158d1f4dc90d20c55a39338b0319e9de1a59ebc02ebf846f6b6833a43f",
+  "seconds": 15.205231199972332,
+  "completed_utc": "2026-10-28T22:37:02.034833+00:00"
+}

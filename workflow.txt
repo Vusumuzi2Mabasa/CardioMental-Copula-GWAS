@@ -1,47 +1,27 @@
-CardioMental Copula GWAS simulation
+CardioMental Copula GWAS version two
 Author: Vusumuzi Mabasa
-ALL OUTCOMES, GENOTYPES AND COVARIATES ARE SYNTHETIC.
-No Genomic SEM, patient data or clinical discoveries.
+Fully synthetic data; no Genomic SEM.
 
-Source: https://github.com/Vusumuzi2Mabasa/CardioMental-Copula-GWAS
-Local project: D:/CardioMental_Copula_GWAS
+python v2/src/test_oracle.py
+Rscript --vanilla v2/src/crosscheck.R v2
+# Published pilot outputs and their source lock are already frozen.
+# Run a new pilot only in a separate checkout with a new versioned design.
+python v2/src/freeze.py
+python v2/src/run.py --smoke --workers 2
+python v2/src/run.py --workers 2
+python v2/src/information.py
+Rscript --vanilla v2/src/information_check.R v2
+python v2/src/audit.py
+python v2/src/analyse.py
+python v2/src/summary_audit.py
+python v2/src/manuscript.py
+python v2/src/build_word.py --pandoc /path/to/pandoc
 
-Read README.md for mathematical likelihoods, nuisance-adjusted information,
-sandwich scores, assumptions, calibration ranks and interpretations.
-Read protocol/design.json and protocol/cells.json for every generating setting.
-
-Commands from the project root, using an activated isolated Python environment:
-python -m pip install -r requirements.txt
-python src/test_model.py
-Rscript --vanilla src/crosscheck.R .
-python src/benchmark.py --smoke
-python src/benchmark.py --workers 2
-python src/audit.py
-python src/analyse.py
-python src/manuscript.py
-python src/build_word.py --pandoc /path/to/pandoc
-python src/publication_audit.py
-
-Install R jsonlite if absent; all statistical R checks use --vanilla.
-Pandoc is available with Quarto. Set an explicit executable path if needed.
-The primary simulation engine is Python; independent numerical checking is R.
-Do not describe this as an R-only benchmark or a newly invented copula method.
-
-Stages:
-1. Validate likelihoods, gradients, block information, allele invariance and R agreement.
-2. Freeze protocol/source in version control before main simulations.
-3. In each stratum, generate 200 independent null calibration datasets.
-4. Freeze each method's 10th-order p-value cutoff before its evaluation.
-5. Generate fresh null and four alternative streams; fit null models once per dataset.
-6. Scan all eight variants; retain all statuses and per-variant scores.
-7. Run prespecified full effect fits without conditioning on association significance.
-8. Independently reconstruct decisions, verify identities and replay seeded datasets.
-9. Summarize attempted and valid denominators, paired MC uncertainty and failures.
-10. Generate figures and a shared research manuscript; render and inspect every Word page.
-11. Verify the publication manifest and push reviewed source/results to this repository.
-
-Completed cells are reused only if source and output hashes match.
-Archive the whole results/cells folder before starting a new execution.
-Do not combine partial outputs from different implementations or protocols.
-No p-value threshold here is a recommendation for a clinical GWAS.
-The null experiment does not validate 5e-8 tail probabilities.
+Monitor without examining results: python v2/src/status.py
+Design and mathematical methods: README.md and v2/protocol/design.json
+Baseline: baseline/CardioMental_v1_48aa582.zip and original root results.
+The v2 runner resumes only matching chunks and freezes calibration before evaluation.
+To rerun from scratch, archive v2/results/chunks AND v2/results/thresholds.json together.
+Report requires Pandoc (available with Quarto), python-docx and visual rendering QA.
+R is always invoked with --vanilla. Never load personal R startup files.
+No 5e-8 calibration or genome-wide scan claim.

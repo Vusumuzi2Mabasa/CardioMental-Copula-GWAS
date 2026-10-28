@@ -1,0 +1,37 @@
+id,n,environment,method,mean_seconds
+0,800,constant,Marginal covariance-aware,0.03657900617930573
+0,800,constant,Constant model,0.05652054510959424
+0,800,constant,Constant sandwich,0.05652363498064224
+0,800,constant,Varying model,0.06428105152838398
+0,800,constant,Varying sandwich,0.06428442243980244
+0,800,constant,Known dependence model,0.05283817064028699
+0,800,constant,Known dependence sandwich,0.052844115490373225
+0,800,constant,All known model,0.002967391689913347
+0,800,constant,All known sandwich,0.0029720575206563806
+1,800,varying,Marginal covariance-aware,0.024644355960050598
+1,800,varying,Constant model,0.03707877092992421
+1,800,varying,Constant sandwich,0.03708146824970609
+1,800,varying,Varying model,0.043748706560139544
+1,800,varying,Varying sandwich,0.04375184164036764
+1,800,varying,Known dependence model,0.03666506646977505
+1,800,varying,Known dependence sandwich,0.036669384600326885
+1,800,varying,All known model,0.0019416312692919747
+1,800,varying,All known sandwich,0.0019453149300650693
+2,1600,constant,Marginal covariance-aware,0.02577323419934837
+2,1600,constant,Constant model,0.04099828157052398
+2,1600,constant,Constant sandwich,0.04100072077994701
+2,1600,constant,Varying model,0.04818693497040076
+2,1600,constant,Varying sandwich,0.048189251020748634
+2,1600,constant,Known dependence model,0.038804801749892065
+2,1600,constant,Known dependence sandwich,0.038808710320177485
+2,1600,constant,All known model,0.0018769595296471379
+2,1600,constant,All known sandwich,0.0018799936902709306
+3,1600,varying,Marginal covariance-aware,0.025889409040275497
+3,1600,varying,Constant model,0.040249970090470745
+3,1600,varying,Constant sandwich,0.04025221805018373
+3,1600,varying,Varying model,0.04899921349993674
+3,1600,varying,Varying sandwich,0.04900157407058869
+3,1600,varying,Known dependence model,0.04095095174931921
+3,1600,varying,Known dependence sandwich,0.04095472040973837
+3,1600,varying,All known model,0.0018806478692335077
+3,1600,varying,All known sandwich,0.00188371754999971

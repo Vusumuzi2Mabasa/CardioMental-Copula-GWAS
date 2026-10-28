@@ -48,11 +48,13 @@ def main():
                     f"The varying-minus-marginal difference was {f(d,'difference')}, with calibration-aware 95% bootstrap interval "
                     f"{float(d['calibration_aware_lower']):.3f} to {float(d['calibration_aware_upper']):.3f}. "
                     "This is a paired operating-point comparison, not a multiplicity-adjusted superiority finding.")
-    direction='higher' if float(oracle['difference'])>0 else 'lower' if float(oracle['difference'])<0 else 'equal'
-    oracleinterpret=(f"Knowing the dependence function produced {direction} moderate binary-only power than estimating it at n=800 with varying dependence: "
-                     f"the known-dependence-sandwich minus varying-sandwich difference was {f(oracle,'difference')} "
+    oracleinterpret=(f"The known-dependence-sandwich minus varying-sandwich point difference for moderate binary-only power at n=800 with varying dependence was {f(oracle,'difference')} "
                      f"({float(oracle['calibration_aware_lower']):.3f} to {float(oracle['calibration_aware_upper']):.3f}). "
-                     "The oracle gap quantifies this experiment's cost of dependence estimation; it is not a guaranteed ordering of finite-sample rejection probabilities.")
+                     "The interval includes zero and does not resolve a power gain from knowing dependence. This is not proof of equivalence or a guaranteed oracle ordering.")
+    abstractresults=(f"The {audit['total_datasets']:,} datasets produced {audit['method_records']:,} method records with {audit['failures']} recorded failures. "
+        f"At n=800 with varying dependence, calibrated moderate binary-only power was {f(vr)} for varying-sandwich testing and {f(mr)} for marginal testing. "
+        f"The known-dependence-sandwich minus varying-sandwich difference was {f(oracle,'difference')} "
+        f"(calibration-aware 95% bootstrap interval {float(oracle['calibration_aware_lower']):.3f} to {float(oracle['calibration_aware_upper']):.3f}).")
     text=r'''# Oracle benchmarks and calibration for joint copula genetic association
 
 **Vusumuzi Mabasa**
@@ -69,9 +71,9 @@ def main():
 
 **Methods.** A separate pilot selected two local-alternative strengths using a prespecified marginal comparator. Four Gaussian settings crossed sample sizes 800 and 1,600 with constant or age-varying dependence. Nine procedures included covariance-aware marginal testing, fitted constant and varying copulas, an oracle with known dependence and fitted margins, and a fully known null-nuisance oracle. Each setting used 5,000 calibration null datasets, 10,000 fresh evaluation nulls and 1,000 datasets for each of eight alternatives. Independent R calculations checked the oracle likelihood and scores.
 
-**Results.** @TOTAL@ datasets produced @RECORDS@ method records, with @FAILURES@ recorded failures. @POWERINTERPRET@ @ORACLEINTERPRET@
+**Results.** @ABSTRACTRESULTS@
 
-**Conclusion.** Oracle benchmarks separate dependence-estimation cost from the achievable performance of a correctly specified dependence structure. The experiment evaluates conditional and calibration-aware uncertainty without requiring the more complex method to win. Its conclusions apply to the specified synthetic Gaussian models and focal-SNP hypothesis.
+**Conclusion.** Power gains occurred in several varying-dependence alternatives, while differences under constant dependence were small. The small known-dependence oracle gaps were consistent with expected score orthogonality. The evidence supports a conditional benefit of joint dependence modelling within this synthetic Gaussian design.
 
 ## Introduction
 
@@ -124,12 +126,12 @@ This expression uses the binary probability conditional on the continuous outcom
 
 Let U denote the summed score, H the negative observed Hessian and nu the unknown nuisance parameters. With beta denoting the two genetic coefficients,
 
-$$A=H_{\beta\nu}H_{\nu\nu}^{-1},\quad U_{\rm eff}=U_\beta-AU_\nu,$$
-$$H_{\rm eff}=H_{\beta\beta}-AH_{\nu\beta},\quad T_{\rm model}=U_{\rm eff}^{\mathsf T}H_{\rm eff}^{-1}U_{\rm eff}.$$
+$$A=H_{\beta\nu}H_{\nu\nu}^{-1},\quad U_{\mathrm{eff}}=U_\beta-AU_\nu,$$
+$$H_{\mathrm{eff}}=H_{\beta\beta}-AH_{\nu\beta},\quad T_{\mathrm{model}}=U_{\mathrm{eff}}^{\mathsf{T}}H_{\mathrm{eff}}^{-1}U_{\mathrm{eff}}.$$
 
 For individual adjusted scores psi,
 
-$$\psi_i=s_{\beta i}-As_{\nu i},\quad V=\sum_i\psi_i\psi_i^{\mathsf T},\quad T_{\rm robust}=U_{\rm eff}^{\mathsf T}V^{-1}U_{\rm eff}.$$
+$$\psi_i=s_{\beta i}-As_{\nu i},\quad V=\sum_i\psi_i\psi_i^{\mathsf{T}},\quad T_{\mathrm{robust}}=U_{\mathrm{eff}}^{\mathsf{T}}V^{-1}U_{\mathrm{eff}}.$$
 
 Two-degree-of-freedom chi-square references require regularity and full-rank positive information. The robust label denotes sandwich variance construction; it does not guarantee unbiased estimating equations or validity under arbitrary misspecification.
 
@@ -178,7 +180,7 @@ Five disjoint calibration subbanks of 1,000 datasets additionally illustrate sma
 
 Oracle scores were checked against an independently assembled expanded Hessian, allele recoding and the independence limit. A separate base-R implementation used the explicit likelihood, BFGS, finite differences and an expanded numerical Hessian. @NUMERICAL@
 
-Every attempted fit remains in the output. Failures count as non-rejections with attempted and valid denominators reported separately; any failed calibration fit disables its method's empirical cutoff. Chunk hashes, frozen source hashes and dataset fingerprints support resumable computation. A final audit verifies thresholds, checks all checkpoint hashes and regenerates the first dataset of every calibration and evaluation stream. A separate summary audit reconstructs reported decisions, checks Wilson intervals against SciPy, verifies every saved bootstrap quantile and replays selected bootstrap draws. The original engine, protocol, results and figures are checked byte-for-byte against the preserved version-one snapshot.
+Every planned dataset and method record remains in the output with its final fitting status. Failures count as non-rejections with attempted and valid denominators reported separately; any failed calibration fit disables its method's empirical cutoff. Interrupted incomplete chunks are regenerated from the same seeds; counts refer to unique planned datasets, rather than computational retries. Chunk hashes, frozen source hashes and dataset fingerprints support resumable computation. A final audit verifies thresholds, checks all checkpoint hashes and regenerates the first dataset of every calibration and evaluation stream. A separate summary audit reconstructs reported decisions, checks Wilson intervals against SciPy, verifies every saved bootstrap quantile and replays selected bootstrap draws. The original engine, protocol, results and figures are checked byte-for-byte against the preserved version-one snapshot.
 
 ## Results
 
@@ -270,7 +272,7 @@ Figure 7. Analytical local-power predictions and observed nominal rejection with
 
 ## Discussion
 
-This second experiment makes the comparison more informative by reducing ceiling effects, increasing calibration precision and defining oracle procedures that remove specific nuisance-estimation burdens. A fitted dependence curve and a useful association test remain different objectives. The experiment's value lies in quantifying where their performance aligns or diverges.
+This second experiment makes the comparison more informative by reducing ceiling effects, increasing calibration precision and defining oracle procedures that remove specific nuisance-estimation burdens. The observed pattern supports a conditional benefit: several varying-dependence alternatives favour the correctly specified joint approach, whereas constant-dependence differences are small. Oracle and fitted varying tests have close point estimates in these settings. A fitted dependence curve and a useful association test remain different objectives, but the current experiment identifies circumstances in which their gains align.
 
 The known-dependence contrast isolates the effect of estimating dependence coefficients within the specified Gaussian model, including finite-sample differences in observed information and empirical thresholds. Small or unresolved gaps imply little demonstrated practical gain from eliminating that estimation burden in the studied setting. Larger gaps would identify a reason to investigate more efficient or regularised dependence estimation, but would not alone establish a generally superior test.
 
@@ -294,11 +296,11 @@ No clinical data are analysed. A phenotype-dependence parameter cannot separate 
 
 ## Conclusion
 
-The revised simulation provides a reproducible assessment of dependence-estimation cost, moderate-signal detection and empirical calibration uncertainty for joint mixed-outcome genetic association tests. It strengthens the evidence available to judge the complex model without requiring a favourable outcome. The next methodological decision should follow the observed oracle gaps and operating curves, then be tested under separately prespecified misspecification and genetic-background scenarios.
+The revised simulation identifies power gains under several age-varying dependence alternatives, small practical differences under constant dependence and little resolved gain from supplying the true dependence coefficients. These findings are consistent with the analytical information comparison and expected score orthogonality. They support a conditional advantage for modelling heterogeneous dependence within the specified Gaussian design, rather than a generally superior GWAS procedure. Further evaluation should introduce separately prespecified misspecification and genetic-background scenarios.
 
 ## Reproducibility
 
-All new scientific outputs are under v2. The original source, protocol, cells, figures and original Word report retain their original bytes; a complete version-one snapshot is linked above. Python runs the simulations, and R supplies independent numerical validation. The full experiment ran on Windows on Toshiba. Calibration began with three workers, then resumed with two to reduce memory pressure, retaining verified completed chunks and unchanged sources and design. @LINUX@
+All new scientific outputs are under v2. The original source, protocol, cells, figures and original Word report retain their original bytes; a complete version-one snapshot is linked above. Python runs the simulations, and R supplies independent numerical validation. The full experiment ran natively on Windows, with project files on the Toshiba drive. Calibration began with three workers, then resumed with two to reduce memory pressure, retaining verified completed chunks and unchanged sources and design. @LINUX@
 
 From the repository root, after creating an isolated Python environment and installing requirements.txt and R jsonlite:
 
@@ -334,7 +336,7 @@ Pandoc distributed with Quarto converts this shared manuscript to Word with nati
              'REPLAY':str(audit['replayed_datasets']),'COMMIT':f"[{audit['protocol_commit'][:7]}](https://github.com/Vusumuzi2Mabasa/CardioMental-Copula-GWAS/commit/{audit['protocol_commit']})",
              'SCALES':' and '.join(str(s) for s in scales),'PILOTRATES':' and '.join(f"{pilot['pooled_marginal_power'][str(s)]:.3f}" for s in scales),
              'NUMERICAL':f"The expanded-Hessian maximum statistic discrepancy was {num['expanded_hessian_max_stat_error']:.3g}; the independent R maximum p-value discrepancy was {rr['max_score_p_error']:.3g}, and its restricted-fit parameter discrepancy was {rr['restricted_fit_max_parameter_error']:.3g}.",
-             'POWERINTERPRET':powerinterpret,'NULLINTERPRET':nullinterpret,'ORACLEINTERPRET':oracleinterpret,
+             'ABSTRACTRESULTS':abstractresults,'POWERINTERPRET':powerinterpret,'NULLINTERPRET':nullinterpret,'ORACLEINTERPRET':oracleinterpret,
              'NULLTABLE':nulltable,'POWERTABLE':powertable,'PAIRTABLE':pairtable,'CALTABLE':caltable,
              'POWERRANGE':f'{min(vals):.3f} to {max(vals):.3f}',
              'CONDINTERVAL':f"{float(vr['conditional_lower']):.3f} to {float(vr['conditional_upper']):.3f}",

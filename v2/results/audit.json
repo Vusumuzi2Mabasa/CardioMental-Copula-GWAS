@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "protocol_commit": "a419d2cc98f69df2105d75c74979b5b90f94824f",
+  "code_sha256": "fa6e25dac5855ce8fce522713a9762d5fec52efe4a5442d0e149fcc002cf045b",
+  "calibration_datasets": 20000,
+  "evaluation_datasets": 72000,
+  "method_records": 828000,
+  "failures": 0,
+  "total_datasets": 92000,
+  "pilot_datasets": 640,
+  "unique_dataset_fingerprints": 92000,
+  "replayed_datasets": 40,
+  "replay_max_p_error": 0.0,
+  "baseline_bytes_preserved": true,
+  "calibration_frozen_before_evaluation": true,
+  "numerical_controls": {
+    "passed": true,
+    "expanded_hessian_max_stat_error": 2.2165047575128938e-12,
+    "allele_flip_passed": true,
+    "fixed_intercept_passed": true,
+    "independence_passed": true,
+    "seconds": 0.5808264999650419
+  },
+  "independent_R": {
+    "passed": true,
+    "R": "4.5.1",
+    "max_score_p_error": 3.2316e-09,
+    "restricted_fit_max_parameter_error": 5.2424e-07,
+    "approach": "Independent base R likelihood finite differences BFGS and expanded Hessian"
+  },
+  "expected_information_R": {
+    "passed": true,
+    "R": "4.5.1",
+    "quadrature_nodes": 80,
+    "expected_Hessian_max_error": 3.8429e-10,
+    "marginal_Godambe_max_error": 3.142e-10,
+    "approach": "Independent Jacobi eigenvalue quadrature, finite-difference likelihood Hessian, marginal score covariance and sensitivity"
+  }
+}

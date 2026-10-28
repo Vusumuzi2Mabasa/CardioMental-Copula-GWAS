@@ -1,334 +1,313 @@
-# Covariate dependent copula score tests for joint genetic association
+# Oracle benchmarks and calibration for joint copula genetic association
 
 **Vusumuzi Mabasa**
 
-**Simulation study.** Both outcomes, all genotypes and all covariates are synthetic. The continuous outcome is cardiometabolic-like and the binary outcome is mental-health-like; neither is an observed clinical measurement or diagnosis. There are no patient data, biological discoveries or Genomic SEM analyses.
+**Simulation study.** All phenotypes, covariates and genotypes are synthetic. The continuous outcome is cardiometabolic-like and the binary outcome is mental-health-like; neither is an observed clinical measurement or diagnosis. No patient data, AWI-Gen data or Genomic SEM analyses are used.
 
-[Word manuscript](report/CardioMental_Copula_GWAS_Report.docx) · [Protocol](protocol/design.json) · [Audited score results](results/score_summary.csv) · [Paired comparisons](results/paired_contrasts.csv) · [Workflow](workflow.txt)
+[Word manuscript](report/CardioMental_Copula_GWAS_Report_v2.docx) | [Original study and complete archive](baseline/README.md) | [Second benchmark protocol](v2/protocol/design.json) | [Full statistical estimates](v2/results/summary.csv) | [Audited results](v2/results/audit.json) | [Full workflow](workflow.txt)
 
 <!-- manuscript -->
 
 ## Abstract
 
-**Background.** Joint genetic association tests can use dependence between continuous and binary outcomes, but a more detailed dependence model need not improve calibrated detection. This study evaluates constant and age-dependent Gaussian-copula score formulations against covariance-aware marginal testing.
+**Background.** A more accurate phenotype-dependence model need not improve joint genetic association testing. The original simulation was limited by strong alternatives and small calibration banks. This second experiment examines whether dependence estimation conceals an attainable efficiency gain and whether conclusions persist with weaker signals and more precise calibration.
 
-**Methods.** A version-controlled protocol preceded the main simulations. Eight primary strata crossed sample sizes 800 and 1,600 with independence, constant Gaussian dependence, varying Gaussian dependence and a varying t copula with normal margins. Eight sensitivity strata examined outcome prevalence, allele frequency and simulated LD. Independent null banks of 200 datasets per stratum froze empirical p-value cutoffs before the corresponding evaluations. Seven association procedures were evaluated on identical datasets. Full effect-model fits used prespecified replicate indices regardless of significance.
+**Methods.** A separate pilot selected two local-alternative strengths using a prespecified marginal comparator. Four Gaussian settings crossed sample sizes 800 and 1,600 with constant or age-varying dependence. Nine procedures included covariance-aware marginal testing, fitted constant and varying copulas, an oracle with known dependence and fitted margins, and a fully known null-nuisance oracle. Each setting used 5,000 calibration null datasets, 10,000 fresh evaluation nulls and 1,000 datasets for each of eight alternatives. Independent R calculations checked the oracle likelihood and scores.
 
-**Results.** The benchmark comprised 13120 datasets: 3,200 calibration datasets and 9920 evaluation datasets, yielding 69440 method records and 555520 variant scores. There were 0 focal evaluation-score failures and 0 full-effect-fit failures. At n=800 under varying Gaussian dependence, the varying sandwich score had nominal null rejection 0.052 and independently calibrated rejection 0.028. Its calibrated binary-only power was 0.950, versus 0.960 for constant sandwich testing and 0.960 for covariance-aware marginal testing. The paired varying-minus-constant power difference was -0.010, with conditional 95% Monte Carlo interval -0.030 to 0.010.
+**Results.** The 92,000 datasets produced 828,000 method records with 0 recorded failures. At n=800 with varying dependence, calibrated moderate binary-only power was 0.546 for varying-sandwich testing and 0.476 for marginal testing. The known-dependence-sandwich minus varying-sandwich difference was -0.002 (calibration-aware 95% bootstrap interval -0.017 to 0.008).
 
-**Conclusion.** The experiment quantifies how dependence specification and variance estimation affect association testing under controlled conditions. Numerical validation, nominal calibration and calibrated power are distinct findings. Results do not establish universal superiority, genome-wide tail accuracy, pleiotropy or clinical disease relationships.
+**Conclusion.** Power gains occurred in several varying-dependence alternatives, while differences under constant dependence were small. The small known-dependence oracle gaps were consistent with expected score orthogonality. The evidence supports a conditional benefit of joint dependence modelling within this synthetic Gaussian design.
 
 ## Introduction
 
-Cardiometabolic measurements and mental-health outcomes can be observed in the same people and have different measurement scales. A joint distribution can represent their conditional dependence while retaining separate SNP effects. The methodological question is whether that representation improves association testing over suitable marginal and covariance-aware alternatives.
+Joint analysis of a continuous cardiometabolic measurement and a binary mental-health outcome can use their conditional dependence while retaining distinct genetic effects. Copula regression for mixed outcomes is established [1]; a more flexible dependence function is therefore a modelling choice whose statistical value must be demonstrated, rather than assumed from improved fit alone.
 
-Copula-based mixed-outcome regression is established [1], as are copula genetic-association procedures. CBMAT is a variant-set score-type method [2], whereas the present target is a focal single-SNP omnibus null. ApproxCopula supplies another established distributional approach and a GWAS application [3]. It is not identical to an exact Gaussian copula because its construction can alter the margins. Neither published method is claimed as newly invented here, and neither external package was executed as a direct comparator in this first experiment.
+The original benchmark retained 13,120 synthetic datasets and found similar calibrated performance for several practical methods. Most shared and opposing alternatives had power near one. Its 200-null calibration banks also introduced appreciable threshold uncertainty. Those results remain unchanged in the version-one archive and original result directories. They motivate a fresh experiment, rather than retrospective modification of the first protocol.
 
-The study concentrates on a narrower question: does accounting for covariate-dependent phenotype dependence change size, power and effect estimation when the underlying SNP effects and conditional margins are controlled? It is an implementation and operating-characteristic study, not a claim of a new general copula framework.
+The present questions are whether dependence estimation materially reduces association power, whether a simpler covariance-aware test already captures much of the useful information, and how calibration uncertainty changes the interpretation of small differences. The design follows explicit aims, generating mechanisms, estimands, methods and performance measures [2]. It does not claim a new general copula framework or demonstrate a clinical relationship between diseases.
 
 ## Methods
 
-### Simulation design and estimands
+### Experimental design and signal selection
 
-The design was frozen in [commit fe4bb39](https://github.com/Vusumuzi2Mabasa/CardioMental-Copula-GWAS/commit/fe4bb394d4a33847d00d7559f2a1371b5342afad) before the main simulation. This is a version-controlled protocol, not a registered clinical study. The primary design used eight common SNPs with minor-allele frequency 0.25 and binary prevalence 0.15. Four effect alternatives were continuous-only, binary-only, shared and opposing; only the focal SNP had a generating effect. Sensitivities used prevalence 0.05 or 0.30, MAF 0.05, or correlated genotypes, each under constant and varying dependence at n=800.
+An independent 640-dataset pilot crossed constant and varying dependence, four effect scales and four signal architectures at n=800. Twenty datasets supported each pilot cell. The two distinct scales minimised squared distance between pooled covariance-aware marginal nominal power and targets 0.30 and 0.65, with a fixed lexicographic tie rule. Only that marginal comparator selected the scales; oracle and varying-model performance did not influence selection. The chosen scales were 0.4 and 0.55, with pilot pooled marginal rejection 0.406 and 0.594. Pilot observations are excluded from main estimates and uncertainty intervals.
 
-People are independent. The age-like covariate is a standard normal draw clipped at -2.5 and 2.5; exposure is Bernoulli(0.5) minus 0.5. Both enter both fitted marginal means. For centered focal genotype g and standardized residual margins,
+For each sample size, let the architecture vector b be (0.20,0), (0,0.35), (0.20,0.35) or (0.20,-0.35). Two strengths use
 
-$$
-Y_i=0.35a_i+0.25e_i+\beta_1g_i+Z_{i1},
-\qquad
-D_i=\mathbf{1}\{b_0+0.25a_i+0.4e_i+\beta_2g_i+Z_{i2}>0\}.
-$$
+$$\boldsymbol\beta_n=c\sqrt{800/n}\,\mathbf b.$$
 
-The generating effects are (0,0), (0.20,0), (0,0.35), (0.20,0.35) and (0.20,-0.35). Binary coefficients are probit-liability effects per allele, not log odds ratios. The binary intercept is calibrated by population quadrature independently of each evaluation dataset. Achieved case counts are retained per dataset.
+Thus the generating continuous and binary effects at n=800 are 0.080 and 0.140 for the weaker strength and 0.110 and 0.1925 for the moderate strength, when that component is active. At n=1,600 both components are divided by the square root of two. This local-alternative design studies estimation behaviour at approximately comparable information across sample sizes; it is not a fixed-effect sample-size power curve. Pilot labels do not guarantee every architecture has intermediate power.
 
-For Gaussian copulas, dependence is zero, constant 0.4, or
+Four main settings cross n=800 or 1,600 with constant or varying Gaussian dependence. Each uses 5,000 calibration nulls, 10,000 evaluation nulls and eight sets of 1,000 alternatives, giving 23,000 datasets per setting. Source and protocol were frozen in commit [a419d2c](https://github.com/Vusumuzi2Mabasa/CardioMental-Copula-GWAS/commit/a419d2cc98f69df2105d75c74979b5b90f94824f) before the main simulation. Pilot, calibration and evaluation seeds are 29102001, 29102011 and 29102012, respectively.
 
-$$
-\rho_i=\tanh\{\operatorname{atanh}(0.3)+0.6a_i\}.
-$$
+### Synthetic phenotypes and genetic association target
 
-The misspecified environment instead uses a t copula with four degrees of freedom and the same varying latent correlation parameter, transformed to normal univariate residual margins. This changes dependence without deliberately changing the univariate residual distributions. A fitted Gaussian rho is not the same parameter as the t-copula latent correlation.
+The covariate vector contains an intercept, a standard-normal age-like draw clipped at -2.5 and 2.5, and a centred Bernoulli exposure with probability 0.5. The focal genotype is Binomial(2,0.25), independent of these covariates. People are independent. For centred genotype g=G-0.5,
 
-Independent genotypes are Binomial(2,MAF). The LD sensitivity adds two independent haplotypes obtained by thresholding latent Gaussian vectors with AR(1) correlation 0.6. That number describes latent-normal correlation, not the resulting diploid LD. No external LD reference, real haplotype panel or ancestry comparison is used.
+$$Y_i=0.35a_i+0.25e_i+\beta_1g_i+Z_{1i},$$
+$$D_i=I\{b_0+0.25a_i+0.40e_i+\beta_2g_i+Z_{2i}>0\}.$$
 
-The primary null is
+The residuals have unit normal margins and Gaussian dependence. Their correlation is either 0.4 or
 
-$$
-H_{0j}:\beta_{j1}=\beta_{j2}=0.
-$$
+$$\rho_i=\tanh\{\operatorname{atanh}(0.3)+0.6a_i\}.$$
 
-Rejecting it supports association with at least one outcome. It does not establish effects on both, a shared causal variant, or a causal relationship between diseases. The study scans a small panel; it is not an executed genome-wide discovery analysis.
+The intercept b0 is determined by independent population quadrature to give null binary prevalence 0.15. It remains fixed across alternatives, so alternative prevalence may change. This differs from version one, which recalibrated prevalence under each binary effect; results from the two studies are not pooled as a single experiment. Binary effects are probit-liability coefficients, not log odds ratios.
 
-### Exact mixed-outcome likelihood
+The focal null is
 
-Let the continuous margin have mean mu and standard deviation sigma, and let eta be the binary probit predictor. Write z=(y-mu)/sigma, t=2d-1 and s=sqrt(1-rho squared). The per-person log likelihood is
+$$H_0:\beta_1=\beta_2=0.$$
 
-$$
-\ell_i=-\log\sigma-\tfrac12 z_i^2-\tfrac12\log(2\pi)
- +\log\Phi\left\{t_i\frac{\eta_i+\rho_i z_i}{\sqrt{1-\rho_i^2}}\right\}.
-$$
+Rejection indicates association with at least one phenotype. It does not establish effects on both, shared causality, fine-mapping or a causal disease relationship. The experiment tests one focal SNP per dataset and is not an executed genome-wide scan.
 
-This uses the binary outcome's probability, not a continuous copula density evaluated at 0 or 1. The fitted models share Gaussian and probit marginal predictors. The dependence model is either constant or has an intercept and age slope on the Fisher transformation scale; independence fixes rho to zero.
+### Mixed outcome likelihood and score tests
 
-For a=(eta+rho z)/s and k=t phi(a)/Phi(t a), the continuous-mean and binary-predictor scores are
+Let mu be the continuous mean, eta the binary probit predictor, sigma the continuous residual standard deviation, z=(y-mu)/sigma and t=2d-1. The per-person log likelihood is
 
-$$
-s_{\mu i}=\frac{z_i-k_i\rho_i/s_i}{\sigma},
-\qquad
-s_{\eta i}=\frac{k_i}{s_i}.
-$$
+$$\ell_i=-\log\sigma-\tfrac12 z_i^2-\tfrac12\log(2\pi)+\log\Phi\left\{\frac{t_i(\eta_i+\rho_i z_i)}{\sqrt{1-\rho_i^2}}\right\}.$$
 
-Stable normal-tail calculations avoid probability underflow. Null fitting uses bounded L-BFGS-B with analytic gradients, recorded convergence checks and a deterministic rescue start. Boundary solutions and non-positive or ill-conditioned information matrices are explicit failures.
+This expression uses the binary probability conditional on the continuous outcome, rather than a continuous copula density evaluated at a binary observation. Analytic individual scores and stable normal-tail calculations are reused unchanged from the validated original engine. Fitted marginal and copula models use bounded L-BFGS-B with gradient and information checks.
 
-### Nuisance-adjusted association tests
+Let U denote the summed score, H the negative observed Hessian and nu the unknown nuisance parameters. With beta denoting the two genetic coefficients,
 
-The SNP score contribution is g times the two marginal-predictor scores. Let nu denote all nuisance parameters, H the negative observed Hessian under the fitted null, and U the summed score. We use
+$$A=H_{\beta\nu}H_{\nu\nu}^{-1},\quad U_{\mathrm{eff}}=U_\beta-AU_\nu,$$
+$$H_{\mathrm{eff}}=H_{\beta\beta}-AH_{\nu\beta},\quad T_{\mathrm{model}}=U_{\mathrm{eff}}^{\mathsf{T}}H_{\mathrm{eff}}^{-1}U_{\mathrm{eff}}.$$
 
-$$
-A_j=H_{\beta\nu}H_{\nu\nu}^{-1},\qquad
-U_{j,\mathrm{eff}}=U_\beta-A_jU_\nu,
-$$
+For individual adjusted scores psi,
 
-$$
-H_{j,\mathrm{eff}}
-=H_{\beta\beta}-H_{\beta\nu}H_{\nu\nu}^{-1}H_{\nu\beta},
-\qquad
-T_{j,\mathrm{model}}
-=U_{j,\mathrm{eff}}^\top H_{j,\mathrm{eff}}^{-1}U_{j,\mathrm{eff}}.
-$$
+$$\psi_i=s_{\beta i}-As_{\nu i},\quad V=\sum_i\psi_i\psi_i^{\mathsf{T}},\quad T_{\mathrm{robust}}=U_{\mathrm{eff}}^{\mathsf{T}}V^{-1}U_{\mathrm{eff}}.$$
 
-This is the observed-information analogue of the efficient score construction, asymptotically equivalent to the information-based score test under suitable correct-model regularity. Nuisance cross-derivatives are retained; simply treating fitted dependence as known would be a different test.
+Two-degree-of-freedom chi-square references require regularity and full-rank positive information. The robust label denotes sandwich variance construction; it does not guarantee unbiased estimating equations or validity under arbitrary misspecification.
 
-The sandwich alternative uses individual adjusted scores
+### Practical comparators and oracle definitions
 
-$$
-\psi_{ij}=s_{\beta,ij}-A_js_{\nu,i},\qquad
-V_j=\sum_i\psi_{ij}\psi_{ij}^{\top},
-\qquad
-T_{j,\mathrm{sandwich}}=U_{j,\mathrm{eff}}^\top V_j^{-1}U_{j,\mathrm{eff}}.
-$$
+The five practical procedures are a covariance-aware marginal score test, constant-copula model and sandwich tests, and varying-copula model and sandwich tests. The marginal procedure fits the two margins under independence and retains cross-outcome score covariance. All practical methods receive only observable synthetic data.
 
-Two-degree-of-freedom chi-square reference p-values are used when information is full rank and regularity is appropriate. Sandwich variance is not a general remedy for confounding, biased scores, ascertainment or unidentified parameters. Those conditions are not validated by this experiment.
+The known-dependence oracle fixes the generating dependence coefficients and estimates the seven marginal nuisance parameters: three continuous coefficients, three probit coefficients and log sigma. Known dependence coefficients are removed from the nuisance projection and from numerical differentiation. Merely inserting the generating rho into the original nine-nuisance test would answer a different question.
 
-Seven procedures are compared: separate marginal scores with Bonferroni adjustment; a covariance-aware omnibus test of stacked marginal scores; the independence likelihood score without cross-outcome variance correction; and constant/varying copula scores with model or sandwich variance. The first three share their fitted marginal models. The independence likelihood is an informative misspecification comparator, not the sole benchmark against which complexity is judged.
+The fully known oracle fixes all generating null nuisance parameters and therefore uses no nuisance projection. Its genotype is centred at the known population mean 0.5, whereas procedures with fitted intercepts use sample centring as in the original engine. Both oracles have model-information and sandwich variants, bringing the total to nine tests. Their generating information is unavailable in an ordinary study. They are diagnostic benchmarks, not deployable methods or guaranteed finite-sample power upper bounds.
 
-Continuous and binary null-model nuisance estimates are reused across the eight fully observed markers in each dataset. A real implementation with genotype-dependent missingness would need to handle changing participant subsets explicitly.
+### Expected orthogonality in this design
 
-### Calibration and independent evaluation
+Under the null, the population-centred genotype is independent of the covariates and outcomes and has mean zero. Write the genetic score as g times a two-component marginal-predictor score b, while the nuisance score depends only on the covariates and outcomes. Then
 
-Each primary stratum contains 200 calibration nulls, 400 evaluation nulls and 100 evaluation datasets for each of four alternatives. Each sensitivity stratum contains 200 calibration nulls, 200 evaluation nulls and 60 per alternative. Calibration and evaluation use distinct master seeds and additional stratum, replicate and architecture identifiers.
+$$E(s_{\beta i}s_{\nu i}^{\mathsf T})=E(g_i)E(\mathbf b_i s_{\nu i}^{\mathsf T})=0.$$
 
-For each method and stratum, the 10th smallest p-value among 200 calibration null datasets is frozen; evaluation rejects strictly below that cutoff. Under exchangeability across calibration and evaluation banks this rank targets 10/201, approximately 0.05, averaged over possible calibration banks. Ties are conservative. Conditional size with a particular frozen bank can differ, so held-out null rejection is reported rather than forced to 0.05.
+For a correctly specified regular model this gives zero expected cross-information. Consequently, estimating nuisance parameters need not produce a first-order asymptotic efficiency loss for the genetic coefficients in this particular prospective independent-genotype design. Oracle comparisons primarily diagnose finite-sample estimation, observed-information and calibration effects. This argument does not equate a misspecified constant copula with the correct varying copula, nor establish orthogonality under population structure, non-centred conditional genotypes or other sampling schemes.
 
-Nominal tests at 0.05 and 0.01 remain visible separately. Empirical calibration is a simulation diagnostic, not a proposed clinical GWAS threshold. No claim is made about accuracy at 5e-8. Eight-marker family-wise null diagnostics use the nominal Bonferroni threshold 0.05/8 and are also not genome-wide validation.
+### Analytical information benchmark
 
-Any failed calibration fit disables that arm's empirical cutoff. Evaluation failures remain in attempted-dataset denominators as non-rejections, alongside explicit failure counts and valid-fit counts. A method with many failures must not be described as well calibrated merely because its rejection rate is low.
+A supplementary analytical diagnostic was added after freezing the main simulation protocol and before examining alternative evaluation results. It did not alter the signals, methods, thresholds or replicate counts. Gaussian quadrature integrates null information over the covariates, continuous residual and binary outcome. Let q=2f(1-f) with allele frequency f=0.25, and let w be the marginal probit information weight:
 
-### Effect estimation and Monte Carlo uncertainty
+$$w_i=\frac{\phi(\eta_i)^2}{\Phi(\eta_i)\{1-\Phi(\eta_i)\}},\quad J=q\,\operatorname{diag}\{1,E(w_i)\}.$$
+$$V_m=q\begin{pmatrix}1&E(\rho_i w_i)\\E(\rho_i w_i)&E(w_i)\end{pmatrix},\quad I_m=J^{\mathsf T}V_m^{-1}J.$$
 
-Score tests do not themselves supply alternative-model effect estimates. Full constant and varying likelihoods are therefore fitted to the first 30 replicates per primary scenario and first 10 per sensitivity scenario, regardless of significance. Bias and RMSE compare with generating effects. Model and sandwich Wald intervals are evaluated empirically; under misspecification, sandwich covariance need not make intervals cover the generating parameter.
+Here Im is the Godambe information of the stacked marginal scores. The correct joint likelihood gives Ic=q E(Hbase), where Hbase is the observed information for the continuous-mean and probit-predictor pair. Expected orthogonality permits this comparison without a first-order nuisance penalty. For the local effect delta=sqrt(n) beta, the two analytical predictions use
 
-For an empirical rejection rate r across B independent datasets, its estimated Monte Carlo SE is the sample standard deviation of the rejection indicators divided by sqrt(B). Rate and coverage plots use 95% binomial Wilson intervals, which remain informative when all observed indicators are zero or one. Paired comparisons first calculate within-dataset differences, then their mean and Monte Carlo SE; their reported intervals use mean plus or minus 1.96 SE. A zero paired plug-in SE means no observed discordance and does not establish equivalence. These measures describe simulation uncertainty conditional on the frozen calibration bank; calibration-bank variability is not included. Comparisons are descriptive and are not multiplicity-adjusted claims of a globally best method [4].
+$$\lambda_k=\boldsymbol\delta^{\mathsf T}I_k\boldsymbol\delta,\quad \pi_k=\Pr\{\chi^2_2(\lambda_k)>\chi^2_{2,0.95}\}.$$
 
-### Numerical validation and reproducibility
+These are asymptotic nominal-power approximations, not calibrated finite-sample results. Eighty-node quadrature checks the information identity, zero mean scores, independence equality and the nonnegative information difference. Increasing residual quadrature to 120 nodes checks numerical integration separately from the non-smooth age clipping; age-order sensitivity is retained in the controls. Independent R quadrature and finite-difference likelihood Hessians provide an additional validation, with maximum information discrepancy 3.84e-10.
 
-Analytic gradients were checked against finite differences; the maximum discrepancy was 0.00000000004. Controls also checked likelihood normalization, the independence limit, allele-flip invariance and equivalence between the block score construction and an expanded joint Hessian. Independent base-R likelihoods, BFGS optimization and numerical derivatives reproduced score calculations and full-effect estimates; the maximum full-effect difference was 0.000000233.
+### Calibration and uncertainty
 
-The primary simulation engine is Python; R supplies independent numerical validation, not a second set of substituted benchmark results. Source hashes tie the calibration and evaluation outputs to the exact core implementation. An independent audit reconstructs decisions, checks all output hashes, verifies unique evaluation fingerprints and regenerates null and shared datasets in every stratum.
+All calibration datasets are generated before evaluation begins. For a target alpha, let k=floor{alpha(Bcal+1)} with Bcal=5,000. Each method and setting freezes the kth ordered calibration p-value q. Evaluation rejects strictly when p is below q. Under exchangeability and continuous p-values, rejection averaged across calibration banks targets k/(Bcal+1); conditional size with a particular bank can differ. The primary alpha is 0.05, and an independently frozen grid at 0.01, 0.025, 0.05, 0.075 and 0.10 supports operating curves. Evaluation nulls do not select thresholds or tune methods.
+
+Nominal rejection and empirical rejection are reported separately. Conditional rates use Wilson intervals. For rejection indicators R and B evaluation datasets,
+
+$$\widehat{\operatorname{MCSE}}(\hat p)=\sqrt{\hat p(1-\hat p)/B}.$$
+
+Paired contrasts use the mean within-dataset difference and its sample standard deviation divided by the square root of B. To include calibration uncertainty approximately, 400 nonparametric bootstrap replicates resample calibration datasets jointly across all methods, reconstruct cutoffs, and independently resample evaluation datasets jointly across methods. Percentile intervals therefore retain paired comparisons while allowing both sources of sampling variation. They are simulation uncertainty intervals, not clinical confidence intervals or multiplicity-adjusted superiority tests.
+
+Five disjoint calibration subbanks of 1,000 datasets additionally illustrate smaller-bank variation. Their held-out evaluations are shared, so the five resulting rejection rates are correlated. This diagnostic does not estimate variability across independent 5,000-null banks. Bootstrap results remain approximate, particularly for tail cutoffs; neither procedure validates p-values at 5e-8.
+
+### Validation and failure accounting
+
+Oracle scores were checked against an independently assembled expanded Hessian, allele recoding and the independence limit. A separate base-R implementation used the explicit likelihood, BFGS, finite differences and an expanded numerical Hessian. The expanded-Hessian maximum statistic discrepancy was 2.22e-12; the independent R maximum p-value discrepancy was 3.23e-09, and its restricted-fit parameter discrepancy was 5.24e-07.
+
+Every planned dataset and method record remains in the output with its final fitting status. Failures count as non-rejections with attempted and valid denominators reported separately; any failed calibration fit disables its method's empirical cutoff. Interrupted incomplete chunks are regenerated from the same seeds; counts refer to unique planned datasets, rather than computational retries. Chunk hashes, frozen source hashes and dataset fingerprints support resumable computation. A final audit verifies thresholds, checks all checkpoint hashes and regenerates the first dataset of every calibration and evaluation stream. A separate summary audit reconstructs reported decisions, checks Wilson intervals against SciPy, verifies every saved bootstrap quantile and replays selected bootstrap draws. The original engine, protocol, results and figures are checked byte-for-byte against the preserved version-one snapshot.
 
 ## Results
 
-### Numerical agreement and complete accounting
+### Numerical validation and complete accounting
 
-All numerical controls and the independent R check passed. The completed benchmark retained 9920 evaluation datasets with unique fingerprints, 69440 method records and 555520 per-variant scores. Calibration had 0 failed focal scores; evaluation had 0 failed focal scores. There were 0 failed full-effect fits. Complete statuses, rather than only successful runs, remain in the cell output files and the [audit](results/audit.json).
+The main benchmark retained 92,000 datasets, comprising 20,000 calibration nulls, 40,000 held-out nulls and 32,000 alternatives. Nine methods produced 828,000 records. There were 0 recorded failures. All 40 replayed datasets reproduced their fingerprints and score p-values within the audit tolerance. The separate 640-dataset pilot is not included in these counts. Numerical agreement establishes implementation consistency; operating characteristics must be assessed from held-out results.
 
-These checks establish implementation agreement and accounting. They do not establish statistical calibration or external clinical validity.
+### Null calibration
 
-### Held-out null association
+At n=800 with varying dependence, varying-sandwich nominal null rejection was 0.055, and its independently calibrated rejection was 0.048. The corresponding frozen p-value cutoff was 0.0433. The held-out sample measures realised size; calibration does not force this sample to reject exactly 5%.
 
-Under varying Gaussian dependence at n=800, constant-model nominal rejection was 0.070, while varying-sandwich nominal rejection was 0.052 and its calibrated rejection was 0.028. Both the dependence specification and the variance construction must therefore be considered when interpreting power.
+| People | Dependence | Marginal | Constant robust | Varying robust | Known rho robust | All known robust |
+| --- | --- | --- | --- | --- | --- | --- |
+| 800 | constant | 0.057 | 0.058 | 0.058 | 0.057 | 0.053 |
+| 800 | varying | 0.051 | 0.053 | 0.055 | 0.051 | 0.048 |
+| 1600 | constant | 0.052 | 0.050 | 0.050 | 0.051 | 0.049 |
+| 1600 | varying | 0.048 | 0.047 | 0.048 | 0.046 | 0.045 |
 
-|Generating dependence|MargCov nominal|C-model nominal|V-model nominal|V-robust nominal|V-robust calibrated|
-|---|---|---|---|---|---|
-|independent|0.050|0.043|0.048|0.048|0.060|
-|constant|0.077|0.077|0.080|0.085|0.085|
-|varying|0.065|0.070|0.048|0.052|0.028|
-|t_varying|0.037|0.040|0.050|0.045|0.043|
+Table 1. Nominal focal-SNP null rejection at alpha 0.05, based on 10,000 held-out nulls per setting. Robust denotes nuisance-adjusted sandwich variance. Model-based variants are retained in the complete result CSV and figure.
 
-Table 1. Focal-SNP null rejection at n=800, 400 fresh null datasets per environment. MargCov is covariance-aware marginal testing; C and V denote constant and varying dependence. Model and robust denote variance constructions. All methods and n=1,600 results are retained in the summary CSV.
+The figure shows nominal size and Wilson uncertainty for all nine methods. Differences from 0.05 should be interpreted with the 10,000-dataset precision rather than visually treating every deviation as evidence of invalidity.
 
-The figure compares nominal rejection against 0.05 with Monte Carlo uncertainty. A more detailed likelihood should not receive credit for higher power without checking its corresponding null behavior.
+![Nominal null calibration](v2/figures/null_calibration.png)
 
-![Held out null rejection of joint association tests](figures/null_calibration.png)
+Figure 1. Simulated nominal null rejection with 95% Wilson intervals. The dashed reference is 0.05. All known and known rho denote oracle information.
 
-Figure 1. Simulated null rejection; circles and squares distinguish sample sizes. Bars are 95% binomial Wilson intervals. The dashed line is 0.05.
+### Association power below the ceiling
 
-### Association power and paired comparisons
+At n=800 under varying dependence, moderate binary-only power was 0.546 for varying-sandwich testing, 0.467 for constant-sandwich testing and 0.476 for covariance-aware marginal testing. The varying-minus-marginal difference was 0.070, with calibration-aware 95% bootstrap interval 0.041 to 0.100. This is a paired operating-point comparison, not a multiplicity-adjusted superiority finding. Across the displayed practical and robust-oracle alternatives, calibrated power ranged from 0.215 to 0.907. Stronger shared or opposing architectures can still be easier to detect; selected pilot scales do not impose equal power across architectures.
 
-For binary-only effects under varying dependence at n=800, varying-sandwich calibrated power was 0.950, compared with 0.960 for constant-sandwich testing and 0.960 for covariance-aware marginal testing. The varying-minus-constant difference was -0.010 (-0.030 to 0.010), or lower power in this particular setting. Because the frozen banks yielded different held-out null rates, this compares realized operating points and is not proof of an intrinsic efficiency ranking at exactly matched size. Other architectures must be evaluated separately.
+| Signal architecture | Marginal | Constant robust | Varying robust | Known rho robust | All known robust |
+| --- | --- | --- | --- | --- | --- |
+| weak continuous only | 0.230 | 0.217 | 0.242 | 0.250 | 0.248 |
+| weak binary only | 0.270 | 0.273 | 0.328 | 0.329 | 0.322 |
+| weak shared | 0.366 | 0.363 | 0.373 | 0.387 | 0.385 |
+| weak opposing | 0.535 | 0.529 | 0.632 | 0.637 | 0.633 |
+| moderate continuous only | 0.416 | 0.399 | 0.428 | 0.441 | 0.435 |
+| moderate binary only | 0.476 | 0.467 | 0.546 | 0.544 | 0.547 |
+| moderate shared | 0.631 | 0.627 | 0.666 | 0.678 | 0.665 |
+| moderate opposing | 0.809 | 0.803 | 0.889 | 0.888 | 0.882 |
 
-|Effect architecture|Bonferroni|MargCov|C-robust|V-robust|
-|---|---|---|---|---|
-|continuous_only|0.840|0.880|0.860|0.860|
-|binary_only|0.920|0.960|0.960|0.950|
-|shared|0.990|1.000|1.000|1.000|
-|opposing|1.000|1.000|1.000|1.000|
+Table 2. Calibrated focal-SNP power at n=800 with varying dependence, based on 1,000 fresh datasets per alternative. The summary CSV contains nominal power, valid denominators, conditional uncertainty, all nine methods and both sample sizes.
 
-Table 2. Independently calibrated focal-SNP power under varying Gaussian dependence, n=800 and 100 datasets per architecture. The same datasets are used by every method.
+The local-alternative comparison keeps effect magnitudes smaller at n=1,600, so between-sample-size differences reflect both finite-sample estimation and the specified scaling. The figure should not be interpreted as the benefit of increasing sample size while keeping effects fixed.
 
-|Architecture|Reference method|Power difference|95% MC interval|
-|---|---|---|---|
-|continuous_only|Constant sandwich score|0.000|-0.056 to 0.056|
-|continuous_only|Marginal covariance-aware|-0.020|-0.068 to 0.028|
-|binary_only|Constant sandwich score|-0.010|-0.030 to 0.010|
-|binary_only|Marginal covariance-aware|-0.010|-0.030 to 0.010|
-|shared|Constant sandwich score|0.000|0.000 to 0.000|
-|shared|Marginal covariance-aware|0.000|0.000 to 0.000|
-|opposing|Constant sandwich score|0.000|0.000 to 0.000|
-|opposing|Marginal covariance-aware|0.000|0.000 to 0.000|
+![Power under weaker and moderate signals](v2/figures/moderate_power.png)
 
-Table 3. Paired calibrated power differences for varying-sandwich testing under varying dependence at n=800. Intervals quantify conditional Monte Carlo uncertainty; they are not multiplicity-adjusted superiority tests. Zero-width plug-in intervals indicate no observed discordance, not proof of equivalence.
+Figure 2. Calibrated power with 95% conditional Wilson intervals. W and M indicate weaker and moderate strengths; C, B, S and O indicate continuous-only, binary-only, shared and opposing effects. Intervals condition on the frozen 5,000-null calibration banks.
 
-Nominal and calibrated curves are shown together so that apparent gains caused by a different operating point remain visible. Several shared and opposing settings reached near-ceiling power and consequently distinguish the methods weakly. Opposing and shared effects need not have the same information geometry even when their absolute generating coefficients match.
+### Oracle gaps and estimation cost
 
-![Nominal and calibrated association power](figures/association_power.png)
+The known-dependence-sandwich minus varying-sandwich point difference for moderate binary-only power at n=800 with varying dependence was -0.002 (-0.017 to 0.008). The interval includes zero and does not resolve a power gain from knowing dependence. This is not proof of equivalence or a guaranteed oracle ordering. The fully known oracle additionally removes marginal nuisance estimation and changes genotype centring to its known population mean; its contrast therefore cannot be attributed solely to learning rho.
 
-Figure 2. Constant and varying Gaussian dependence at n=800; 100 fresh datasets per alternative. Bars are 95% binomial Wilson intervals. Calibrated curves condition on their separate frozen null banks.
+| People | Contrast | Power difference | 95% bootstrap interval |
+| --- | --- | --- | --- |
+| 800 | Varying minus marginal | 0.070 | 0.041 to 0.100 |
+| 800 | Varying minus constant | 0.079 | 0.051 to 0.110 |
+| 800 | Known rho minus varying | -0.002 | -0.017 to 0.008 |
+| 800 | All known minus varying | 0.001 | -0.014 to 0.013 |
+| 1600 | Varying minus marginal | 0.131 | 0.098 to 0.159 |
+| 1600 | Varying minus constant | 0.121 | 0.085 to 0.150 |
+| 1600 | Known rho minus varying | 0.002 | -0.013 to 0.013 |
+| 1600 | All known minus varying | 0.003 | -0.012 to 0.020 |
 
-### Dependence recovery
+Table 3. Paired calibrated-power differences for moderate binary-only alternatives under varying dependence. The 95% percentile intervals resample both calibration and evaluation datasets; 400 bootstrap replicates support each interval. These descriptive contrasts are not corrected for multiple comparisons.
 
-The Gaussian null environments permit direct comparison with generating rho curves. Constant models cannot represent an age-varying curve by construction; this does not by itself prove that a varying model improves SNP testing. Curve recovery and genetic association performance are separate outcomes.
+The full pattern across signal directions is more informative than a single favourable contrast. Intervals overlapping zero indicate that this experiment does not resolve the sign of the difference at that precision; they do not establish equivalence.
 
-![Recovery of generating conditional dependence](figures/dependence_recovery.png)
+![Oracle and practical paired contrasts](v2/figures/oracle_gaps.png)
 
-Figure 3. Mean fitted curves across Gaussian null datasets at n=800. Shading is 1.96 Monte Carlo SE for the mean curve, not an individual person's uncertainty interval. The t-copula environment is excluded because its latent correlation parameter is not the same as a fitted Gaussian-copula parameter.
+Figure 3. Paired power differences with approximate 95% bootstrap intervals including calibration and evaluation sampling. Oracle superiority is not imposed by construction.
 
-The QQ diagnostics examine the focal SNP across independent null datasets. They do not use eight correlated markers as eight independent Monte Carlo replicates, and their range is insufficient to validate genome-wide significance tails.
+### Calibration uncertainty and operating curves
 
-![Focal SNP null p value diagnostics](figures/score_qq.png)
+Frozen thresholds produce different realised false-positive rates in the independent evaluation sample. The following table makes those operating points explicit for varying dependence at n=800.
 
-Figure 4. Nominal p-values under varying Gaussian and varying t-copula dependence, n=800. The diagonal is a uniform reference; no genome-wide calibration claim is made.
+| Method | Nominal null | Calibrated null | Null cutoff |
+| --- | --- | --- | --- |
+| Marginal | 0.051 | 0.050 | 0.0491 |
+| Constant robust | 0.053 | 0.048 | 0.0455 |
+| Varying robust | 0.055 | 0.048 | 0.0433 |
+| Known rho robust | 0.051 | 0.049 | 0.0474 |
+| All known robust | 0.048 | 0.048 | 0.0488 |
 
-### Effect estimates and interval behavior
+Table 4. Nominal rejection, independently calibrated rejection and frozen p-value cutoffs. All rates use the same 10,000 held-out null datasets within the setting.
 
-Full fits are evaluated without selecting significant SNPs. The table contrasts bias, RMSE and generating-effect coverage in shared and opposing architectures. The small prespecified full-fit sample makes coverage estimates imprecise; values near 1 should not be interpreted as proof of reliable coverage.
+The operating curves connect the five prespecified calibration targets and display their held-out null rejection on the horizontal axis. They permit a broader assessment of power and size without selecting an evaluation-derived threshold. The curves do not demonstrate equality of the true false-positive rates at every plotted point.
 
-|Architecture|Model|Effect scale|Bias|RMSE|Model coverage|Sandwich coverage|
-|---|---|---|---|---|---|---|
-|shared|Constant|continuous|0.007|0.044|1.000|1.000|
-|shared|Constant|probit|-0.009|0.081|1.000|1.000|
-|shared|Varying|continuous|-0.001|0.041|0.967|0.967|
-|shared|Varying|probit|-0.009|0.071|1.000|1.000|
-|opposing|Constant|continuous|-0.003|0.055|0.967|0.967|
-|opposing|Constant|probit|-0.012|0.095|0.967|0.967|
-|opposing|Varying|continuous|-0.001|0.050|1.000|1.000|
-|opposing|Varying|probit|-0.019|0.087|0.967|0.967|
+![Power versus realised false positive rate](v2/figures/power_vs_size.png)
 
-Table 4. Varying Gaussian dependence at n=800; 30 attempted full fits per architecture and model. Coverage denominators include failures as noncoverage. Valid-fit denominators and standard errors are also retained in the effect summary.
+Figure 4. Moderate binary-only power versus held-out null rejection under varying dependence. Each point corresponds to an independently frozen calibration-grid cutoff. The grid was not tuned on these evaluations.
 
-The figure separates model and sandwich intervals. Better variance estimation does not necessarily remove bias from a misspecified dependence model.
+For varying-sandwich moderate binary-only power at n=800, the conditional Wilson interval was 0.515 to 0.577, while the calibration-plus-evaluation bootstrap interval was 0.512 to 0.583. The intervals answer different uncertainty questions; their widths need not be ordered in every realised sample.
 
-![Generating effect interval coverage](figures/effect_interval_coverage.png)
+![Conditional and calibration aware uncertainty](v2/figures/calibration_uncertainty.png)
 
-Figure 5. Prespecified full-model fits under varying Gaussian dependence, n=800. Bars are 95% binomial Wilson intervals; the reference line is 0.95. These are observed simulation coverages, not assertions of finite-sample interval validity.
+Figure 5. Conditional Wilson intervals and approximate calibration-plus-evaluation bootstrap intervals at n=800 with varying dependence. Both refer to independently calibrated rejection at target 0.05.
 
-### Prevalence allele frequency and LD
+Across the five 1,000-null subbanks, the varying-sandwich held-out null rejection at n=800 ranged from 0.037 to 0.058. These observations demonstrate sensitivity to a smaller empirical calibration bank while retaining exactly the same evaluation data.
 
-Lower prevalence and lower allele frequency change the information available for binary-trait association. The LD sensitivity changes correlation among the tested genotypes; it does not evaluate an external LD reference or prove causal-variant identification.
+![Calibration subbank sensitivity](v2/figures/subbank_sensitivity.png)
 
-|Setting|MargCov|C-robust|V-robust|Failures across these arms|
-|---|---|---|---|---|
-|primary|0.960|0.960|0.950|0|
-|low_prevalence|0.733|0.717|0.783|0|
-|high_prevalence|0.967|0.967|1.000|0|
-|low_maf|0.350|0.383|0.400|0|
-|LD|0.950|0.950|0.967|0|
+Figure 6. Independent calibration subbanks of 1,000 null datasets, applied to shared held-out evaluation datasets. Main reported results use the full 5,000-null banks, not an average of these five rates.
 
-Table 5. Calibrated binary-only signal power at n=800 under varying Gaussian dependence. Main design uses 100 alternative datasets; each sensitivity uses 60. Full uncertainty estimates and both dependence environments are available in the summary CSV.
+### Analytical predictions and observed power
 
-Sensitivity results condition on independently calibrated cutoffs in each setting. They therefore compare operating behavior under controlled data-generating settings rather than provide thresholds transferable to an observed cohort.
+The information calculation predicts only small differences from covariance-aware marginal testing under constant dependence. Under varying dependence, the moderate binary-only local-power predictions are 0.575 for the correct joint model and 0.479 for the marginal procedure, with noncentrality ratio 1.248. These predictions indicate that the specified varying-dependence setting contains a potentially useful information gain even when knowing nuisance parameters provides little first-order benefit.
 
-![Sensitivity of binary trait association power](figures/sensitivity_power.png)
+| Architecture | Information ratio | Joint prediction | Marginal prediction | V model nominal | All known model nominal |
+| --- | --- | --- | --- | --- | --- |
+| weak continuous only | 1.142 | 0.253 | 0.226 | 0.266 | 0.253 |
+| weak binary only | 1.248 | 0.332 | 0.273 | 0.374 | 0.371 |
+| weak shared | 1.102 | 0.410 | 0.376 | 0.421 | 0.419 |
+| weak opposing | 1.266 | 0.646 | 0.538 | 0.638 | 0.632 |
+| moderate continuous only | 1.142 | 0.445 | 0.396 | 0.450 | 0.443 |
+| moderate binary only | 1.248 | 0.575 | 0.479 | 0.601 | 0.607 |
+| moderate shared | 1.102 | 0.685 | 0.639 | 0.705 | 0.707 |
+| moderate opposing | 1.266 | 0.907 | 0.825 | 0.890 | 0.882 |
 
-Figure 6. Calibrated power with 95% binomial Wilson intervals. LD denotes the thresholded latent-Gaussian genotype sensitivity, not a measured population LD panel.
+Table 5. Analytical local-power predictions under varying dependence, compared with finite-sample nominal rejection at n=800. Information ratio is joint divided by marginal noncentrality. The prediction is asymptotic and common to both sample sizes under the specified local scaling; observed rates use 1,000 alternatives each. This table uses nominal, rather than empirically calibrated, power to align with the analytical chi-square reference.
 
-### Computational cost
+The figure checks whether nominal finite-sample behaviour approaches the analytical predictions across sample sizes and effect directions. Differences can arise from finite-sample estimation, the local approximation and realised nominal size. The prediction does not replace independent null calibration or justify a universal power claim.
 
-Null reuse avoids a separate full optimization for every marker. The measured workload nevertheless contains only eight variants, so the timing experiment cannot substantiate million-SNP scalability.
+![Analytical information and observed nominal power](v2/figures/information_predictions.png)
 
-|People|Shared computation|Seconds|
-|---|---|---|
-|800|Marginal covariance-aware|0.0438|
-|800|Constant model score|0.0591|
-|800|Varying model score|0.0655|
-|1600|Marginal covariance-aware|0.0557|
-|1600|Constant model score|0.0781|
-|1600|Varying model score|0.0865|
-
-Table 6. Mean measured time for a shared null fit and its eight-marker score scan, averaged across primary null environments. Marginal procedures share one computation; model and sandwich variants also share fitted models and derivatives. Full effect fits and R startup are excluded.
-
-The timings were obtained with two concurrent workers on the local computer and include process competition and implementation overhead. They are not a universal speed ranking.
-
-![Measured null fitting and scan time](figures/runtime.png)
-
-Figure 7. Hardware-specific seconds for the shared null-fit/scan computations at the two primary sample sizes.
+Figure 7. Analytical local-power predictions and observed nominal rejection with 95% Wilson intervals. Joint predictions correspond to the correct Gaussian dependence model; both oracle and fitted varying-model nominal rates are displayed. The analytical diagnostic did not select or tune the main experiment.
 
 ## Discussion
 
-The design separates three questions often conflated in multivariate GWAS: whether a likelihood is computed correctly, whether its p-values have the intended null behavior, and whether it detects a specified alternative more efficiently than a suitable comparator. Independent R agreement addresses the first question; held-out null simulations address the second; paired nominal and calibrated power address the third.
+This second experiment makes the comparison more informative by reducing ceiling effects, increasing calibration precision and defining oracle procedures that remove specific nuisance-estimation burdens. The observed pattern supports a conditional benefit: several varying-dependence alternatives favour the correctly specified joint approach, whereas constant-dependence differences are small. Oracle and fitted varying tests have close point estimates in these settings. A fitted dependence curve and a useful association test remain different objectives, but the current experiment identifies circumstances in which their gains align.
 
-Covariate-dependent dependence is useful only insofar as its additional parameters improve relevant operating characteristics at a defensible computational cost. Accurate recovery of a generating rho curve is not sufficient evidence for better SNP discovery. Conversely, covariance-aware marginal testing can remain an important benchmark even when it does not specify the full outcome distribution.
+The known-dependence contrast isolates the effect of estimating dependence coefficients within the specified Gaussian model, including finite-sample differences in observed information and empirical thresholds. Small or unresolved gaps imply little demonstrated practical gain from eliminating that estimation burden in the studied setting. Larger gaps would identify a reason to investigate more efficient or regularised dependence estimation, but would not alone establish a generally superior test.
 
-The sandwich construction adjusts variability using nuisance-projected individual scores. It still requires regularity and an appropriate null score expectation. It cannot automatically correct population structure, outcome-dependent sampling, omitted genetic background, missingness or an incorrect interpretation of the tested estimand.
+The expected-score orthogonality derived above gives an additional reason not to anticipate a large oracle advantage here: estimating more nuisance coefficients is not automatically a first-order information penalty for the genetic score. Thus a small oracle gap would be compatible with the design's mathematics, rather than evidence that the oracle was implemented unsuccessfully. To distinguish practical dependence models, the relevant information gain can instead depend on how each method weights observations and genetic-effect directions.
 
-The empirical cutoffs facilitate a diagnostic comparison at approximately comparable average null operating points. Their finite-bank variability remains visible in held-out rejection rates, and their conditional uncertainty is not the same as a guarantee across future cohorts. Clinical GWAS would need a separate calibration and validation strategy.
+The analytical information calculation makes that distinction concrete: the theoretical gain over marginal testing is small with the specified constant correlation and larger for several directions under age-varying correlation. A small oracle-versus-fitted gap can therefore coexist with a meaningful joint-versus-marginal gain. The observed results must still be assessed with their uncertainty and null behaviour before translating that conditional pattern into a methodological conclusion.
 
-The observed effects of dependence specification must be interpreted alongside full-fit bias and interval coverage. Under model misspecification, a robust variance can estimate variability around a pseudo-true parameter rather than restore the generating effect. Nothing in this experiment establishes that a SNP acts on both diseases, identifies a shared causal allele in LD, or demonstrates a causal relationship between the outcomes.
+Covariance-aware marginal testing remains a demanding comparator because it uses cross-outcome score covariance without requiring a fully correct joint distribution. Adding dependence parameters can improve the joint likelihood while contributing little additional information for a particular genetic-effect direction. Conversely, favourable copula contrasts should be evaluated against their realised null rejection and calibration-aware uncertainty before being interpreted as efficiency gains.
+
+The oracle methods deliberately receive unavailable generating information. Their performance is diagnostic and should not be presented as an achievable analysis of patient data. Correct-model information may motivate asymptotic efficiency arguments, but observed finite-sample power need not follow a universal oracle ordering, especially after separate empirical calibration.
+
+The original negative findings remain preserved rather than replaced. The new local alternatives and fixed null intercept define a distinct experiment, so differences from version one are not evidence that a single isolated change caused an improvement. The present work still does not benchmark an external published copula package. Region-level CBMAT [3] requires a separate genetic architecture and aligned region-level null before a fair direct comparison.
 
 ## Limitations
 
-The study uses fully synthetic independent people, a small common-SNP panel and standardized outcome models. There are no background polygenic effects, relatedness, ancestry differences, population stratification, missing phenotypes, genotype uncertainty, medication effects, ordinal outcomes or case-control ascertainment. MAF 0.05 is not a rare-variant benchmark. The t-copula experiment is one controlled misspecification, not a comprehensive robustness assessment.
+The main extension intentionally concentrates on correctly specified Gaussian models, one common focal SNP and independent people. It does not introduce empirical LD references, polygenic background, relatedness, ancestry effects, missing phenotypes, ascertainment or diagnosis misclassification. The original t-copula sensitivity remains available in version one; it was not expanded here. Results cannot establish robustness to those omitted conditions. Analytical information predictions depend on the same correct model and use a local asymptotic approximation; they are not independent evidence of real-world validity.
 
-Only a restricted linear dependence predictor is assessed. The study does not establish novelty of covariate-dependent copula regression, and external CBMAT or ApproxCopula software was not benchmarked. A variant-set method requires a different matching hypothesis before comparison. A future software comparison should be independently specified rather than used to select favorable results from the current simulation.
+Five thousand calibration nulls improve central-tail precision but do not validate genome-wide significance. Four hundred bootstrap replicates provide approximate simulation intervals rather than precise extreme quantiles. Calibration subbanks are smaller than the main banks and share evaluations. Only four core settings and two pilot-selected local strengths were tested; power can remain high for some architectures. Effect-estimation and interval-coverage analyses from version one remain available, but new full-effect estimation was not added to this score-comparison stage.
 
-Per-stratum Monte Carlo precision is limited, particularly for 60- or 100-dataset power estimates and 30 full-effect fits. Several primary alternatives have near-ceiling power; smaller effects need a separately specified experiment. Calibration-bank uncertainty is not included in evaluation intervals. Wald intervals and asymptotic score references are evaluated empirically rather than presumed reliable near boundaries or with sparse cases. Neither the number of markers nor the number of null replicates supports calibration claims at 5e-8.
+No clinical data are analysed. A phenotype-dependence parameter cannot separate background genetic correlation from environmental comorbidity without explicit additional structure. This study makes no causal claim, no claim of novel copula regression and no assertion of submission readiness.
 
 ## Conclusion
 
-This reproducible simulation evaluates constant and covariate-dependent Gaussian-copula association scores with explicit nuisance adjustment, alongside covariance-aware marginal alternatives. The contribution is a transparent implementation and assessment of conditions under which dependence modelling changes size, power, effect estimation and cost. Findings are conditional on the simulated design and do not establish a universally superior GWAS method or a clinical discovery.
+The revised simulation identifies power gains under several age-varying dependence alternatives, small practical differences under constant dependence and little resolved gain from supplying the true dependence coefficients. These findings are consistent with the analytical information comparison and expected score orthogonality. They support a conditional advantage for modelling heterogeneous dependence within the specified Gaussian design, rather than a generally superior GWAS procedure. Further evaluation should introduce separately prespecified misspecification and genetic-background scenarios.
 
 ## Reproducibility
 
-Python 3.12.14 with NumPy 2.3.5, SciPy 1.18.1 and Matplotlib 3.11.2 runs the benchmark. Base R 4.5.1 and jsonlite independently validate likelihoods, derivatives and selected calculations. The tested host is Windows; two worker processes keep memory use modest. Linux execution uses the same Python/R scripts but has not been separately tested here.
+All new scientific outputs are under v2. The original source, protocol, cells, figures and original Word report retain their original bytes; a complete version-one snapshot is linked above. Python runs the simulations, and R supplies independent numerical validation. The full experiment ran natively on Windows, with project files on the Toshiba drive. Calibration began with three workers, then resumed with two to reduce memory pressure, retaining verified completed chunks and unchanged sources and design. Independent [Linux numerical and smoke checks](https://github.com/Vusumuzi2Mabasa/CardioMental-Copula-GWAS/actions/runs/40779093512) passed on GitHub's Ubuntu runner at commit f066cbc, including the independent R likelihood and expected-information checks. The full 92,000-dataset experiment was not repeated on Linux.
 
-Install dependencies in an isolated Python environment; never load personal R startup files. From the repository root:
+From the repository root, after creating an isolated Python environment and installing requirements.txt and R jsonlite:
 
 ```bash
-python -m venv .venv
-# Linux: source .venv/bin/activate
-# Windows PowerShell: .\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-Rscript --vanilla -e 'install.packages("jsonlite", repos="https://cloud.r-project.org")'
-python src/test_model.py
-Rscript --vanilla src/crosscheck.R .
-python src/benchmark.py --smoke
-python src/benchmark.py --workers 2
-python src/audit.py
-python src/analyse.py
-python src/manuscript.py
-python src/build_word.py --pandoc /path/to/pandoc
+python v2/src/test_oracle.py
+Rscript --vanilla v2/src/crosscheck.R v2
+# Published pilot outputs and their source lock are already frozen.
+# Run a new pilot only in a separate checkout with a new versioned design.
+python v2/src/freeze.py
+python v2/src/run.py --smoke --workers 2
+python v2/src/run.py --workers 2
+python v2/src/information.py
+Rscript --vanilla v2/src/information_check.R v2
+python v2/src/audit.py
+python v2/src/analyse.py
+python v2/src/summary_audit.py
+python v2/src/manuscript.py
+python v2/src/build_word.py --pandoc /path/to/pandoc
 ```
 
-Pandoc distributed with Quarto converts the shared manuscript into Word with editable Office Math. The report builder retains the author name and interpretations before figures. A separate rendered-page review checks the delivered document.
+Completed chunks resume only when source and output hashes agree. To perform a genuinely fresh main simulation, archive the whole v2/results/chunks directory and its thresholds.json together outside the checkout before rerunning. Do not mix chunks, sources or thresholds across protocols. Existing publication checksums authenticate the delivered snapshot; rerunning computations changes timing and Word metadata, so a new publication requires a new manifest and rendered-page review. The audit verifies statistical reproducibility through seeds and numerical agreement rather than identical elapsed times.
 
-Completed cells resume only when source/protocol hashes and output hashes agree. For a genuinely fresh execution, archive the entire results/cells directory outside the checkout before rerunning; do not mix source versions or designs. Calibration and evaluation seeds are 28101941 and 28101942. Dataset-level outputs, threshold freezes, software versions, numerical controls and audit records are public. Timing fields and Word ZIP timestamps can differ on reproduction.
-
-The SHA-256 manifest authenticates the published snapshot. Scientific reproduction is assessed through the deterministic seed specification and numerical audit, not by requiring identical execution times. The workflow text gives the same commands and execution scope.
+Pandoc distributed with Quarto converts this shared manuscript to Word with native editable equations, the author name and interpretations before figures. Word pagination and all figure/table placements are checked visually after rendering. The original analysis commands belong to the preserved version-one archive; the current workflow.txt describes this second experiment.
 
 ## References
 
 1. de Leon AR, Wu B. Copula-based regression models for a bivariate mixed discrete and continuous outcome. Statistics in Medicine 30, 175–185 (2011). [doi:10.1002/sim.4087](https://doi.org/10.1002/sim.4087).
-2. St-Pierre J, Oualkacha K. A copula-based set-variant association test for bivariate continuous, binary or mixed phenotypes. International Journal of Biostatistics 19, 369–387 (2023; online 2022). [doi:10.1515/ijb-2022-0010](https://doi.org/10.1515/ijb-2022-0010).
-3. Ji SS, Chu BB, Zhou H, Lange K. An approximate-copula distribution for statistical modeling. PLOS Computational Biology 22, e1013922 (2026). [doi:10.1371/journal.pcbi.1013922](https://doi.org/10.1371/journal.pcbi.1013922).
-4. Morris TP, White IR, Crowther MJ. Using simulation studies to evaluate statistical methods. Statistics in Medicine 38, 2074–2102 (2019). [doi:10.1002/sim.8086](https://doi.org/10.1002/sim.8086).
+2. Morris TP, White IR, Crowther MJ. Using simulation studies to evaluate statistical methods. Statistics in Medicine 38, 2074–2102 (2019). [doi:10.1002/sim.8086](https://doi.org/10.1002/sim.8086).
+3. St-Pierre J, Oualkacha K. A copula-based set-variant association test for bivariate continuous, binary or mixed phenotypes. International Journal of Biostatistics 19, 369–387 (2023; online 2022). [doi:10.1515/ijb-2022-0010](https://doi.org/10.1515/ijb-2022-0010).

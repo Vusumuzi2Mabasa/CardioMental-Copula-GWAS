@@ -1,0 +1,13 @@
+{
+  "cell": 3,
+  "phase": "calibration",
+  "scenario": "null",
+  "start": 4700,
+  "stop": 4800,
+  "rows": 900,
+  "failures": 0,
+  "code_sha256": "fa6e25dac5855ce8fce522713a9762d5fec52efe4a5442d0e149fcc002cf045b",
+  "csv_sha256": "a445ad64568da32a6ae7126a12964e922d4ddb427618f012eb44bcd09296e6bb",
+  "seconds": 24.11971499992069,
+  "completed_utc": "2026-10-28T21:12:50.498365+00:00"
+}

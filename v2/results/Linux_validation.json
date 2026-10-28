@@ -1,17 +1,17 @@
 {
   "passed": true,
   "repository": "Vusumuzi2Mabasa/CardioMental-Copula-GWAS",
-  "commit": "f12ecba7e57069599c58e974046ddab906b17400",
-  "run_id": 40772639025,
-  "url": "https://github.com/Vusumuzi2Mabasa/CardioMental-Copula-GWAS/actions/runs/40772639025",
-  "completed_at": "2026-10-28T21:32:31Z",
+  "commit": "f066cbcde8bb858461a4315dabe753e5cb0f788d",
+  "run_id": 40779093512,
+  "url": "https://github.com/Vusumuzi2Mabasa/CardioMental-Copula-GWAS/actions/runs/40779093512",
+  "completed_at": "2026-10-28T22:20:58Z",
   "runner": "GitHub hosted Ubuntu",
   "scope": [
     "Oracle numerical controls",
     "Independent base R likelihood validation",
     "Small independent benchmark",
     "Expected information identities and local power",
-    "Independent R quadrature and expected Hessian"
+    "Independent R joint Hessian and marginal Godambe integration"
   ],
   "full_simulation_executed_on_linux": false
 }

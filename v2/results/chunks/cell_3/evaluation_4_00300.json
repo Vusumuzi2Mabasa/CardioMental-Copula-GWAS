@@ -1,0 +1,13 @@
+{
+  "cell": 3,
+  "phase": "evaluation",
+  "scenario": "weak_opposing",
+  "start": 300,
+  "stop": 400,
+  "rows": 900,
+  "failures": 0,
+  "code_sha256": "fa6e25dac5855ce8fce522713a9762d5fec52efe4a5442d0e149fcc002cf045b",
+  "csv_sha256": "c0be02239b23d39f3e735db64d68255003411287fd3d58791603f795b4d8f5e7",
+  "seconds": 14.678184400079772,
+  "completed_utc": "2026-10-28T22:43:59.818246+00:00"
+}

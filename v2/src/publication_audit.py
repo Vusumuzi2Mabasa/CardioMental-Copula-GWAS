@@ -15,7 +15,8 @@ def main():
     assert d.core_properties.author=='Vusumuzi Mabasa'
     assert len(d.inline_shapes)==7 and [len(t.rows) for t in d.tables]==[5,9,9,6,9]
     with zipfile.ZipFile(document) as z:xml=z.read('word/document.xml').decode()
-    assert xml.count('<m:oMath>')>=10
+    assert xml.count('<m:oMath>')==14
+    assert not any(token in ' '.join(p.text for p in d.paragraphs) for token in ['\\quad','\\mathrm','\\frac']), 'Unconverted TeX in Word text'
     words=' '.join(p.text for p in d.paragraphs)
     assert 'synthetic' in words.lower() and 'Genomic SEM analyses' in words and '92,000' in words
     assert all(r.target_ref.startswith(('https://','http://','#')) for r in d.part.rels.values() if r.reltype.endswith('/hyperlink'))
@@ -51,9 +52,9 @@ def main():
                 figures=7,tables=5,native_math=True,author='Vusumuzi Mabasa',rendered_pages=visual['pages'],
                 baseline_preserved=True,credential_scan_passed=True)
     if args.write:
-        name='v2/results/publication_audit.json';(ROOT/name).write_text(json.dumps(result,indent=2)+'\n')
+        name='v2/results/publication_audit.json';(ROOT/name).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8',newline='\n')
         if name not in paths:paths.append(name)
-        (ROOT/'checksums_public.sha256').write_text('\n'.join(f'{sha(ROOT/p)}  {p}' for p in sorted(paths) if p!='checksums_public.sha256')+'\n')
+        (ROOT/'checksums_public.sha256').write_text('\n'.join(f'{sha(ROOT/p)}  {p}' for p in sorted(paths) if p!='checksums_public.sha256')+'\n',encoding='utf-8',newline='\n')
         print('PASS wrote publication audit and',len(paths)-1,'public checksums')
     else:
         names=[]
