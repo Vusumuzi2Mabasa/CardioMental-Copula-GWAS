@@ -127,7 +127,7 @@ def main():
         ax.set_xlabel('Held-out null rejection');ax.set_ylabel('Moderate binary-only power');ax.set_title(f"Varying dependence | n={cell['n']}");ax.legend(fontsize=12)
     fig.suptitle('SIMULATED data | operating curves from frozen calibration grid; no evaluation tuning')
     fig.tight_layout();save(fig,'power_vs_size.png')
-    fig,axes=plt.subplots(1,2,figsize=(12,4.6),sharey=True)
+    fig,axes=plt.subplots(1,2,figsize=(12,4.6))
     for ax,scenario in zip(axes,['null','moderate_binary_only']):
         cell=cells()[1]
         for jj,j in enumerate(SHOW):
@@ -139,7 +139,7 @@ def main():
     from matplotlib.lines import Line2D
     fig.legend(handles=[Line2D([0],[0],color='#333333',label='Conditional Wilson'),Line2D([0],[0],color='#b84b4b',label='Calibration plus evaluation bootstrap')],loc='upper center',ncol=2,bbox_to_anchor=(.5,1.0))
     fig.suptitle('SIMULATED varying dependence | n=800',y=1.07);fig.tight_layout();save(fig,'calibration_uncertainty.png')
-    fig,axes=plt.subplots(1,2,figsize=(12,4.5),sharey=True)
+    fig,axes=plt.subplots(1,2,figsize=(12,4.5))
     for ax,scenario in zip(axes,['null','moderate_binary_only']):
         for j,color in zip(SHOW,COLORS):
             z=[r for r in banks if r['id']==1 and r['scenario']==scenario and r['method']==METHODS[j]]

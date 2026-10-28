@@ -59,7 +59,7 @@ def main():
 
 **Simulation study.** All phenotypes, covariates and genotypes are synthetic. The continuous outcome is cardiometabolic-like and the binary outcome is mental-health-like; neither is an observed clinical measurement or diagnosis. No patient data, AWI-Gen data or Genomic SEM analyses are used.
 
-[Word manuscript](report/CardioMental_Copula_GWAS_Report_v2.docx) | [Original study and complete archive](baseline/README.md) | [Second benchmark protocol](v2/protocol/design.json) | [Audited results](v2/results/audit.json) | [Full workflow](workflow.txt)
+[Word manuscript](report/CardioMental_Copula_GWAS_Report_v2.docx) | [Original study and complete archive](baseline/README.md) | [Second benchmark protocol](v2/protocol/design.json) | [Full statistical estimates](v2/results/summary.csv) | [Audited results](v2/results/audit.json) | [Full workflow](workflow.txt)
 
 <!-- manuscript -->
 

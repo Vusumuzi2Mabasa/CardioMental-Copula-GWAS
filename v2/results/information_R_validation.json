@@ -3,5 +3,6 @@
   "R": "4.5.1",
   "quadrature_nodes": 80,
   "expected_Hessian_max_error": 3.8429e-10,
-  "approach": "Independent Jacobi eigenvalue quadrature and finite-difference log likelihood Hessian"
+  "marginal_Godambe_max_error": 3.142e-10,
+  "approach": "Independent Jacobi eigenvalue quadrature, finite-difference likelihood Hessian, marginal score covariance and sensitivity"
 }
