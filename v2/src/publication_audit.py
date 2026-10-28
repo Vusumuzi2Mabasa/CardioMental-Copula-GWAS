@@ -8,6 +8,8 @@ def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--write',action='store_true');args=ap.parse_args()
     audit=json.loads((ROOT/'v2/results/audit.json').read_text());assert audit['passed'] and audit['baseline_bytes_preserved']
+    assert json.loads((ROOT/'v2/results/summary_audit.json').read_text())['passed']
+    assert json.loads((ROOT/'v2/results/Linux_validation.json').read_text())['passed']
     text=(ROOT/'README.md').read_text(encoding='utf-8');assert not re.search(r'@[A-Z_]+@',text)
     document=ROOT/'report/CardioMental_Copula_GWAS_Report_v2.docx';d=Document(document)
     assert d.core_properties.author=='Vusumuzi Mabasa'

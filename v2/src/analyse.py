@@ -12,7 +12,7 @@ from oracle import METHODS
 SHORT=['Marginal','C model','C robust','V model','V robust','Known rho model','Known rho robust','All known model','All known robust']
 SHOW=[0,2,4,6,8]
 COLORS=['#222222','#4679a6','#29958c','#a05b9c','#bb4949']
-plt.rcParams.update({'font.size':12,'axes.spines.top':False,'axes.spines.right':False,'legend.fontsize':10})
+plt.rcParams.update({'font.size':14,'axes.spines.top':False,'axes.spines.right':False,'legend.fontsize':12})
 
 def ci(p,n):
     z=norm.ppf(.975);den=1+z*z/n;c=(p+z*z/(2*n))/den;h=z*np.sqrt(p*(1-p)/n+z*z/(4*n*n))/den
@@ -23,7 +23,7 @@ def save(fig,name):
 def main():
     audit=json.loads((ROOT/'results/audit.json').read_text());assert audit['passed']
     cfg=config();frozen=json.loads((ROOT/'results/thresholds.json').read_text())['thresholds']
-    summaries=[];pairs=[];bootrows=[];banks=[];runtime=[];lookup={};bootlookup={}
+    summaries=[];pairs=[];bootrows=[];banks=[];runtime=[];lookup={};bootlookup={};draws={}
     contrasts=[(4,0),(4,2),(6,4),(8,4),(7,3),(5,3)]
     for cell in cells():
         cal=load(cell,'calibration','null');ss=scenarios(cell)
@@ -40,6 +40,7 @@ def main():
                 a=arrays[s['name']];ex=rng.integers(0,a['n'],a['n'])
                 br[s['name']][b]=np.mean((a['p'][ex]<cut)&a['good'][ex],axis=0)
                 br[s['name']][b,~np.isfinite(cut)]=np.nan
+        draws['cell_'+str(cell['id'])]=np.stack([br[s['name']] for s in ss],axis=1)
         for s in ss:
             name=s['name'];a=arrays[name];n=a['n'];valid=a['good'].sum(0);fail=n-valid
             for alpha in cfg['alpha_grid']:
@@ -79,6 +80,7 @@ def main():
         for j,m in enumerate(METHODS):runtime.append(dict(**meta(cell),method=m,mean_seconds=float(arrays['null']['seconds'][:,j].mean())))
         print('Summarised cell',cell['id'],flush=True)
     for name,rows in [('summary.csv',summaries),('paired_contrasts.csv',pairs),('calibration_aware_intervals.csv',bootrows),('subbank_sensitivity.csv',banks),('runtime.csv',runtime)]:write(ROOT/'results'/name,rows)
+    np.savez_compressed(ROOT/'results/bootstrap_draws.npz',**draws)
     # Main nominal null calibration includes model and sandwich versions.
     fig,axes=plt.subplots(2,2,figsize=(13,8),sharey=True)
     for ax,cell in zip(axes.flat,cells()):
@@ -111,7 +113,7 @@ def main():
             ax.vlines(xx,[r['calibration_aware_lower'] for r in rr],[r['calibration_aware_upper'] for r in rr],color=color,lw=1)
             ax.scatter(xx,[r['difference'] for r in rr],s=12,color=color,label=SHORT[j]+' minus '+SHORT[k])
         ax.axhline(0,color='gray',ls='--');ax.set_xticks(range(8),labels,rotation=25);ax.set_ylabel('Paired power difference');ax.set_title(f"n={cell['n']} | {cell['environment']}")
-    axes[0,0].legend(fontsize=9);fig.suptitle('SIMULATED data | 95% paired bootstrap intervals include calibration and evaluation sampling')
+    axes[0,0].legend(fontsize=12);fig.suptitle('SIMULATED data | 95% paired bootstrap intervals include calibration and evaluation sampling')
     fig.tight_layout();save(fig,'oracle_gaps.png')
     fig,axes=plt.subplots(1,2,figsize=(12,4.5),sharey=True)
     for ax,cell in zip(axes,[cells()[1],cells()[3]]):
@@ -122,7 +124,7 @@ def main():
                 alt=next(r for r in summaries if r['id']==cell['id'] and r['method']==METHODS[j] and r['scenario']=='moderate_binary_only' and r['alpha']==alpha)
                 xx.append(null['calibrated_rate']);yy.append(alt['calibrated_rate'])
             ax.plot(xx,yy,marker='o',ms=3,color=color,label=SHORT[j])
-        ax.set_xlabel('Held-out null rejection');ax.set_ylabel('Moderate binary-only power');ax.set_title(f"Varying dependence | n={cell['n']}");ax.legend(fontsize=9)
+        ax.set_xlabel('Held-out null rejection');ax.set_ylabel('Moderate binary-only power');ax.set_title(f"Varying dependence | n={cell['n']}");ax.legend(fontsize=12)
     fig.suptitle('SIMULATED data | operating curves from frozen calibration grid; no evaluation tuning')
     fig.tight_layout();save(fig,'power_vs_size.png')
     fig,axes=plt.subplots(1,2,figsize=(12,4.6),sharey=True)
@@ -142,7 +144,7 @@ def main():
         for j,color in zip(SHOW,COLORS):
             z=[r for r in banks if r['id']==1 and r['scenario']==scenario and r['method']==METHODS[j]]
             ax.plot([r['bank']+1 for r in z],[r['evaluation_rate'] for r in z],marker='o',color=color,label=SHORT[j])
-        ax.set_xticks(range(1,6));ax.set_xlabel('Independent calibration subbank of 1,000');ax.set_ylabel('Held-out rejection');ax.set_title(scenario.replace('_',' ').title());ax.legend(fontsize=9)
+        ax.set_xticks(range(1,6));ax.set_xlabel('Independent calibration subbank of 1,000');ax.set_ylabel('Held-out rejection');ax.set_title(scenario.replace('_',' ').title());ax.legend(fontsize=12)
     fig.suptitle('SIMULATED varying dependence | n=800 | shared held-out evaluations across subbanks');fig.tight_layout();save(fig,'subbank_sensitivity.png')
     prediction=read(ROOT/'results/information_predictions.csv')
     fig,axes=plt.subplots(2,2,figsize=(13,8),sharey=True)
@@ -156,7 +158,7 @@ def main():
                 yerr=[[r['nominal_rate']-r['nominal_lower'] for r in rr],[r['nominal_upper']-r['nominal_rate'] for r in rr]],
                 fmt='o',ms=3,capsize=1,color=color,label=SHORT[j]+' nominal')
         ax.set_xticks(range(8),labels,rotation=25);ax.set_ylabel('Nominal association power');ax.set_ylim(0,1.03);ax.set_title(f"n={cell['n']} | {cell['environment']}")
-    axes[0,0].legend(fontsize=9);fig.suptitle('SIMULATED data | asymptotic information predictions and finite-sample nominal power')
+    axes[0,0].legend(fontsize=12);fig.suptitle('SIMULATED data | asymptotic information predictions and finite-sample nominal power')
     fig.tight_layout();save(fig,'information_predictions.png')
     import scipy
     result=dict(python=sys.version.split()[0],numpy=np.__version__,scipy=scipy.__version__,matplotlib=matplotlib.__version__,platform=platform.platform(),

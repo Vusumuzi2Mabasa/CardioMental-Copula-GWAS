@@ -9,7 +9,9 @@ def read(name):
 def table(headers,rows):return '\n'.join(['| '+' | '.join(headers)+' |','| '+' | '.join(['---']*len(headers))+' |']+['| '+' | '.join(str(v) for v in r)+' |' for r in rows])
 def main():
     audit=json.loads((ROOT/'results/audit.json').read_text());assert audit['passed']
+    assert json.loads((ROOT/'results/summary_audit.json').read_text())['passed']
     cfg=json.loads((ROOT/'protocol/design.json').read_text());pilot=json.loads((ROOT/'results/pilot_selection.json').read_text())
+    linux=json.loads((ROOT/'results/Linux_validation.json').read_text());assert linux['passed']
     summary=read('summary.csv');pairs=read('paired_contrasts.csv');boot=read('calibration_aware_intervals.csv');banks=read('subbank_sensitivity.csv')
     predictions=read('information_predictions.csv')
     def r(cid,sc,m):return next(z for z in summary if int(z['id'])==cid and z['scenario']==sc and z['method']==m and float(z['alpha'])==.05)
@@ -176,7 +178,7 @@ Five disjoint calibration subbanks of 1,000 datasets additionally illustrate sma
 
 Oracle scores were checked against an independently assembled expanded Hessian, allele recoding and the independence limit. A separate base-R implementation used the explicit likelihood, BFGS, finite differences and an expanded numerical Hessian. @NUMERICAL@
 
-Every attempted fit remains in the output. Failures count as non-rejections with attempted and valid denominators reported separately; any failed calibration fit disables its method's empirical cutoff. Chunk hashes, frozen source hashes and dataset fingerprints support resumable computation. A final audit verifies thresholds, checks all checkpoint hashes and regenerates the first dataset of every calibration and evaluation stream. The original engine, protocol, results and figures are checked byte-for-byte against the preserved version-one snapshot.
+Every attempted fit remains in the output. Failures count as non-rejections with attempted and valid denominators reported separately; any failed calibration fit disables its method's empirical cutoff. Chunk hashes, frozen source hashes and dataset fingerprints support resumable computation. A final audit verifies thresholds, checks all checkpoint hashes and regenerates the first dataset of every calibration and evaluation stream. A separate summary audit reconstructs reported decisions, checks Wilson intervals against SciPy, verifies every saved bootstrap quantile and replays selected bootstrap draws. The original engine, protocol, results and figures are checked byte-for-byte against the preserved version-one snapshot.
 
 ## Results
 
@@ -296,7 +298,7 @@ The revised simulation provides a reproducible assessment of dependence-estimati
 
 ## Reproducibility
 
-All new scientific outputs are under v2. The original source, protocol, cells, figures and original Word report retain their original bytes; a complete version-one snapshot is linked above. Python runs the simulations, and R supplies independent numerical validation. The tested host is Windows on Toshiba. Calibration began with three workers, then resumed with two to reduce memory pressure, retaining verified completed chunks and unchanged sources and design. Linux portability is intended but not separately executed here.
+All new scientific outputs are under v2. The original source, protocol, cells, figures and original Word report retain their original bytes; a complete version-one snapshot is linked above. Python runs the simulations, and R supplies independent numerical validation. The full experiment ran on Windows on Toshiba. Calibration began with three workers, then resumed with two to reduce memory pressure, retaining verified completed chunks and unchanged sources and design. @LINUX@
 
 From the repository root, after creating an isolated Python environment and installing requirements.txt and R jsonlite:
 
@@ -312,6 +314,7 @@ python v2/src/information.py
 Rscript --vanilla v2/src/information_check.R v2
 python v2/src/audit.py
 python v2/src/analyse.py
+python v2/src/summary_audit.py
 python v2/src/manuscript.py
 python v2/src/build_word.py --pandoc /path/to/pandoc
 ```
@@ -339,9 +342,10 @@ Pandoc distributed with Quarto converts this shared manuscript to Word with nati
              'SUBBANKRANGE':f'{min(sub):.3f} to {max(sub):.3f}'}
     replace.update(INFOTABLE=infotable,INFOERROR=f"{audit['expected_information_R']['expected_Hessian_max_error']:.3g}",
                    JOINTPRED=f(theoretical,'joint_asymptotic_power'),MARGPRED=f(theoretical,'marginal_asymptotic_power'),INFORATIO=f(theoretical,'information_ratio'))
+    replace['LINUX']=f"Independent [Linux numerical and smoke checks]({linux['url']}) passed on GitHub's Ubuntu runner at commit {linux['commit'][:7]}, including the independent R likelihood and expected-information checks. The full 92,000-dataset experiment was not repeated on Linux."
     for key,value in replace.items():text=text.replace('@'+key+'@',value)
-    (REPO/'README.md').write_text(text.lstrip(),encoding='utf-8')
+    (REPO/'README.md').write_text(text.lstrip(),encoding='utf-8',newline='\n')
     commands=text.split('```bash\n',1)[1].split('```',1)[0]
-    (REPO/'workflow.txt').write_text('CardioMental Copula GWAS version two\nAuthor: Vusumuzi Mabasa\nFully synthetic data; no Genomic SEM.\n\n'+commands+'\nDesign and mathematical methods: README.md and v2/protocol/design.json\nBaseline: baseline/CardioMental_v1_48aa582.zip and original root results.\nThe v2 runner resumes only matching chunks and freezes calibration before evaluation.\nTo rerun from scratch, archive v2/results/chunks AND v2/results/thresholds.json together.\nReport requires Pandoc (available with Quarto), python-docx and visual rendering QA.\nR is always invoked with --vanilla. Never load personal R startup files.\nNo 5e-8 calibration or genome-wide scan claim.\n',encoding='utf-8')
+    (REPO/'workflow.txt').write_text('CardioMental Copula GWAS version two\nAuthor: Vusumuzi Mabasa\nFully synthetic data; no Genomic SEM.\n\n'+commands+'\nMonitor without examining results: python v2/src/status.py\nDesign and mathematical methods: README.md and v2/protocol/design.json\nBaseline: baseline/CardioMental_v1_48aa582.zip and original root results.\nThe v2 runner resumes only matching chunks and freezes calibration before evaluation.\nTo rerun from scratch, archive v2/results/chunks AND v2/results/thresholds.json together.\nReport requires Pandoc (available with Quarto), python-docx and visual rendering QA.\nR is always invoked with --vanilla. Never load personal R startup files.\nNo 5e-8 calibration or genome-wide scan claim.\n',encoding='utf-8',newline='\n')
     print('Research manuscript and workflow generated from audited results')
 if __name__=='__main__':main()
