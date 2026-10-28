@@ -11,6 +11,7 @@ def main():
     audit=json.loads((ROOT/'results/audit.json').read_text());assert audit['passed']
     cfg=json.loads((ROOT/'protocol/design.json').read_text());pilot=json.loads((ROOT/'results/pilot_selection.json').read_text())
     summary=read('summary.csv');pairs=read('paired_contrasts.csv');boot=read('calibration_aware_intervals.csv');banks=read('subbank_sensitivity.csv')
+    predictions=read('information_predictions.csv')
     def r(cid,sc,m):return next(z for z in summary if int(z['id'])==cid and z['scenario']==sc and z['method']==m and float(z['alpha'])==.05)
     def p(cid,sc,m,ref):return next(z for z in pairs if int(z['id'])==cid and z['scenario']==sc and z['method']==m and z['reference']==ref)
     def f(z,k='calibrated_rate'):return f'{float(z[k]):.3f}'
@@ -25,6 +26,11 @@ def main():
             contrasts.append([800 if cid==1 else 1600,label,f(z,'difference'),f"{float(z['calibration_aware_lower']):.3f} to {float(z['calibration_aware_upper']):.3f}"])
     pairtable=table(['People','Contrast','Power difference','95% bootstrap interval'],contrasts)
     caltable=table(['Method','Nominal null','Calibrated null','Null cutoff'],[[tag,f(r(1,'null',m),'nominal_rate'),f(r(1,'null',m)),f"{float(r(1,'null',m)['cutoff']):.4f}"] for tag,m in zip(tags,names)])
+    infotable=table(['Architecture','Information ratio','Joint prediction','Marginal prediction','V model nominal','All known model nominal'],
+        [[z['scenario'].replace('_',' '),f(z,'information_ratio'),f(z,'joint_asymptotic_power'),f(z,'marginal_asymptotic_power'),
+          f(r(1,z['scenario'],'Varying model'),'nominal_rate'),f(r(1,z['scenario'],'All known model'),'nominal_rate')]
+         for z in predictions if z['environment']=='varying'])
+    theoretical=next(z for z in predictions if z['environment']=='varying' and z['scenario']=='moderate_binary_only')
     scales=cfg['scales'];d=p(1,'moderate_binary_only','Varying sandwich','Marginal covariance-aware')
     oracle=p(1,'moderate_binary_only','Known dependence sandwich','Varying sandwich')
     vals=[float(z['calibrated_rate']) for z in summary if z['scenario']!='null' and float(z['alpha'])==.05 and z['method'] in names]
@@ -141,6 +147,19 @@ $$E(s_{\beta i}s_{\nu i}^{\mathsf T})=E(g_i)E(\mathbf b_i s_{\nu i}^{\mathsf T})
 
 For a correctly specified regular model this gives zero expected cross-information. Consequently, estimating nuisance parameters need not produce a first-order asymptotic efficiency loss for the genetic coefficients in this particular prospective independent-genotype design. Oracle comparisons primarily diagnose finite-sample estimation, observed-information and calibration effects. This argument does not equate a misspecified constant copula with the correct varying copula, nor establish orthogonality under population structure, non-centred conditional genotypes or other sampling schemes.
 
+### Analytical information benchmark
+
+A supplementary analytical diagnostic was added after freezing the main simulation protocol and before examining alternative evaluation results. It did not alter the signals, methods, thresholds or replicate counts. Gaussian quadrature integrates null information over the covariates, continuous residual and binary outcome. Let q=2f(1-f) with allele frequency f=0.25, and let w be the marginal probit information weight:
+
+$$w_i=\frac{\phi(\eta_i)^2}{\Phi(\eta_i)\{1-\Phi(\eta_i)\}},\quad J=q\,\operatorname{diag}\{1,E(w_i)\}.$$
+$$V_m=q\begin{pmatrix}1&E(\rho_i w_i)\\E(\rho_i w_i)&E(w_i)\end{pmatrix},\quad I_m=J^{\mathsf T}V_m^{-1}J.$$
+
+Here Im is the Godambe information of the stacked marginal scores. The correct joint likelihood gives Ic=q E(Hbase), where Hbase is the observed information for the continuous-mean and probit-predictor pair. Expected orthogonality permits this comparison without a first-order nuisance penalty. For the local effect delta=sqrt(n) beta, the two analytical predictions use
+
+$$\lambda_k=\boldsymbol\delta^{\mathsf T}I_k\boldsymbol\delta,\quad \pi_k=\Pr\{\chi^2_2(\lambda_k)>\chi^2_{2,0.95}\}.$$
+
+These are asymptotic nominal-power approximations, not calibrated finite-sample results. Eighty-node quadrature checks the information identity, zero mean scores, independence equality and the nonnegative information difference. Increasing residual quadrature to 120 nodes checks numerical integration separately from the non-smooth age clipping; age-order sensitivity is retained in the controls. Independent R quadrature and finite-difference likelihood Hessians provide an additional validation, with maximum information discrepancy @INFOERROR@.
+
 ### Calibration and uncertainty
 
 All calibration datasets are generated before evaluation begins. For a target alpha, let k=floor{alpha(Bcal+1)} with Bcal=5,000. Each method and setting freezes the kth ordered calibration p-value q. Evaluation rejects strictly when p is below q. Under exchangeability and continuous p-values, rejection averaged across calibration banks targets k/(Bcal+1); conditional size with a particular bank can differ. The primary alpha is 0.05, and an independently frozen grid at 0.01, 0.025, 0.05, 0.075 and 0.10 supports operating curves. Evaluation nulls do not select thresholds or tune methods.
@@ -233,6 +252,20 @@ Across the five 1,000-null subbanks, the varying-sandwich held-out null rejectio
 
 Figure 6. Independent calibration subbanks of 1,000 null datasets, applied to shared held-out evaluation datasets. Main reported results use the full 5,000-null banks, not an average of these five rates.
 
+### Analytical predictions and observed power
+
+The information calculation predicts only small differences from covariance-aware marginal testing under constant dependence. Under varying dependence, the moderate binary-only local-power predictions are @JOINTPRED@ for the correct joint model and @MARGPRED@ for the marginal procedure, with noncentrality ratio @INFORATIO@. These predictions indicate that the specified varying-dependence setting contains a potentially useful information gain even when knowing nuisance parameters provides little first-order benefit.
+
+@INFOTABLE@
+
+Table 5. Analytical local-power predictions under varying dependence, compared with finite-sample nominal rejection at n=800. Information ratio is joint divided by marginal noncentrality. The prediction is asymptotic and common to both sample sizes under the specified local scaling; observed rates use 1,000 alternatives each. This table uses nominal, rather than empirically calibrated, power to align with the analytical chi-square reference.
+
+The figure checks whether nominal finite-sample behaviour approaches the analytical predictions across sample sizes and effect directions. Differences can arise from finite-sample estimation, the local approximation and realised nominal size. The prediction does not replace independent null calibration or justify a universal power claim.
+
+![Analytical information and observed nominal power](v2/figures/information_predictions.png)
+
+Figure 7. Analytical local-power predictions and observed nominal rejection with 95% Wilson intervals. Joint predictions correspond to the correct Gaussian dependence model; both oracle and fitted varying-model nominal rates are displayed. The analytical diagnostic did not select or tune the main experiment.
+
 ## Discussion
 
 This second experiment makes the comparison more informative by reducing ceiling effects, increasing calibration precision and defining oracle procedures that remove specific nuisance-estimation burdens. A fitted dependence curve and a useful association test remain different objectives. The experiment's value lies in quantifying where their performance aligns or diverges.
@@ -240,6 +273,8 @@ This second experiment makes the comparison more informative by reducing ceiling
 The known-dependence contrast isolates the effect of estimating dependence coefficients within the specified Gaussian model, including finite-sample differences in observed information and empirical thresholds. Small or unresolved gaps imply little demonstrated practical gain from eliminating that estimation burden in the studied setting. Larger gaps would identify a reason to investigate more efficient or regularised dependence estimation, but would not alone establish a generally superior test.
 
 The expected-score orthogonality derived above gives an additional reason not to anticipate a large oracle advantage here: estimating more nuisance coefficients is not automatically a first-order information penalty for the genetic score. Thus a small oracle gap would be compatible with the design's mathematics, rather than evidence that the oracle was implemented unsuccessfully. To distinguish practical dependence models, the relevant information gain can instead depend on how each method weights observations and genetic-effect directions.
+
+The analytical information calculation makes that distinction concrete: the theoretical gain over marginal testing is small with the specified constant correlation and larger for several directions under age-varying correlation. A small oracle-versus-fitted gap can therefore coexist with a meaningful joint-versus-marginal gain. The observed results must still be assessed with their uncertainty and null behaviour before translating that conditional pattern into a methodological conclusion.
 
 Covariance-aware marginal testing remains a demanding comparator because it uses cross-outcome score covariance without requiring a fully correct joint distribution. Adding dependence parameters can improve the joint likelihood while contributing little additional information for a particular genetic-effect direction. Conversely, favourable copula contrasts should be evaluated against their realised null rejection and calibration-aware uncertainty before being interpreted as efficiency gains.
 
@@ -249,7 +284,7 @@ The original negative findings remain preserved rather than replaced. The new lo
 
 ## Limitations
 
-The main extension intentionally concentrates on correctly specified Gaussian models, one common focal SNP and independent people. It does not introduce empirical LD references, polygenic background, relatedness, ancestry effects, missing phenotypes, ascertainment or diagnosis misclassification. The original t-copula sensitivity remains available in version one; it was not expanded here. Results cannot establish robustness to those omitted conditions.
+The main extension intentionally concentrates on correctly specified Gaussian models, one common focal SNP and independent people. It does not introduce empirical LD references, polygenic background, relatedness, ancestry effects, missing phenotypes, ascertainment or diagnosis misclassification. The original t-copula sensitivity remains available in version one; it was not expanded here. Results cannot establish robustness to those omitted conditions. Analytical information predictions depend on the same correct model and use a local asymptotic approximation; they are not independent evidence of real-world validity.
 
 Five thousand calibration nulls improve central-tail precision but do not validate genome-wide significance. Four hundred bootstrap replicates provide approximate simulation intervals rather than precise extreme quantiles. Calibration subbanks are smaller than the main banks and share evaluations. Only four core settings and two pilot-selected local strengths were tested; power can remain high for some architectures. Effect-estimation and interval-coverage analyses from version one remain available, but new full-effect estimation was not added to this score-comparison stage.
 
@@ -273,6 +308,8 @@ Rscript --vanilla v2/src/crosscheck.R v2
 python v2/src/freeze.py
 python v2/src/run.py --smoke --workers 2
 python v2/src/run.py --workers 2
+python v2/src/information.py
+Rscript --vanilla v2/src/information_check.R v2
 python v2/src/audit.py
 python v2/src/analyse.py
 python v2/src/manuscript.py
@@ -300,6 +337,8 @@ Pandoc distributed with Quarto converts this shared manuscript to Word with nati
              'CONDINTERVAL':f"{float(vr['conditional_lower']):.3f} to {float(vr['conditional_upper']):.3f}",
              'BOOTINTERVAL':f"{float(br['lower']):.3f} to {float(br['upper']):.3f}",
              'SUBBANKRANGE':f'{min(sub):.3f} to {max(sub):.3f}'}
+    replace.update(INFOTABLE=infotable,INFOERROR=f"{audit['expected_information_R']['expected_Hessian_max_error']:.3g}",
+                   JOINTPRED=f(theoretical,'joint_asymptotic_power'),MARGPRED=f(theoretical,'marginal_asymptotic_power'),INFORATIO=f(theoretical,'information_ratio'))
     for key,value in replace.items():text=text.replace('@'+key+'@',value)
     (REPO/'README.md').write_text(text.lstrip(),encoding='utf-8')
     commands=text.split('```bash\n',1)[1].split('```',1)[0]

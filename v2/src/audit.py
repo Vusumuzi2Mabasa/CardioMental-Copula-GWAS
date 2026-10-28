@@ -66,11 +66,14 @@ def run():
                 replays.append(dict(cell=cell['id'],phase=phase,scenario=sc['name'],max_p_error=max(diff,default=0)))
     assert counts['calibration_datasets']==20000 and counts['evaluation_datasets']==72000
     assert counts['method_records']==828000 and len(allids)==92000
+    for name in ['information_controls.json','information_R_validation.json']:
+        assert json.loads((ROOT/'results'/name).read_text())['passed']
     result=dict(passed=True,protocol_commit=commit,code_sha256=identity(),**counts,total_datasets=92000,
                 pilot_datasets=640,unique_dataset_fingerprints=len(allids),replayed_datasets=len(replays),
                 replay_max_p_error=max(r['max_p_error'] for r in replays),baseline_bytes_preserved=True,
                 calibration_frozen_before_evaluation=True,numerical_controls=json.loads((ROOT/'results/numerical_controls.json').read_text()),
-                independent_R=json.loads((ROOT/'results/R_validation.json').read_text()))
+                independent_R=json.loads((ROOT/'results/R_validation.json').read_text()),
+                expected_information_R=json.loads((ROOT/'results/information_R_validation.json').read_text()))
     (ROOT/'results/audit.json').write_text(json.dumps(result,indent=2)+'\n')
     (ROOT/'results/replay_audit.json').write_text(json.dumps(replays,indent=2)+'\n')
     (ROOT/'results/dataset_summary.json').write_text(json.dumps(reports,indent=2)+'\n')

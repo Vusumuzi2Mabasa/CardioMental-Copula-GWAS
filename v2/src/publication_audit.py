@@ -11,7 +11,7 @@ def main():
     text=(ROOT/'README.md').read_text(encoding='utf-8');assert not re.search(r'@[A-Z_]+@',text)
     document=ROOT/'report/CardioMental_Copula_GWAS_Report_v2.docx';d=Document(document)
     assert d.core_properties.author=='Vusumuzi Mabasa'
-    assert len(d.inline_shapes)==6 and [len(t.rows) for t in d.tables]==[5,9,9,6]
+    assert len(d.inline_shapes)==7 and [len(t.rows) for t in d.tables]==[5,9,9,6,9]
     with zipfile.ZipFile(document) as z:xml=z.read('word/document.xml').decode()
     assert xml.count('<m:oMath>')>=10
     words=' '.join(p.text for p in d.paragraphs)
@@ -23,7 +23,7 @@ def main():
             vals=[v.strip() for v in line.strip('|').split('|')]
             if not all(v=='---' for v in vals):current.append(vals)
         elif current:tables.append(current);current=[]
-    assert len(tables)==4
+    assert len(tables)==5
     norm=lambda s:' '.join(s.split())
     for source,actual in zip(tables,d.tables):assert [[norm(v) for v in row] for row in source]==[[norm(c.text) for c in row.cells] for row in actual.rows]
     for link in re.findall(r'\]\(([^)]+)\)',text):
@@ -46,7 +46,7 @@ def main():
                     if not n.endswith(('.png','.docx')):scan(z.read(n))
         else:scan((ROOT/path).read_bytes())
     result=dict(passed=True,source_sha256=sha(ROOT/'README.md'),word_sha256=sha(document),word_tables_match_README=True,
-                figures=6,tables=4,native_math=True,author='Vusumuzi Mabasa',rendered_pages=visual['pages'],
+                figures=7,tables=5,native_math=True,author='Vusumuzi Mabasa',rendered_pages=visual['pages'],
                 baseline_preserved=True,credential_scan_passed=True)
     if args.write:
         name='v2/results/publication_audit.json';(ROOT/name).write_text(json.dumps(result,indent=2)+'\n')

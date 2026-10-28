@@ -33,3 +33,7 @@ jobs:
         run: Rscript --vanilla v2/src/crosscheck.R v2
       - name: Small independent benchmark
         run: python v2/src/run.py --smoke --workers 2
+      - name: Expected information identities and local power
+        run: python v2/src/information.py
+      - name: Independent R integration of expected information
+        run: Rscript --vanilla v2/src/information_check.R v2

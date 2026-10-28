@@ -5,7 +5,7 @@ from scipy.stats import norm
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from run import ROOT,config,cells,scenarios,write
+from run import ROOT,config,cells,scenarios,write,read
 from data import load
 from oracle import METHODS
 
@@ -144,9 +144,23 @@ def main():
             ax.plot([r['bank']+1 for r in z],[r['evaluation_rate'] for r in z],marker='o',color=color,label=SHORT[j])
         ax.set_xticks(range(1,6));ax.set_xlabel('Independent calibration subbank of 1,000');ax.set_ylabel('Held-out rejection');ax.set_title(scenario.replace('_',' ').title());ax.legend(fontsize=9)
     fig.suptitle('SIMULATED varying dependence | n=800 | shared held-out evaluations across subbanks');fig.tight_layout();save(fig,'subbank_sensitivity.png')
+    prediction=read(ROOT/'results/information_predictions.csv')
+    fig,axes=plt.subplots(2,2,figsize=(13,8),sharey=True)
+    for ax,cell in zip(axes.flat,cells()):
+        pp=[next(r for r in prediction if r['environment']==cell['environment'] and r['scenario']==s) for s in altnames]
+        ax.plot(range(8),[float(r['joint_asymptotic_power']) for r in pp],color='#a94040',ls='--',label='Joint local prediction')
+        ax.plot(range(8),[float(r['marginal_asymptotic_power']) for r in pp],color='#333333',ls=':',label='Marginal local prediction')
+        for j,color in [(0,'#333333'),(3,'#377eaa'),(7,'#a94040')]:
+            rr=[lookup[cell['id'],s,j] for s in altnames]
+            ax.errorbar(np.arange(8)+(j/7-.5)*.12,[r['nominal_rate'] for r in rr],
+                yerr=[[r['nominal_rate']-r['nominal_lower'] for r in rr],[r['nominal_upper']-r['nominal_rate'] for r in rr]],
+                fmt='o',ms=3,capsize=1,color=color,label=SHORT[j]+' nominal')
+        ax.set_xticks(range(8),labels,rotation=25);ax.set_ylabel('Nominal association power');ax.set_ylim(0,1.03);ax.set_title(f"n={cell['n']} | {cell['environment']}")
+    axes[0,0].legend(fontsize=9);fig.suptitle('SIMULATED data | asymptotic information predictions and finite-sample nominal power')
+    fig.tight_layout();save(fig,'information_predictions.png')
     import scipy
     result=dict(python=sys.version.split()[0],numpy=np.__version__,scipy=scipy.__version__,matplotlib=matplotlib.__version__,platform=platform.platform(),
                 execution='Native Windows; calibration started with three workers, reduced to two under memory pressure; source and design unchanged; completed chunks verified and resumed',bootstrap_replicates=cfg['bootstrap_replicates'])
     (ROOT/'results/software.json').write_text(json.dumps(result,indent=2)+'\n')
-    print('Six figures and five result tables generated',flush=True)
+    print('Seven figures and result tables generated',flush=True)
 if __name__=='__main__':main()

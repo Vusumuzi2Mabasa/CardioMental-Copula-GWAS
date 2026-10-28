@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "scope": "Post-protocol analytical diagnostic, not used for selection or calibration; local asymptotic power under correct Gaussian specification",
+  "quadrature_order": 80,
+  "controls": [
+    {
+      "environment": "independent",
+      "information_identity_error": 2.9976021664879227e-15,
+      "mean_score_max": 4.528067839527031e-17,
+      "information_dominance_min_eigenvalue": -1.0547118733938987e-15,
+      "residual_order80_vs120_max_difference": 1.887379141862766e-15,
+      "age_order80_vs120_max_difference": 8.408688904060213e-07
+    },
+    {
+      "environment": "constant",
+      "information_identity_error": 7.105427357601002e-15,
+      "mean_score_max": 2.0293786239203352e-17,
+      "information_dominance_min_eigenvalue": -1.9562259798155957e-15,
+      "residual_order80_vs120_max_difference": 3.3306690738754696e-16,
+      "age_order80_vs120_max_difference": 7.598941834108253e-07
+    },
+    {
+      "environment": "varying",
+      "information_identity_error": 2.220446049250313e-15,
+      "mean_score_max": 1.7628781815789342e-17,
+      "information_dominance_min_eigenvalue": 0.016409863933006575,
+      "residual_order80_vs120_max_difference": 2.231108631178813e-10,
+      "age_order80_vs120_max_difference": 5.955310525251889e-05
+    }
+  ],
+  "information": {
+    "independent": {
+      "joint": [
+        [
+          0.37499999999999906,
+          0.0
+        ],
+        [
+          0.0,
+          0.15214969227550296
+        ]
+      ],
+      "marginal": [
+        [
+          0.375,
+          0.0
+        ],
+        [
+          0.0,
+          0.152149692275504
+        ]
+      ],
+      "binary_intercept": -1.087830916034229
+    },
+    "constant": {
+      "joint": [
+        [
+          0.4015067350911533,
+          -0.0662668377278888
+        ],
+        [
+          -0.0662668377278888,
+          0.1656670943197217
+        ]
+      ],
+      "marginal": [
+        [
+          0.4010340055630648,
+          -0.06508501390766196
+        ],
+        [
+          -0.06508501390766194,
+          0.16271253476915487
+        ]
+      ],
+      "binary_intercept": -1.087830916034229
+    },
+    "varying": {
+      "joint": [
+        [
+          0.44723224439854947,
+          -0.08138663204299149
+        ],
+        [
+          -0.08138663204299149,
+          0.19831132368664292
+        ]
+      ],
+      "marginal": [
+        [
+          0.3915835020586013,
+          -0.05132987691557624
+        ],
+        [
+          -0.05132987691557624,
+          0.15887815823568102
+        ]
+      ],
+      "binary_intercept": -1.087830916034229
+    }
+  }
+}
