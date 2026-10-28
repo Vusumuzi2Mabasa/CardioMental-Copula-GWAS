@@ -1,0 +1,16 @@
+{
+  "code_sha256": "fa6e25dac5855ce8fce522713a9762d5fec52efe4a5442d0e149fcc002cf045b",
+  "files": {
+    "src/model.py": "35a1b4f29c2ef4c040fd72b1b5277994996d22d48c2f442c7e9d3769634d58e6",
+    "src/simulate.py": "213d9e74ec95e62050f4583d76ab253a5a5edc06924ebe7dca21dd514823a912",
+    "v2/src/oracle.py": "74eae8eb2cdd4eddb15d920ec50d168a715721d2929625fe35a62cdf02a374ca",
+    "v2/src/generate.py": "e0196a922920246beece60db48b2446dcd1da4e7699058ae35ac792e621d8f63",
+    "v2/src/run.py": "1f5cd5754125365677f13c894f99fd033e0ce7326de6f07d7df11c8a1932ca5e",
+    "v2/protocol/design.json": "cbafec6dc6444133637b54bf996ab312189ffaac0759499501ef072404650270",
+    "v2/src/test_oracle.py": "3e0377fb2e42a5060afb0fc2ede9cfa9fd0cc093ffe7204bb0c24beb4dac3aad",
+    "v2/src/crosscheck.R": "5d092a88f3969bb597cee9b6d7e293ccff8988a85192ddd6395274291bb83855",
+    "v2/src/pilot.py": "83fc23e63fd88af1661c8fe37373f8ee7dc843d5a6ae87415f52405d7ecef4a7",
+    "v2/results/pilot.csv": "50ae09a7a2c2f9a03695e7ad92eaa98a0bc6e19eb3e1fdccc23f265b0f9fbc7c",
+    "v2/results/pilot_selection.json": "7de3a1a613ec795c7667fa41b62347d5330c5da425fbc69e6b28ef772f47db1f"
+  }
+}

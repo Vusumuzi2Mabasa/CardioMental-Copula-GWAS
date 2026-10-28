@@ -1,0 +1,47 @@
+CardioMental Copula GWAS simulation
+Author: Vusumuzi Mabasa
+ALL OUTCOMES, GENOTYPES AND COVARIATES ARE SYNTHETIC.
+No Genomic SEM, patient data or clinical discoveries.
+
+Source: https://github.com/Vusumuzi2Mabasa/CardioMental-Copula-GWAS
+Local project: D:/CardioMental_Copula_GWAS
+
+Read README.md for mathematical likelihoods, nuisance-adjusted information,
+sandwich scores, assumptions, calibration ranks and interpretations.
+Read protocol/design.json and protocol/cells.json for every generating setting.
+
+Commands from the project root, using an activated isolated Python environment:
+python -m pip install -r requirements.txt
+python src/test_model.py
+Rscript --vanilla src/crosscheck.R .
+python src/benchmark.py --smoke
+python src/benchmark.py --workers 2
+python src/audit.py
+python src/analyse.py
+python src/manuscript.py
+python src/build_word.py --pandoc /path/to/pandoc
+python src/publication_audit.py
+
+Install R jsonlite if absent; all statistical R checks use --vanilla.
+Pandoc is available with Quarto. Set an explicit executable path if needed.
+The primary simulation engine is Python; independent numerical checking is R.
+Do not describe this as an R-only benchmark or a newly invented copula method.
+
+Stages:
+1. Validate likelihoods, gradients, block information, allele invariance and R agreement.
+2. Freeze protocol/source in version control before main simulations.
+3. In each stratum, generate 200 independent null calibration datasets.
+4. Freeze each method's 10th-order p-value cutoff before its evaluation.
+5. Generate fresh null and four alternative streams; fit null models once per dataset.
+6. Scan all eight variants; retain all statuses and per-variant scores.
+7. Run prespecified full effect fits without conditioning on association significance.
+8. Independently reconstruct decisions, verify identities and replay seeded datasets.
+9. Summarize attempted and valid denominators, paired MC uncertainty and failures.
+10. Generate figures and a shared research manuscript; render and inspect every Word page.
+11. Verify the publication manifest and push reviewed source/results to this repository.
+
+Completed cells are reused only if source and output hashes match.
+Archive the whole results/cells folder before starting a new execution.
+Do not combine partial outputs from different implementations or protocols.
+No p-value threshold here is a recommendation for a clinical GWAS.
+The null experiment does not validate 5e-8 tail probabilities.

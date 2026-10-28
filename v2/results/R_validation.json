@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "R": "4.5.1",
+  "max_score_p_error": 3.2316e-09,
+  "restricted_fit_max_parameter_error": 5.2424e-07,
+  "approach": "Independent base R likelihood finite differences BFGS and expanded Hessian"
+}

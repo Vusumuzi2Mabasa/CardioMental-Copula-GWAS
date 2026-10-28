@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "expanded_hessian_max_stat_error": 2.2165047575128938e-12,
+  "allele_flip_passed": true,
+  "fixed_intercept_passed": true,
+  "independence_passed": true,
+  "seconds": 0.5808264999650419
+}

@@ -1,0 +1,52 @@
+{
+  "version": "copula-score-2-oracle",
+  "author": "Vusumuzi Mabasa",
+  "baseline_commit": "48aa58263b2247c4b7d198bb9c23b295b0d66d22",
+  "seed_pilot": 29102001,
+  "seed_calibration": 29102011,
+  "seed_evaluation": 29102012,
+  "seed_uncertainty": 29102013,
+  "calibration_null": 5000,
+  "evaluation_null": 10000,
+  "evaluation_per_alternative": 1000,
+  "scales": [
+    0.4,
+    0.55
+  ],
+  "architectures": {
+    "continuous_only": [
+      0.2,
+      0
+    ],
+    "binary_only": [
+      0,
+      0.35
+    ],
+    "shared": [
+      0.2,
+      0.35
+    ],
+    "opposing": [
+      0.2,
+      -0.35
+    ]
+  },
+  "signal_rule": "beta = architecture vector * selected scale * sqrt(800/n); two local-alternative strengths fixed by independent pilot",
+  "alpha_grid": [
+    0.01,
+    0.025,
+    0.05,
+    0.075,
+    0.1
+  ],
+  "chunk_size": 100,
+  "bootstrap_replicates": 400,
+  "bank_partitions": 5,
+  "scope": "Four Gaussian settings: n800 and1600, constant and age-varying dependence; one common focal SNP; prevalence .15 under null, MAF .25; no polygenic background, ancestry or real data",
+  "oracle": "Known dependence: hold generating alpha fixed, estimate seven marginal nuisance parameters and exclude alpha from nuisance projection. All known: generating null nuisance parameters fixed, no nuisance projection, genotype centered at known 2MAF. Oracles diagnostic, not achievable or guaranteed power upper bounds.",
+  "intercept": "Population null binary intercept fixed across alternatives, unlike v1; alternative prevalence can change",
+  "calibration": "For each method/setting/alpha, floor(alpha*(5000+1))th order p; strict rejection. Freeze full calibration before any evaluation. Any calibration failure disables that cutoff.",
+  "failures": "Never omit attempted datasets; all failures published; tests count failures as nonrejections; report valid and attempted denominators",
+  "uncertainty": "Wilson intervals and paired MCSE conditional on frozen banks. 400 paired nonparametric bootstrap draws of calibration AND evaluation datasets give approximate intervals including calibration uncertainty; five disjoint 1000-null calibration subbanks diagnose smaller-bank variation. No exactly matched conditional size claim.",
+  "preservation": "Original source, protocol, result cells, figures, original Word and software records retained. Complete v1 Git archive in baseline; new outputs under v2."
+}
