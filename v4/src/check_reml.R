@@ -3,6 +3,7 @@ args<-commandArgs(trailingOnly=TRUE);root<-if(length(args)) args[1] else 'v4'
 library(jsonlite)
 files<-file.path(root,'results','tests','reml_fixture.json')
 more<-list.files(file.path(root,'results','polygenic_fixtures'),pattern='g0.0.*json$',full.names=TRUE)
+more<-c(more,list.files(file.path(root,'results','polygenic_validation','polygenic_fixtures'),pattern='g0.0.*json$',full.names=TRUE))
 files<-c(files,more);stopifnot(length(files)>0)
 maxll<-0;maxrg<-0
 for(file in files){

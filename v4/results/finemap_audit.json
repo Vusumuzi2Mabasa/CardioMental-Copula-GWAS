@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "calibration_analyses": 2400,
+  "evaluation_analyses": 3840,
+  "distinct_calibration_datasets": 1200,
+  "distinct_evaluation_datasets": 1920,
+  "LD_arms": 2,
+  "calibration_failures": 0,
+  "evaluation_failures": 0,
+  "inactive_calibrations": 0,
+  "not_independent_of_v3": "Fixed first 20 replicates of the original version three calibration/evaluation datasets; no pooling as new independent replicates",
+  "threshold_sha256": "81ee622df2944eb500fd056a6e224e256de76a78938c8056e9ac8d437e5b9f52"
+}

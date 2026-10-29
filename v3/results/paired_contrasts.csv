@@ -1,0 +1,49 @@
+regime,scenario,contrast,difference,bootstrap_lower,bootstrap_upper
+ideal,null,Coloc calibrated minus Coloc PP4 > 0.8,0.0,0.0,0.0
+ideal,null,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.0,0.0,0.0
+ideal,null,Tagging conjunction minus Coloc PP4 > 0.8,0.0,0.0,0.0
+ideal,cardio_only,Coloc calibrated minus Coloc PP4 > 0.8,0.0,0.0,0.0
+ideal,cardio_only,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.0008333333333333334,0.0,0.0025
+ideal,cardio_only,Tagging conjunction minus Coloc PP4 > 0.8,0.005,0.0016666666666666668,0.01
+ideal,mental_only,Coloc calibrated minus Coloc PP4 > 0.8,-0.0016666666666666668,-0.004166666666666667,0.0
+ideal,mental_only,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.0,-0.0025,0.0025
+ideal,mental_only,Tagging conjunction minus Coloc PP4 > 0.8,0.0075,0.0025,0.0125
+ideal,shared_same,Coloc calibrated minus Coloc PP4 > 0.8,-0.645,-0.6758333333333334,-0.6099791666666665
+ideal,shared_same,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.10250000000000004,0.08581249999999999,0.1216666666666667
+ideal,shared_same,Tagging conjunction minus Coloc PP4 > 0.8,0.10333333333333339,0.08666666666666667,0.12168750000000002
+ideal,shared_opposing,Coloc calibrated minus Coloc PP4 > 0.8,-0.6708333333333334,-0.6958333333333333,-0.6374583333333333
+ideal,shared_opposing,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.14583333333333337,0.12750000000000006,0.16835416666666664
+ideal,shared_opposing,Tagging conjunction minus Coloc PP4 > 0.8,0.14833333333333332,0.13083333333333336,0.17083333333333328
+ideal,distinct_low,Coloc calibrated minus Coloc PP4 > 0.8,-0.0008333333333333334,-0.0025,0.0
+ideal,distinct_low,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,-0.0008333333333333334,-0.0025,0.0
+ideal,distinct_low,Tagging conjunction minus Coloc PP4 > 0.8,0.31666666666666665,0.2958125,0.3383333333333333
+ideal,distinct_high,Coloc calibrated minus Coloc PP4 > 0.8,-0.7324999999999999,-0.7558333333333334,-0.7024583333333334
+ideal,distinct_high,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.0033333333333334103,-0.021666666666666723,0.030854166666666693
+ideal,distinct_high,Tagging conjunction minus Coloc PP4 > 0.8,0.20833333333333337,0.18914583333333337,0.23002083333333329
+ideal,shared_plus_distinct,Coloc calibrated minus Coloc PP4 > 0.8,-0.5991666666666667,-0.6250208333333334,-0.5691666666666667
+ideal,shared_plus_distinct,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.08916666666666662,0.0641666666666667,0.10918749999999995
+ideal,shared_plus_distinct,Tagging conjunction minus Coloc PP4 > 0.8,0.2483333333333333,0.22664583333333335,0.27249999999999996
+realistic,null,Coloc calibrated minus Coloc PP4 > 0.8,0.0,0.0,0.0
+realistic,null,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.0,0.0,0.0
+realistic,null,Tagging conjunction minus Coloc PP4 > 0.8,0.0008333333333333334,0.0,0.0025
+realistic,cardio_only,Coloc calibrated minus Coloc PP4 > 0.8,-0.0025,-0.005,0.0
+realistic,cardio_only,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,-0.0008333333333333333,-0.003354166666666666,0.0016666666666666668
+realistic,cardio_only,Tagging conjunction minus Coloc PP4 > 0.8,0.005833333333333333,0.0008333333333333335,0.010833333333333334
+realistic,mental_only,Coloc calibrated minus Coloc PP4 > 0.8,-0.0008333333333333334,-0.0033333333333333335,0.0
+realistic,mental_only,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.0008333333333333334,-0.0024999999999999996,0.0033333333333333335
+realistic,mental_only,Tagging conjunction minus Coloc PP4 > 0.8,0.01,0.004166666666666667,0.015833333333333335
+realistic,shared_same,Coloc calibrated minus Coloc PP4 > 0.8,-0.6416666666666666,-0.6825208333333334,-0.6024791666666667
+realistic,shared_same,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.15749999999999997,0.13743749999999996,0.1791666666666667
+realistic,shared_same,Tagging conjunction minus Coloc PP4 > 0.8,0.15833333333333333,0.13829166666666665,0.17920833333333333
+realistic,shared_opposing,Coloc calibrated minus Coloc PP4 > 0.8,-0.6583333333333333,-0.6925,-0.6216250000000001
+realistic,shared_opposing,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.2300000000000001,0.20833333333333337,0.255
+realistic,shared_opposing,Tagging conjunction minus Coloc PP4 > 0.8,0.2316666666666667,0.20997916666666663,0.25585416666666655
+realistic,distinct_low,Coloc calibrated minus Coloc PP4 > 0.8,0.0,0.0,0.0
+realistic,distinct_low,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.0,0.0,0.0
+realistic,distinct_low,Tagging conjunction minus Coloc PP4 > 0.8,0.2725,0.25333333333333335,0.2925
+realistic,distinct_high,Coloc calibrated minus Coloc PP4 > 0.8,-0.7124999999999999,-0.7316875,-0.6791458333333332
+realistic,distinct_high,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.0591666666666667,0.029166666666666674,0.08585416666666675
+realistic,distinct_high,Tagging conjunction minus Coloc PP4 > 0.8,0.2516666666666667,0.22829166666666673,0.2750208333333333
+realistic,shared_plus_distinct,Coloc calibrated minus Coloc PP4 > 0.8,-0.5766666666666667,-0.6125625,-0.54
+realistic,shared_plus_distinct,Overlap PP4 > 0.8 minus Coloc PP4 > 0.8,0.12249999999999994,0.09583333333333333,0.14916666666666667
+realistic,shared_plus_distinct,Tagging conjunction minus Coloc PP4 > 0.8,0.2833333333333333,0.25831249999999994,0.31004166666666666

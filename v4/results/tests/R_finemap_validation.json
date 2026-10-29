@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "shared_PP4": 1,
+  "opposing_PP4": 1,
+  "distinct_PP4": 2.5517e-11,
+  "max_harmonisation_error": 0,
+  "coloc": "5.2.3",
+  "susieR": "0.14.2"
+}

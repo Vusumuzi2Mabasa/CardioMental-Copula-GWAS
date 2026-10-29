@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "max_logistic_vs_independent_bfgs_error": 2.429254158942129e-09,
+  "max_allele_flip_p_error": 2.55351295663786e-15,
+  "perfect_LD_shared_and_distinct_observationally_identical": true,
+  "one_dataset_seconds": 0.3300468000015826,
+  "example": {
+    "iut_p": 2.342386005817625e-06,
+    "joint_p": 4.0990573043927623e-16,
+    "anchor_iut": 3.659978134090039e-08,
+    "anchor_joint": 6.404777038113691e-18,
+    "split_pp4": 0.8421234621081777,
+    "split_pp3": 0.011228890517596393,
+    "overlap_pp4": 0.9969985132726216,
+    "prior_low_pp4": 0.3478571373608119,
+    "prior_high_pp4": 0.9815975647166334,
+    "min_p_cardio": 3.659978134090039e-08,
+    "min_p_mental": 3.0242651272622795e-14,
+    "copula_status": "ok",
+    "copula_p": 1.849629379731553e-17
+  }
+}

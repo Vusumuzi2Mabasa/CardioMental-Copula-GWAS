@@ -9,7 +9,7 @@ permissions:
 jobs:
   controls:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     env:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
@@ -37,3 +37,26 @@ jobs:
         run: python v2/src/information.py
       - name: Independent R integration of expected information
         run: Rscript --vanilla v2/src/information_check.R v2
+      - name: Install established colocalisation validation package
+        run: |
+          Rscript --vanilla -e 'install.packages("remotes",repos="https://cloud.r-project.org"); remotes::install_version("susieR",version="0.14.2",repos="https://cloud.r-project.org",upgrade="never"); remotes::install_version("coloc",version="5.2.3",repos="https://cloud.r-project.org",upgrade="never")'
+      - name: African LD shared effect numerical controls
+        run: python v3/src/test_model.py
+      - name: Independent R GWAS and established coloc cross check
+        run: |
+          python v3/src/export_r.py
+          Rscript --vanilla v3/src/crosscheck.R v3
+      - name: Small African LD pipeline
+        run: python v3/src/run.py --smoke --workers 2
+      - name: Established multi signal fine mapping controls
+        run: Rscript --vanilla v4/src/check_finemap.R v4
+      - name: Bivariate REML algebra and independent R validation
+        run: |
+          python v4/src/test_reml.py
+          Rscript --vanilla v4/src/check_reml.R v4
+      - name: Small ancestry aware fine mapping pipeline
+        run: |
+          python v4/src/export_finemap.py --phase cal --smoke
+          Rscript --vanilla v4/src/finemap.R v4 cal smoke
+      - name: Small polygenic mixed model pipeline
+        run: python v4/src/polygenic.py --smoke

@@ -1,27 +1,315 @@
-CardioMental Copula GWAS version two
+CARDIOMENTAL COPULA GWAS AND SHARED GENETIC EFFECTS
 Author: Vusumuzi Mabasa
-Fully synthetic data; no Genomic SEM.
+Version 4: Shared associations, causal variants and polygenic architecture
+All phenotypes and genetic effects are simulated. Public haplotypes supply LD only.
 
-python v2/src/test_oracle.py
-Rscript --vanilla v2/src/crosscheck.R v2
-# Published pilot outputs and their source lock are already frozen.
-# Run a new pilot only in a separate checkout with a new versioned design.
-python v2/src/freeze.py
-python v2/src/run.py --smoke --workers 2
-python v2/src/run.py --workers 2
-python v2/src/information.py
-Rscript --vanilla v2/src/information_check.R v2
-python v2/src/audit.py
-python v2/src/analyse.py
-python v2/src/summary_audit.py
-python v2/src/manuscript.py
-python v2/src/build_word.py --pandoc /path/to/pandoc
+1. STUDY LOCATION AND PRESERVED RESULTS
 
-Monitor without examining results: python v2/src/status.py
-Design and mathematical methods: README.md and v2/protocol/design.json
-Baseline: baseline/CardioMental_v1_48aa582.zip and original root results.
-The v2 runner resumes only matching chunks and freezes calibration before evaluation.
-To rerun from scratch, archive v2/results/chunks AND v2/results/thresholds.json together.
-Report requires Pandoc (available with Quarto), python-docx and visual rendering QA.
-R is always invoked with --vanilla. Never load personal R startup files.
-No 5e-8 calibration or genome-wide scan claim.
+Toshiba workspace: D:\CardioMental_Copula_GWAS
+Public repository: https://github.com/Vusumuzi2Mabasa/CardioMental-Copula-GWAS
+Initial study commit: 48aa58263b2247c4b7d198bb9c23b295b0d66d22
+Version 2 completed oracle study: a648ebd2525de7689d5ded5726ac5a766e503b39
+Version 3 protocol commit: 5999591
+
+The original src, protocol, results, figures, version 2 scientific files and both
+earlier Word reports remain unchanged. baseline/README_v2.md and
+baseline/workflow_v2.txt preserve the preceding manuscript and commands. The
+archived README is a byte-exact snapshot whose relative links are interpreted
+from the repository root; view its original Git commit for rendered navigation.
+Local results are in v3/results, with fine-mapping and polygenic results in v4/results.
+Figures are in v3/figures and v4/figures. The integrated Word manuscript is
+report/CardioMental_Shared_Genetics_Report_v4.docx. Do not pool inferential rates
+across experiments or count paired outcome modes as independent cohorts.
+
+2. WHAT IS TESTED
+
+Joint association: at least one phenotype is associated with a marker.
+Conjunction: both phenotypes have marginal association with the same marker.
+Colocalisation: one causal variant versus distinct causal variants in the tested
+candidate region, under a single-causal-variant model and declared priors.
+Neither a copula dependence parameter nor a conjunction rejection establishes a
+shared causal variant. Colocalisation does not establish a causal effect of one
+disease on another. No real patient or AWI-Gen data are analysed.
+
+3. SOFTWARE
+
+Python 3.12, packages pinned in requirements.txt:
+NumPy 2.3.5, SciPy 1.18.1, Matplotlib 3.11.2, python-docx 1.2.0.
+R 4.5.1, jsonlite 2.0.0, coloc 5.2.3 and susieR 0.14.2.
+Pandoc, including the distribution shipped with Quarto, builds native Word math.
+The report uses Pandoc plus python-docx, not an executed Quarto QMD.
+LibreOffice and the document renderer are used for final visual QA.
+
+Linux setup in a clone on the mounted Toshiba drive:
+  cd /path/to/TOSHIBA/CardioMental_Copula_GWAS
+  python3 -m venv .venv
+  source .venv/bin/activate
+  python -m pip install -r requirements.txt
+  export OPENBLAS_NUM_THREADS=1
+  export OMP_NUM_THREADS=1
+  export MKL_NUM_THREADS=1
+  Rscript --vanilla -e 'install.packages(c("jsonlite","remotes"),repos="https://cloud.r-project.org"); remotes::install_version("coloc",version="5.2.3",repos="https://cloud.r-project.org",upgrade="never")'
+
+Always use Rscript --vanilla so personal .Renviron and .Rprofile files are not read.
+The host has all scientific dependencies; avoid installing over the user's setup.
+For this execution the verified scientific Python packages were already available
+on Toshiba. R coloc was installed only in v3/work/Rlib, outside the public repo.
+
+4. REFERENCE DATA
+
+Exact release: 1000 Genomes Phase 3 v5b, GRCh37, chromosome 22.
+Base URL: https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/
+VCF: ALL.chr22.phase3_shapeit2_mvncall_integrated_v5b.20130502.genotypes.vcf.gz
+VCF SHA256: a90c16c4ff2b3196476d506ae13cb3047fae8670163c7c932c4b0239aef3daf5
+Panel: integrated_call_samples_v3.20130502.ALL.panel
+Panel SHA256: b4023dc6ee2d62ee89c8d4d347db4d348e65518d66d346574cdae7a4bbd76858
+
+Exact reproduction uses the committed derived v3/reference panels. Raw extraction
+can be independently rebuilt in a separate copy of the study:
+  python v3/src/prepare.py --raw /path/to/checksum-verified/raw/files
+If files are absent, the script retrieves them from the public release above.
+For the completed Toshiba run, the existing verified download was reused from:
+  D:\Multiancestry_GWAS_Bayesian_Comparison\data\reference
+No changes were made to that project's files.
+
+Regions: 22:20,000,000-20,100,000; 22:30,000,000-30,100,000;
+22:40,000,000-40,100,000, inclusive, all GRCh37.
+YRI and LWK each contribute 40 external reference donors and respectively 68 and
+59 disjoint study-pool donors. Whole local haplotypes are sampled with replacement.
+Retain PASS phased non-palindromic biallelic SNPs, MAF >=0.10 in each split.
+Select 64 coordinate-spaced common markers per window without phenotype selection.
+Reference-only LD chooses the causal anchor and high/low-LD alternatives.
+The third window's high-LD pair is perfectly correlated in both study pools.
+This identifiability failure is retained and explicitly reported.
+Donor identifiers are omitted from public derived files; source/split hashes remain.
+Consult IGSR data reuse terms and cite the 1000 Genomes Consortium (2015).
+
+5. GENERATING MECHANISMS AND DENOMINATORS
+
+Protocol: v3/protocol/design.json. Core source identity: v3/protocol/source_lock.json.
+2 populations x 3 regions x 2 phenotype regimes = 12 strata.
+Calibration: 5 no-sharing mechanisms x 200 replicates x 12 = 12,000 datasets.
+Evaluation: 8 genetic architectures x 200 replicates x 12 = 19,200 datasets.
+Total: 31,200 datasets, 3,200 generated participants per dataset.
+Seeds: reference split 29103100, calibration 29103101, evaluation 29103102,
+bootstrap 29103103; additional seed components identify stratum/scenario/replicate.
+All main seeds are disjoint. Small numerical and smoke controls have separate seeds.
+
+Phenotypes are continuous pressure and binary depression proxies. Equations,
+effects, treatment, heavy tails, diagnostic sensitivity/specificity and MAR
+missingness appear in README.md and v3/src/model.py. They are illustrative choices,
+not parameters estimated from a clinical cohort. No outcome-directed tuning.
+Known genetic-predictor covariance is decomposed into same-variant and between-
+variant LD contributions. It is distinct from covariance of observed diagnoses.
+
+6. EXECUTION
+
+From the repository root after activating the intended Python environment:
+  python v3/src/freeze.py
+  python v3/src/test_model.py
+  python v3/src/run.py --smoke --workers 2
+  python v3/src/run.py --workers 2
+
+The main runner completes calibration and freezes thresholds before evaluation.
+It resumes complete 10-dataset chunks only when source identity and output hashes
+match; incomplete chunks regenerate deterministically. Do not edit the frozen
+model, runner, design or derived reference panels to create a new experiment.
+Use a new version or a separate checkout for scientific modifications.
+The smoke run writes v3/work/smoke, outside the main results.
+
+Separate phases are available:
+  python v3/src/run.py --phase cal --workers 2
+  python v3/src/run.py --phase eval --workers 2
+
+For a genuinely fresh run, archive BOTH v3/results/chunks and
+v3/results/thresholds.json together in a separate directory before restarting.
+Keep the published originals intact. Existing published results need not be rerun.
+
+7. INFERENCE AND CALIBRATION
+
+Per-SNP OLS and logistic MLE adjust for intercept, age, sex, measured exposure,
+and squared age. Sandwich HC0 variances and cross-trait influence covariance
+support marginal and omnibus Wald tests. Bonferroni correction covers 64 markers.
+The conjunction p-value is max(p_C,p_M). It identifies two associations at a tag,
+not necessarily one directly shared causal effect.
+
+Primary coloc ABFs use non-overlapping participant halves. Quantitative prior SD
+0.15 in fitted outcome units, logistic prior SD 0.20 log OR, p1=p2=1e-4,
+p12=1e-5, with p12 sensitivity 1e-6 and 1e-4. Model-based variances enter the
+standard ABFs. A whole-sample overlap diagnostic changes both N and error dependence.
+H0 neither, H1 cardio only, H2 mental only, H3 distinct causes, H4 one shared cause.
+PP4 >0.8 is compared with strict composite-null calibrated cutoffs.
+The latter take the largest 191st ascending PP4 across the five 200-replicate
+no-sharing banks in each stratum. Calibration does not validate genome-wide tails.
+
+The first 20 evaluation replicates in every cell/architecture form 1,920 fixed
+copula diagnostics using the unchanged original Gaussian/probit engine. Their
+nominal fixed-anchor tests have a different search burden from regional tests.
+They are not presented as a ranking of shared-causal-variant methods.
+Main failures remain non-discoveries; calibration failures block cutoffs.
+
+8. SUMMARY AND INDEPENDENT VALIDATION
+
+  python v3/src/analyse.py
+  python v3/src/audit.py --summaries
+  python v3/src/export_r.py
+  Rscript --vanilla v3/src/crosscheck.R v3
+
+The analysis saves per-cell rates, aggregate rates, paired comparisons, 400 paired
+stratified bootstrap draws, generating genetic covariance, phenotype summaries,
+copula diagnostics and seven figures. Bootstrap resampling includes both calibration
+and evaluation uncertainty, with all methods kept paired within datasets.
+Independent R lm/glm and HC0 calculations check numerical fixtures and prespecified
+main-data fixtures; established R coloc 5.2.3 validates posterior enumeration.
+Allele flips, an independent BFGS optimiser, exact perfect-LD equivalence,
+deterministic replays, counts, hashes, original bytes and summary intervals are checked.
+Audits retain the initial execution ordering evidence by threshold checksum so
+the result remains portable across copies where filesystem times change.
+
+9. LEVEL TWO MULTI-SIGNAL FINE MAPPING
+
+Frozen design/source commit: 85b0bc4.
+Use the first 20 replicates of every original local calibration/evaluation cell.
+This reuses 1,200 calibration and 1,920 evaluation datasets, not new cohorts.
+Matched-reference and in-sample LD yield 6,240 analysis records and two SuSiE fits
+per record. The source ensures ALT-allele order, signed LD and matching SNP names.
+The external LD uses the 40 matched reference donors' actual paired genotypes.
+In-sample continuous LD is covariate-residualised; binary LD is null-information
+weighted. Both use R_used = .95R + .05I, prespecified before main fitting.
+
+Run sequentially from the repository root:
+  python v4/src/freeze.py
+  python v4/src/export_finemap.py --phase cal
+  Rscript --vanilla v4/src/finemap.R v4 cal
+  python v4/src/finemap_summary.py --freeze
+  python v4/src/export_finemap.py --phase eval
+  Rscript --vanilla v4/src/finemap.R v4 eval
+  python v4/src/finemap_summary.py
+  Rscript --vanilla v4/src/check_finemap.R v4
+
+SuSiE uses L=5, 95% credible sets, default purity checks, at most 1,000 iterations,
+and no residual-variance estimation. The binary summary likelihood is approximate.
+No credible set is a valid no-discovery; nonconvergence is retained as a failure.
+coloc.susie evaluates retained signal pairs. Maximum pairwise PP4 >.8 is a
+conventional decision score, not a global posterior for at least one sharing event.
+Calibration takes the maximum across five no-sharing banks, with strict rejection.
+For each 20-replicate bank the averaged rank bound is 1/21, not conditional error
+control for a realised bank. Any calibration failure disables that calibrated arm.
+PIP and credible-set outputs are retained, including causal recovery and set sizes.
+The matched single-causal comparison uses the identical 20-replicate subset/banks.
+The small panel supports a secondary methodological comparison, not universal
+superiority claims or real clinical fine-mapping conclusions.
+
+10. LEVEL THREE GENETIC COVARIANCE AND CORRELATION
+
+The separate model generates a synthetic polygenic genome from 22 independent
+blocks of 32 common variants each. The LD templates are real chromosome 22 windows
+at 20.0,21.0,...,41.0 Mb, each 100 kb long. They are NOT real chromosome 1-22 data.
+Source positions and population-specific haplotypes are retained in v4/reference.
+It is a 704-marker synthetic genome-scale benchmark, not a complete African
+whole-genome reference. This scope is explicit in the README and Word report.
+
+The committed derived haplotypes are sufficient to reproduce the simulations.
+To independently reconstruct all templates and cached kernels in a separate copy:
+  python v4/src/kernel.py --raw /path/to/checksum-verified/Phase3/files
+
+The model uses n=600/1200, YRI/LWK, genetic variances .4/.4, residual variances
+.6/.6, genetic correlations -.5/0/.5 and residual correlations 0/.4. Simulated
+genotypes define a unit-diagonal relationship kernel. Both genetic and residual
+covariances are estimated, so environmental dependence is not assumed to be genetic.
+Covariates are projected out before the kernel eigendecomposition. The exact
+bivariate restricted likelihood is solved with analytic gradients. An independent
+R optimiser and dense-matrix likelihood checks validate calculations.
+
+The continuous-liability benchmark is exact for this mixed model. The observed
+depression proxy is binary, population prevalence .15, sensitivity .90, specificity
+.98; its Gaussian working REML fit is explicitly approximate. Information-based
+interval coverage, bias, RMSE, boundaries and empirical error rates are evaluated.
+There is no clinical ascertainment. Genetic correlation approximately cancels
+liability/diagnostic scale factors; covariance transformations are separately
+labelled approximations. Positive/negative effects can cancel genome-wide genetic
+covariance even when many variants affect both traits. No Genomic SEM is used.
+
+Initial experiment, preserved:
+  python v4/src/test_reml.py
+  python v4/src/polygenic.py
+  python v4/src/polygenic_summary.py
+
+The initial run contains 1,600 calibration plus 2,400 evaluation cohorts.
+Small-bank cell-level uncertainty motivated a uniform prospective amplification,
+frozen in commit dd84837. The model and all generating parameters remained fixed.
+Initial results remain published; the amplification uses entirely fresh seeds.
+
+Confirmatory larger-bank validation:
+  python v4/src/polygenic_validation.py
+  python v4/src/polygenic_summary.py --validation
+  Rscript --vanilla v4/src/check_reml.R v4
+
+It adds 8,000 calibration and 4,800 fresh evaluation cohorts. There are 1,000 null
+calibration cohorts per population/sample-size/residual-correlation stratum, and
+200 evaluation cohorts for each genetic correlation in each stratum. Strict
+rank-951 thresholds are frozen before fresh evaluation. Seed replicate offsets
+1,000,000 and 2,000,000 never overlap the initial experiment. Both liability and
+binary outcomes come from the same cohort and must not be double-counted.
+Parameter summaries and test rates remain separate from local shared-SNP inference.
+Four hundred paired bootstrap draws include calibration and evaluation uncertainty.
+
+11. INTEGRATED AUDIT AND MANUSCRIPT
+
+After all local and extension simulations and independent R checks complete:
+  python v3/src/audit.py --summaries
+  python v4/src/audit.py
+  python v4/src/figures.py
+  python v4/src/manuscript.py
+  python v4/src/build_word.py --pandoc /path/to/pandoc
+
+The integrated manuscript generator regenerates the intermediate v3-only text
+before incorporating Levels 2 and 3. v3/results/manuscript_sources.json records
+that intermediate stage; v4/results/manuscript_sources.json records final sources.
+Only the integrated Word report is a new final document. Original Word reports
+remain untouched. All figures require visual inspection, and every final Word
+page must be rendered and inspected before the publication audit is completed.
+
+Global counts: 31,200 local cohorts + 4,000 initial polygenic cohorts + 12,800
+fresh polygenic-validation cohorts = 48,000 unique newly generated cohorts.
+The 3,120 fine-mapping subset datasets and paired outcome modes do not add to
+that total. The earlier 92,000-dataset oracle study is preserved separately.
+
+For independent reproduction on another runtime, keep published outputs intact
+in a separate archival directory or use a separate clone. Checkpoint reuse is
+allowed only when source and generated input/output hashes match. Numerical
+differences across platforms can require a fresh output directory; do not merge
+old and new chunk collections or overwrite the original published result archives.
+12. MANUSCRIPT AND WORD
+
+  python v4/src/manuscript.py
+  python v4/src/build_word.py --pandoc /path/to/pandoc
+
+The manuscript generator inserts results directly from audited CSV/JSON outputs.
+Interpretations precede figures. README and Word share the research-paper text,
+mathematical specifications, twelve figures, eleven tables and author name.
+The Word builder converts TeX equations to native editable Office Math.
+Render the Word output and inspect every page before publishing. Generated
+page images and QA PDFs belong in v3/work, not the public deliverables.
+Run v4/src/publication_audit.py after all final edits; it compares tables, equations,
+author/links, preserved files, visual-validation hashes and public checksums.
+
+13. GITHUB
+
+The user authorised publishing to the existing public repository. No raw clinical
+data, private identifiers, personal R startup files, credentials or QA intermediates
+belong in the public snapshot. The derived public haplotype panels and small
+synthetic numerical fixtures are included for reproducibility.
+
+  git -c core.fsmonitor=false status --short
+  git -c core.fsmonitor=false diff --check
+  git -c core.fsmonitor=false add README.md workflow.txt report v3 v4 baseline .github .gitignore
+  python v4/src/publication_audit.py --write
+  git -c core.fsmonitor=false add checksums_public.sha256 v3/results v4/results
+  git -c core.fsmonitor=false commit -m "Evaluate shared genetic effects with African LD and realistic phenotypes"
+  git -c core.fsmonitor=false -c http.version=HTTP/1.1 -c http.postBuffer=67108864 push origin main
+
+Check the final GitHub Actions run and verify local HEAD matches origin/main.
+CI executes independent numerical controls and small pipelines; it does not repeat
+the complete simulation study. Detailed current findings and limitations appear
+in README.md and the integrated version 4 Word report.

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "fixtures": 13,
+  "independent_fits": 1552,
+  "max_absolute_errors": {
+    "ols": 1.0894e-14,
+    "logistic": 1.8467e-12,
+    "ols_robust": 1.4528e-17,
+    "logistic_robust": 4.6698e-14,
+    "posterior": 2.2204e-16
+  },
+  "R": "R version 4.5.1 (2025-06-13 ucrt)",
+  "coloc": "5.2.3",
+  "jsonlite": "2.0.0"
+}

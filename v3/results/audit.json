@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "datasets": 31200,
+  "calibration_datasets": 12000,
+  "evaluation_datasets": 19200,
+  "unique_fingerprints": 31200,
+  "main_failures": 0,
+  "copula_diagnostic_datasets": 1920,
+  "copula_failures": 0,
+  "replayed_datasets": 12,
+  "max_replay_error": 0.0,
+  "preserved_old_files": 2049,
+  "calibration_before_evaluation": true,
+  "threshold_sha256": "a57594899e75cd16d9639cb0f4256c25e7a88e39aac48faa1181a234240cbf30",
+  "timeline_evidence": "Initial execution file ordering, retained by threshold hash for portable replay",
+  "source_identity": "9bc3dad396ef9a1eaf3e0621b25b88cccd66a864975644f16233caaa2b93b05a",
+  "protocol_commit": "5999591",
+  "audited_utc": "2026-10-29T06:34:51Z",
+  "summary_rows": 768,
+  "aggregate_rows": 128,
+  "bootstrap_draws": 400,
+  "summary_checks_passed": true
+}

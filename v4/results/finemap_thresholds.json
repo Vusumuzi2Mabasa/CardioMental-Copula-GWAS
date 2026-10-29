@@ -1,0 +1,153 @@
+{
+  "thresholds": {
+    "LWK_r0_ideal_in_sample": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.994975571850041,
+      "calibration_per_architecture": 20
+    },
+    "LWK_r0_ideal_matched_reference": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.99999996383312,
+      "calibration_per_architecture": 20
+    },
+    "LWK_r0_realistic_in_sample": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.998220838075499,
+      "calibration_per_architecture": 20
+    },
+    "LWK_r0_realistic_matched_reference": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.998511239061696,
+      "calibration_per_architecture": 20
+    },
+    "LWK_r1_ideal_in_sample": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.999916791995855,
+      "calibration_per_architecture": 20
+    },
+    "LWK_r1_ideal_matched_reference": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.999936675810689,
+      "calibration_per_architecture": 20
+    },
+    "LWK_r1_realistic_in_sample": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.998545345239131,
+      "calibration_per_architecture": 20
+    },
+    "LWK_r1_realistic_matched_reference": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.998946848159293,
+      "calibration_per_architecture": 20
+    },
+    "LWK_r2_ideal_in_sample": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.994991436862941,
+      "calibration_per_architecture": 20
+    },
+    "LWK_r2_ideal_matched_reference": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.998321453372478,
+      "calibration_per_architecture": 20
+    },
+    "LWK_r2_realistic_in_sample": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.99488370103964,
+      "calibration_per_architecture": 20
+    },
+    "LWK_r2_realistic_matched_reference": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.995005095927679,
+      "calibration_per_architecture": 20
+    },
+    "YRI_r0_ideal_in_sample": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.992642370298699,
+      "calibration_per_architecture": 20
+    },
+    "YRI_r0_ideal_matched_reference": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.992873340385822,
+      "calibration_per_architecture": 20
+    },
+    "YRI_r0_realistic_in_sample": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.986471548742035,
+      "calibration_per_architecture": 20
+    },
+    "YRI_r0_realistic_matched_reference": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.991878185125733,
+      "calibration_per_architecture": 20
+    },
+    "YRI_r1_ideal_in_sample": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.983838598314095,
+      "calibration_per_architecture": 20
+    },
+    "YRI_r1_ideal_matched_reference": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.999528428234127,
+      "calibration_per_architecture": 20
+    },
+    "YRI_r1_realistic_in_sample": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.997615966228474,
+      "calibration_per_architecture": 20
+    },
+    "YRI_r1_realistic_matched_reference": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.999963042096191,
+      "calibration_per_architecture": 20
+    },
+    "YRI_r2_ideal_in_sample": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.998993264738375,
+      "calibration_per_architecture": 20
+    },
+    "YRI_r2_ideal_matched_reference": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.99898613860182,
+      "calibration_per_architecture": 20
+    },
+    "YRI_r2_realistic_in_sample": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.998846165531776,
+      "calibration_per_architecture": 20
+    },
+    "YRI_r2_realistic_matched_reference": {
+      "active": true,
+      "failures": 0,
+      "cutoff": 0.99890266554947,
+      "calibration_per_architecture": 20
+    }
+  },
+  "alpha": 0.05,
+  "rank": 20,
+  "strict": true,
+  "averaged_bound": 0.047619047619047616,
+  "calibration_rows": 2400
+}

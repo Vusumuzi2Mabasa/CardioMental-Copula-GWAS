@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "fixtures": 17,
+  "max_loglikelihood_error": 8.2525e-10,
+  "max_genetic_correlation_error": 3.025e-06,
+  "R": "R version 4.5.1 (2025-06-13 ucrt)"
+}

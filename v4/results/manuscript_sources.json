@@ -1,0 +1,9 @@
+{
+  "source": "v4/src/manuscript.py",
+  "intermediate_v3_readme_sha256": "8144d936609315f65209c4572d04cb665ccbac6dda6fd6b83dbd2545b16b53fb",
+  "readme_sha256": "88f5349084b484688ba89d3f7383bd086cac245a917b784f0da96635c73c98ce",
+  "local_audit_sha256": "ec2154182921c3c618a054f9c1753ff86995fc0d9046cff3c1528de0402f834f",
+  "extension_audit_sha256": "c269ca340da60eb07d6548cc2448f150545104eefd645940837831674f6abfbb",
+  "fine_comparison_sha256": "a808d89c8fd497108829703de502f37efbfeaabd550bbcf986b09913d8a72183",
+  "primary_polygenic_rates_sha256": "39ec70a7f9d1223272d29e458af2a4ce7ce52eb570aa3a0ea6a901aa6d35f803"
+}

@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "pages": 24,
+  "pages_inspected": 24,
+  "figures_inspected": 12,
+  "readme_sha256": "88f5349084b484688ba89d3f7383bd086cac245a917b784f0da96635c73c98ce",
+  "word_sha256": "0c4bb1e6b50c5c9d4ffa6ad62bd8b79927c01297d5676ff5063a1474e897ab13",
+  "page_image_sha256": {
+    "page-1.png": "a121d473917e7d7a34fa3107d51190a18c703e703ea6057e341444905b3066db",
+    "page-2.png": "60c1aa5cdac3d238188e62d20cf2e403c24fbb18d4a03c68f1025eab354b523f",
+    "page-3.png": "47a6b24c068f31d07d968c1489110f1c55b61eb7b570f82ac08d31deebb30d80",
+    "page-4.png": "6c9513e1e539620f6e2e4f6f2a4d670551271c902eedbdfc2f1b82e5e5279092",
+    "page-5.png": "ed35141dc90ecf3f9969c7ecf63828a294b284be770c4fcf921319e90e5270b8",
+    "page-6.png": "ff6a303578071bc53effd1eaae568b331d24c8c99f518f96a984627eed3bb9cb",
+    "page-7.png": "d9292198e90a953b81fd0ca677dfece8444dadf1c190c1dce73f716aefce00c7",
+    "page-8.png": "31da5374b1ffdcb00b49733211837c41e282728e0a03caf9939a71ad4e9d75e2",
+    "page-9.png": "44ccb972a9587cd1a69ff79cbe91397498a4e3579ef3c7fba994db2eca078755",
+    "page-10.png": "9f801fb7b916b7cff7f22bceebbc1ccf4dc8987666d0c50809c508b730527dbb",
+    "page-11.png": "dd574fcc1342be41446fdd6990430b2a2c039548f122b51c2c5c11be40e8bd22",
+    "page-12.png": "d57b37085a8f6c24d7178265ea0966273eef790b36e8c5406611decca4b7b5d7",
+    "page-13.png": "07e0f6ba4be8d5e54b3a97ec573809a71fbbd48adccb08ba690f049021402f0f",
+    "page-14.png": "c8acca1f3dd6e92aa13fa3096692fe34fde42b6db4c1a7dd28b7c4a89c83a068",
+    "page-15.png": "8e8bc8bdacca6f4d4b6ce2bbe38c5f277d9889fc6955ff4a86a0e4cd325fa99f",
+    "page-16.png": "e614b787547e03d3057f681f9b577a2efb53a8cdae8472f791bfb016c4d0070b",
+    "page-17.png": "56a1196ec23c4f8c60bddbdad1d242c0d6df0fc57922854b7e98532b7fe2f442",
+    "page-18.png": "cc10da25c26814429b3847c0426810da526636cbaefb28d6781b5f2dac9a838d",
+    "page-19.png": "303636dda80409db7abe74f5c3d1e52b9361e64e89fe5abae824ae8027dc7b6c",
+    "page-20.png": "cf72ae75f1efd9b8e00ec4b6a0b24e8a7878f32341b3c6fa04b426acd489be38",
+    "page-21.png": "e877467af9bfdb05937d091101e29f0ac0fdc7030bbff2219e2b125b7dfdea91",
+    "page-22.png": "e689d39f1c78e0861d6e1efcb8a3944290a67aa65df1a9a33be78de08c1e201c",
+    "page-23.png": "4ec6e7ce75ea97b2d405c2895c33334f782cc8a7eced0b5c67201f0787e79bde",
+    "page-24.png": "79b2b45689f2ba4dc7bfb449a704ee5284e4c42e765cb29556754a1fba3bb501"
+  },
+  "inspection": "Every page reviewed at 816 by 1056 pixels. Release pages 1 to 11 have byte-identical pixels to the inspected preceding render; pages 12 to 24 directly reviewed after the final table layout change.",
+  "checks": [
+    "All author and simulation labels visible",
+    "All mathematical glyphs rendered without errors",
+    "No clipped tables or figures",
+    "Short tables and captions kept together",
+    "Interpretations precede figures",
+    "All 12 graphics legible"
+  ]
+}

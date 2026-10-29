@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "gradient_max_error": 1.485742431861503e-11,
+  "dense_loglikelihood_error": 6.661338147750939e-16,
+  "outcome_sign_flip": true
+}

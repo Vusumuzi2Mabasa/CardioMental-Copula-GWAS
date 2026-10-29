@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "local_cohorts": 31200,
+  "initial_polygenic_cohorts": 4000,
+  "fresh_polygenic_cohorts": 12800,
+  "total_new_unique_cohorts": 48000,
+  "figures": 12,
+  "tables": 11,
+  "native_editable_equations": 21,
+  "report_pages": 24,
+  "author": "Vusumuzi Mabasa",
+  "readme_sha256": "88f5349084b484688ba89d3f7383bd086cac245a917b784f0da96635c73c98ce",
+  "word_sha256": "0c4bb1e6b50c5c9d4ffa6ad62bd8b79927c01297d5676ff5063a1474e897ab13",
+  "original_scientific_files_preserved": 2049,
+  "credential_scan_passed": true
+}

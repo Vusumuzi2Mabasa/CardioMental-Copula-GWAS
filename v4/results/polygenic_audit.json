@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "unique_calibration_cohorts": 1600,
+  "unique_evaluation_cohorts": 2400,
+  "outcome_fits": 8000,
+  "outcome_modes_not_independent": true,
+  "calibration_fit_failures": 0,
+  "evaluation_fit_failures": 0,
+  "inactive_calibration_strata": 0,
+  "summary_rows": 48,
+  "aggregate_rows": 12,
+  "bootstrap_replicates": 400,
+  "binary_likelihood": "Gaussian working approximation; errors and coverage evaluated separately from exact liability benchmark"
+}

@@ -1,0 +1,88 @@
+{
+  "thresholds": {
+    "LWK_n1200_e0.0_liability": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 3.4988179897795817
+    },
+    "LWK_n1200_e0.0_observed_binary": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 3.5594934118912533
+    },
+    "LWK_n1200_e0.4_liability": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 3.4257066646200656
+    },
+    "LWK_n1200_e0.4_observed_binary": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 3.5397132601188446
+    },
+    "LWK_n600_e0.0_liability": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 3.794639815815117
+    },
+    "LWK_n600_e0.0_observed_binary": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 3.968527798617572
+    },
+    "LWK_n600_e0.4_liability": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 4.913788052984728
+    },
+    "LWK_n600_e0.4_observed_binary": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 6.130327447319942
+    },
+    "YRI_n1200_e0.0_liability": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 3.4572713103937076
+    },
+    "YRI_n1200_e0.0_observed_binary": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 3.91298997632191
+    },
+    "YRI_n1200_e0.4_liability": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 3.6115981693442336
+    },
+    "YRI_n1200_e0.4_observed_binary": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 4.721521312805351
+    },
+    "YRI_n600_e0.0_liability": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 4.429078731899949
+    },
+    "YRI_n600_e0.0_observed_binary": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 2.8419377041736453
+    },
+    "YRI_n600_e0.4_liability": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 3.9989471583753584
+    },
+    "YRI_n600_e0.4_observed_binary": {
+      "active": true,
+      "failures": 0,
+      "LR_cutoff": 3.213665294360709
+    }
+  },
+  "strict": true,
+  "alpha": 0.05,
+  "calibration_datasets": 1600,
+  "outcome_modes_not_independent": true
+}

@@ -1,0 +1,8 @@
+{
+  "R": "R version 4.5.1 (2025-06-13 ucrt)",
+  "coloc": "5.2.3",
+  "susieR": "0.14.2",
+  "L": 5,
+  "coverage": 0.95,
+  "LD_shrinkage": 0.05
+}

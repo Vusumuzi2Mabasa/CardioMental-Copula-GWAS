@@ -1,0 +1,129 @@
+regime,scenario,method,attempted,rate,bootstrap_lower,bootstrap_upper
+ideal,null,Joint association,1200,0.03166666666666667,0.0225,0.043333333333333335
+ideal,null,Tagging conjunction,1200,0.0,0.0,0.0
+ideal,null,Tagging calibrated,1200,0.0016666666666666668,0.0,0.006666666666666667
+ideal,null,Coloc PP4 > 0.8,1200,0.0,0.0,0.0
+ideal,null,Coloc calibrated,1200,0.0,0.0,0.0
+ideal,null,Overlap PP4 > 0.8,1200,0.0,0.0,0.0
+ideal,null,Prior low PP4 > 0.8,1200,0.0,0.0,0.0
+ideal,null,Prior high PP4 > 0.8,1200,0.0,0.0,0.0
+ideal,cardio_only,Joint association,1200,1.0,1.0,1.0
+ideal,cardio_only,Tagging conjunction,1200,0.005,0.0016666666666666668,0.01
+ideal,cardio_only,Tagging calibrated,1200,0.02666666666666667,0.0175,0.0475
+ideal,cardio_only,Coloc PP4 > 0.8,1200,0.0,0.0,0.0
+ideal,cardio_only,Coloc calibrated,1200,0.0,0.0,0.0
+ideal,cardio_only,Overlap PP4 > 0.8,1200,0.0008333333333333334,0.0,0.0025
+ideal,cardio_only,Prior low PP4 > 0.8,1200,0.0,0.0,0.0
+ideal,cardio_only,Prior high PP4 > 0.8,1200,0.015833333333333335,0.009166666666666667,0.023333333333333334
+ideal,mental_only,Joint association,1200,1.0,1.0,1.0
+ideal,mental_only,Tagging conjunction,1200,0.009166666666666667,0.004166666666666667,0.01418749999999998
+ideal,mental_only,Tagging calibrated,1200,0.03333333333333333,0.025,0.05002083333333332
+ideal,mental_only,Coloc PP4 > 0.8,1200,0.0016666666666666668,0.0,0.004166666666666667
+ideal,mental_only,Coloc calibrated,1200,0.0,0.0,0.0
+ideal,mental_only,Overlap PP4 > 0.8,1200,0.0016666666666666668,0.0,0.004166666666666667
+ideal,mental_only,Prior low PP4 > 0.8,1200,0.0,0.0,0.0
+ideal,mental_only,Prior high PP4 > 0.8,1200,0.0125,0.006666666666666667,0.019166666666666665
+ideal,shared_same,Joint association,1200,1.0,1.0,1.0
+ideal,shared_same,Tagging conjunction,1200,1.0,1.0,1.0
+ideal,shared_same,Tagging calibrated,1200,1.0,1.0,1.0
+ideal,shared_same,Coloc PP4 > 0.8,1200,0.8966666666666666,0.8783124999999999,0.9133333333333333
+ideal,shared_same,Coloc calibrated,1200,0.25166666666666665,0.22414583333333332,0.28587499999999993
+ideal,shared_same,Overlap PP4 > 0.8,1200,0.9991666666666666,0.9975,1.0
+ideal,shared_same,Prior low PP4 > 0.8,1200,0.6925,0.6691458333333333,0.7175416666666666
+ideal,shared_same,Prior high PP4 > 0.8,1200,0.9783333333333334,0.9683333333333334,0.9866875
+ideal,shared_opposing,Joint association,1200,1.0,1.0,1.0
+ideal,shared_opposing,Tagging conjunction,1200,0.9991666666666666,0.9975,1.0
+ideal,shared_opposing,Tagging calibrated,1200,1.0,1.0,1.0
+ideal,shared_opposing,Coloc PP4 > 0.8,1200,0.8508333333333333,0.8275,0.8683333333333333
+ideal,shared_opposing,Coloc calibrated,1200,0.18,0.15662500000000001,0.2075208333333333
+ideal,shared_opposing,Overlap PP4 > 0.8,1200,0.9966666666666667,0.9925,0.9991875
+ideal,shared_opposing,Prior low PP4 > 0.8,1200,0.6266666666666667,0.6033333333333334,0.6500416666666666
+ideal,shared_opposing,Prior high PP4 > 0.8,1200,0.9641666666666666,0.9533125,0.9741666666666666
+ideal,distinct_low,Joint association,1200,1.0,1.0,1.0
+ideal,distinct_low,Tagging conjunction,1200,0.3175,0.29664583333333333,0.3391875
+ideal,distinct_low,Tagging calibrated,1200,0.5233333333333333,0.47581249999999997,0.5758541666666667
+ideal,distinct_low,Coloc PP4 > 0.8,1200,0.0008333333333333334,0.0,0.0025
+ideal,distinct_low,Coloc calibrated,1200,0.0,0.0,0.0
+ideal,distinct_low,Overlap PP4 > 0.8,1200,0.0,0.0,0.0
+ideal,distinct_low,Prior low PP4 > 0.8,1200,0.0,0.0,0.0
+ideal,distinct_low,Prior high PP4 > 0.8,1200,0.010833333333333334,0.005833333333333334,0.0175
+ideal,distinct_high,Joint association,1200,1.0,1.0,1.0
+ideal,distinct_high,Tagging conjunction,1200,1.0,1.0,1.0
+ideal,distinct_high,Tagging calibrated,1200,1.0,1.0,1.0
+ideal,distinct_high,Coloc PP4 > 0.8,1200,0.7916666666666666,0.7699791666666667,0.8108541666666667
+ideal,distinct_high,Coloc calibrated,1200,0.059166666666666666,0.043333333333333335,0.0825
+ideal,distinct_high,Overlap PP4 > 0.8,1200,0.795,0.7766666666666666,0.8125
+ideal,distinct_high,Prior low PP4 > 0.8,1200,0.5108333333333334,0.48583333333333334,0.5358541666666667
+ideal,distinct_high,Prior high PP4 > 0.8,1200,0.9625,0.9516666666666667,0.9725208333333334
+ideal,shared_plus_distinct,Joint association,1200,1.0,1.0,1.0
+ideal,shared_plus_distinct,Tagging conjunction,1200,1.0,1.0,1.0
+ideal,shared_plus_distinct,Tagging calibrated,1200,1.0,1.0,1.0
+ideal,shared_plus_distinct,Coloc PP4 > 0.8,1200,0.7516666666666667,0.7275,0.7733541666666667
+ideal,shared_plus_distinct,Coloc calibrated,1200,0.1525,0.13160416666666666,0.18083333333333335
+ideal,shared_plus_distinct,Overlap PP4 > 0.8,1200,0.8408333333333333,0.8216666666666667,0.8608333333333333
+ideal,shared_plus_distinct,Prior low PP4 > 0.8,1200,0.5191666666666667,0.49495833333333333,0.5442083333333333
+ideal,shared_plus_distinct,Prior high PP4 > 0.8,1200,0.8866666666666667,0.8691666666666666,0.9033333333333333
+realistic,null,Joint association,1200,0.0225,0.015,0.03
+realistic,null,Tagging conjunction,1200,0.0008333333333333334,0.0,0.0025
+realistic,null,Tagging calibrated,1200,0.0025,0.0,0.005
+realistic,null,Coloc PP4 > 0.8,1200,0.0,0.0,0.0
+realistic,null,Coloc calibrated,1200,0.0,0.0,0.0
+realistic,null,Overlap PP4 > 0.8,1200,0.0,0.0,0.0
+realistic,null,Prior low PP4 > 0.8,1200,0.0,0.0,0.0
+realistic,null,Prior high PP4 > 0.8,1200,0.0,0.0,0.0
+realistic,cardio_only,Joint association,1200,1.0,1.0,1.0
+realistic,cardio_only,Tagging conjunction,1200,0.008333333333333333,0.0033333333333333335,0.012520833333333314
+realistic,cardio_only,Tagging calibrated,1200,0.05583333333333333,0.03666666666666667,0.06916666666666667
+realistic,cardio_only,Coloc PP4 > 0.8,1200,0.0025,0.0,0.005
+realistic,cardio_only,Coloc calibrated,1200,0.0,0.0,0.0
+realistic,cardio_only,Overlap PP4 > 0.8,1200,0.0016666666666666668,0.0,0.004166666666666667
+realistic,cardio_only,Prior low PP4 > 0.8,1200,0.0,0.0,0.0
+realistic,cardio_only,Prior high PP4 > 0.8,1200,0.0175,0.010833333333333334,0.02666666666666667
+realistic,mental_only,Joint association,1200,1.0,1.0,1.0
+realistic,mental_only,Tagging conjunction,1200,0.010833333333333334,0.005,0.016666666666666666
+realistic,mental_only,Tagging calibrated,1200,0.04,0.025833333333333333,0.0575
+realistic,mental_only,Coloc PP4 > 0.8,1200,0.0008333333333333334,0.0,0.0033333333333333335
+realistic,mental_only,Coloc calibrated,1200,0.0,0.0,0.0
+realistic,mental_only,Overlap PP4 > 0.8,1200,0.0016666666666666668,0.0,0.004166666666666667
+realistic,mental_only,Prior low PP4 > 0.8,1200,0.0,0.0,0.0
+realistic,mental_only,Prior high PP4 > 0.8,1200,0.010833333333333334,0.005,0.0175
+realistic,shared_same,Joint association,1200,1.0,1.0,1.0
+realistic,shared_same,Tagging conjunction,1200,1.0,1.0,1.0
+realistic,shared_same,Tagging calibrated,1200,1.0,1.0,1.0
+realistic,shared_same,Coloc PP4 > 0.8,1200,0.8416666666666667,0.8207916666666666,0.8617083333333333
+realistic,shared_same,Coloc calibrated,1200,0.2,0.16247916666666667,0.2350208333333333
+realistic,shared_same,Overlap PP4 > 0.8,1200,0.9991666666666666,0.9975,1.0
+realistic,shared_same,Prior low PP4 > 0.8,1200,0.5991666666666666,0.575,0.6275
+realistic,shared_same,Prior high PP4 > 0.8,1200,0.9583333333333334,0.9475,0.9683333333333334
+realistic,shared_opposing,Joint association,1200,1.0,1.0,1.0
+realistic,shared_opposing,Tagging conjunction,1200,0.9991666666666666,0.9975,1.0
+realistic,shared_opposing,Tagging calibrated,1200,1.0,1.0,1.0
+realistic,shared_opposing,Coloc PP4 > 0.8,1200,0.7675,0.7425,0.79
+realistic,shared_opposing,Coloc calibrated,1200,0.10916666666666666,0.07831250000000001,0.1425208333333333
+realistic,shared_opposing,Overlap PP4 > 0.8,1200,0.9975,0.995,1.0
+realistic,shared_opposing,Prior low PP4 > 0.8,1200,0.4575,0.43247916666666664,0.48333333333333334
+realistic,shared_opposing,Prior high PP4 > 0.8,1200,0.9333333333333333,0.9208124999999999,0.9483541666666667
+realistic,distinct_low,Joint association,1200,1.0,1.0,1.0
+realistic,distinct_low,Tagging conjunction,1200,0.2725,0.25333333333333335,0.2925
+realistic,distinct_low,Tagging calibrated,1200,0.48583333333333334,0.4208125,0.5108541666666667
+realistic,distinct_low,Coloc PP4 > 0.8,1200,0.0,0.0,0.0
+realistic,distinct_low,Coloc calibrated,1200,0.0,0.0,0.0
+realistic,distinct_low,Overlap PP4 > 0.8,1200,0.0,0.0,0.0
+realistic,distinct_low,Prior low PP4 > 0.8,1200,0.0,0.0,0.0
+realistic,distinct_low,Prior high PP4 > 0.8,1200,0.0125,0.006666666666666667,0.019166666666666665
+realistic,distinct_high,Joint association,1200,1.0,1.0,1.0
+realistic,distinct_high,Tagging conjunction,1200,1.0,1.0,1.0
+realistic,distinct_high,Tagging calibrated,1200,1.0,1.0,1.0
+realistic,distinct_high,Coloc PP4 > 0.8,1200,0.7483333333333333,0.7249791666666666,0.7717083333333332
+realistic,distinct_high,Coloc calibrated,1200,0.035833333333333335,0.025812500000000002,0.0625
+realistic,distinct_high,Overlap PP4 > 0.8,1200,0.8075,0.7925,0.8233333333333334
+realistic,distinct_high,Prior low PP4 > 0.8,1200,0.4275,0.4,0.45416666666666666
+realistic,distinct_high,Prior high PP4 > 0.8,1200,0.9283333333333333,0.915,0.9400208333333333
+realistic,shared_plus_distinct,Joint association,1200,1.0,1.0,1.0
+realistic,shared_plus_distinct,Tagging conjunction,1200,1.0,1.0,1.0
+realistic,shared_plus_distinct,Tagging calibrated,1200,1.0,1.0,1.0
+realistic,shared_plus_distinct,Coloc PP4 > 0.8,1200,0.7166666666666667,0.6899583333333332,0.7416875
+realistic,shared_plus_distinct,Coloc calibrated,1200,0.14,0.1075,0.16668749999999996
+realistic,shared_plus_distinct,Overlap PP4 > 0.8,1200,0.8391666666666666,0.8183125,0.8591875
+realistic,shared_plus_distinct,Prior low PP4 > 0.8,1200,0.4558333333333333,0.42916666666666664,0.4800208333333333
+realistic,shared_plus_distinct,Prior high PP4 > 0.8,1200,0.895,0.8775,0.9125

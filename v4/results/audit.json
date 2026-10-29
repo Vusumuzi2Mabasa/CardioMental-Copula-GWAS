@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "source_identity": "5e49c33c01b6c330e965a64f31d3b248c4066fa88d37983385708d7b4b6ee897",
+  "protocol_commit": "85b0bc4",
+  "fresh_validation_commit": "dd84837",
+  "fresh_validation_identity": "859345079776f687e85ea27210f35e4b7a2fb33d978923cc5d8b50a814548875",
+  "finemap_analyses": 6240,
+  "finemap_cohorts_reused_from_v3": 3120,
+  "retained_variant_PIP_rows": 798720,
+  "retained_credible_sets": 8005,
+  "initial_polygenic_cohorts": 4000,
+  "fresh_polygenic_cohorts": 12800,
+  "polygenic_outcome_fit_records": 33600,
+  "replayed_polygenic_fits": 32,
+  "max_replay_error": 0.0,
+  "fresh_summary_rows_checked": 48,
+  "fresh_bootstrap_rounds_replayed": 4,
+  "independent_R_fixtures": 33,
+  "scope": "Synthetic analyses of association, causal-variant sharing and polygenic genetic correlation; no real shared genetic causes established"
+}
