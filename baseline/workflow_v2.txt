@@ -1,0 +1,27 @@
+CardioMental Copula GWAS version two
+Author: Vusumuzi Mabasa
+Fully synthetic data; no Genomic SEM.
+
+python v2/src/test_oracle.py
+Rscript --vanilla v2/src/crosscheck.R v2
+# Published pilot outputs and their source lock are already frozen.
+# Run a new pilot only in a separate checkout with a new versioned design.
+python v2/src/freeze.py
+python v2/src/run.py --smoke --workers 2
+python v2/src/run.py --workers 2
+python v2/src/information.py
+Rscript --vanilla v2/src/information_check.R v2
+python v2/src/audit.py
+python v2/src/analyse.py
+python v2/src/summary_audit.py
+python v2/src/manuscript.py
+python v2/src/build_word.py --pandoc /path/to/pandoc
+
+Monitor without examining results: python v2/src/status.py
+Design and mathematical methods: README.md and v2/protocol/design.json
+Baseline: baseline/CardioMental_v1_48aa582.zip and original root results.
+The v2 runner resumes only matching chunks and freezes calibration before evaluation.
+To rerun from scratch, archive v2/results/chunks AND v2/results/thresholds.json together.
+Report requires Pandoc (available with Quarto), python-docx and visual rendering QA.
+R is always invoked with --vanilla. Never load personal R startup files.
+No 5e-8 calibration or genome-wide scan claim.

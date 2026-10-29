@@ -1,0 +1,13 @@
+region,population,pool,donors,markers,min_maf,max_r2
+0,YRI,reference,40,64,0.1,1.0
+0,YRI,study,68,64,0.1029411764705882,1.0
+0,LWK,reference,40,64,0.1,1.0
+0,LWK,study,59,64,0.1271186440677966,1.0
+1,YRI,reference,40,64,0.1,1.0
+1,YRI,study,68,64,0.11029411764705882,1.0
+1,LWK,reference,40,64,0.125,1.0
+1,LWK,study,59,64,0.11864406779661017,1.0
+2,YRI,reference,40,64,0.1375,1.0
+2,YRI,study,68,64,0.11029411764705882,1.0
+2,LWK,reference,40,64,0.125,1.0
+2,LWK,study,59,64,0.11016949152542373,1.0

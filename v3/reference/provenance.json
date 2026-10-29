@@ -1,0 +1,46 @@
+{
+  "build": "GRCh37",
+  "collection": "1000 Genomes Phase 3 v5b",
+  "sources": [
+    {
+      "file": "ALL.chr22.phase3_shapeit2_mvncall_integrated_v5b.20130502.genotypes.vcf.gz",
+      "url": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/ALL.chr22.phase3_shapeit2_mvncall_integrated_v5b.20130502.genotypes.vcf.gz",
+      "sha256": "a90c16c4ff2b3196476d506ae13cb3047fae8670163c7c932c4b0239aef3daf5",
+      "bytes": 205612353
+    },
+    {
+      "file": "integrated_call_samples_v3.20130502.ALL.panel",
+      "url": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/integrated_call_samples_v3.20130502.ALL.panel",
+      "sha256": "b4023dc6ee2d62ee89c8d4d347db4d348e65518d66d346574cdae7a4bbd76858",
+      "bytes": 55156
+    }
+  ],
+  "windows": [
+    [
+      20000000,
+      20100000
+    ],
+    [
+      30000000,
+      30100000
+    ],
+    [
+      40000000,
+      40100000
+    ]
+  ],
+  "split_seed": 29103100,
+  "reference_donors_each": 40,
+  "donor_overlap": 0,
+  "donor_list_digests": {
+    "YRI": {
+      "reference": "ed9d4b850351421e1cabc6f2a6a9ed2d1064ec5750dc680f345d228077a22225",
+      "study": "9a2e9f94763b42193fda7ae99702093f87262efc56728e9adb5be543abf994f5"
+    },
+    "LWK": {
+      "reference": "bdef8a110b8aca9cd7b0f0ec44ef5b8d6a5aa9a5c3fb2a1864851161f5afacf2",
+      "study": "aa97d7dcd31edd3a2e3d80273b8bc5a76bf00ba44472a665bad9d32fcc3120fe"
+    }
+  },
+  "reuse": "Public IGSR data; derived haplotypes have no sample identifiers. Cite IGSR and 1000 Genomes. No participant phenotypes used."
+}
