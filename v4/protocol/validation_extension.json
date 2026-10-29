@@ -1,0 +1,14 @@
+{
+  "stage": "Prospective amplification after the initial 4000-cohort Level 3 run; initial results retained",
+  "reason": "Small 200-replicate calibration banks left visible cell-level null-rate uncertainty. Increase calibration uniformly across all strata and evaluate fresh cohorts rather than retuning to the original evaluation results.",
+  "unchanged": "Original generating model, reference pools, kernels, effect variances, genetic and residual correlations, diagnostic error, estimators, bounds and test statistic",
+  "calibration_per_stratum": 1000,
+  "evaluation_per_genetic_correlation_stratum": 200,
+  "calibration_seed_replicate_offset": 1000000,
+  "evaluation_seed_replicate_offset": 2000000,
+  "fresh_calibration_cohorts": 8000,
+  "fresh_evaluation_cohorts": 4800,
+  "threshold": "Strict upper tail, k=floor(.05*(1000+1))=50, ascending rank 951; target averaged over calibration banks <=50/1001",
+  "primary_reporting": "Fresh confirmatory results, with original results and all cell-level rates retained and linked. No guarantee that every realised cell rate is <=.05.",
+  "genome_scope": "704-marker synthetic polygenic genome with independent LD blocks from chromosome 22, not a real whole-genome African reference panel"
+}
