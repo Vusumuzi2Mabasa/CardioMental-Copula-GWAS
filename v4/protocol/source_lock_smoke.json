@@ -1,0 +1,41 @@
+{
+  "identity": "862c1867248e7ccf280461c7b48e830e68c4f102fbb4940278bdf144cdb54154",
+  "sha256": {
+    "v4/protocol/design.json": "1779dde64ff54c9da6925c79157ba7aef7eab07b541723009c14694834f03179",
+    "v3/protocol/source_lock.json": "27f66254bfa1112133da263b4cc4f8ee703ca617a47fe2eeaf44190a53a6c809",
+    "v4/src/kernel.py": "6cc4f74d0033291a3b136b35ccec08708ca32edee726fe3314868ea2202b3543",
+    "v4/src/reml.py": "2c04f63faee63e394c2bece1ac4e32589c24509020b49b055b8006bfab4e8bba",
+    "v4/src/polygenic.py": "f785a7dd74e9471044134a0082f9a5929b51c17de3dc8b4321b97482d4c6c738",
+    "v4/src/export_finemap.py": "d83c377c03304448090bd4187698317d51cbdc607fa1363baa08087370626f74",
+    "v4/src/finemap.R": "6305a824bb5b8e33ece76635871abba0ac86b826fb5448e3d3e2017f6d596718",
+    "v4/src/finemap_summary.py": "68ac3b2b69ce7c534390790b231b1cfd07c03ef5832c209dbf790ed812c733e1",
+    "v4/reference/kernel_LWK_n1200.csv": "86eda856b7d017b74ca2f77a355e2d95c681a43f3a3da42e12c2832a6f954be2",
+    "v4/reference/kernel_LWK_n600.csv": "ac0986bec1df830e19285c4ed5694f7f5638f97a3dec73d32ac1b0dd7627fb3a",
+    "v4/reference/kernel_YRI_n1200.csv": "f28d7561e6154554f138a526f1ab343808026755a1eb8809c4fc0352d6c1e634",
+    "v4/reference/kernel_YRI_n600.csv": "7a3a843fc594549e767bd476461a7ce50de57af0095e5b6d28efa3b8f10be607",
+    "v4/reference/polygenic_haplotypes.npz": "d0292e08255a205366abfd3ddc14c752b1dea176dcbd202ce82df8b4ee0bbad5",
+    "v4/reference/polygenic_provenance.json": "38c935b1156988df0973b927c6465f106a8a7bd933545b407f487edbfbe1be7f",
+    "v4/reference/polygenic_qc.csv": "a9f5a3e07c6068eed2f67ef90bcfedaa93bbeefcc384ba28df526469c1a6bb7f",
+    "v4/reference/polygenic_variants.csv": "76573377176108dded725e94fd5b16fc37902b3a1c8b3f95154035d714496866"
+  },
+  "md5": {
+    "v4/protocol/design.json": "7ef104863c0b7665578a79dcc2348637",
+    "v3/protocol/source_lock.json": "b080a9d3d27d43193eb035657de2954b",
+    "v4/src/kernel.py": "7a7beaa6375cee4bada5e7462c531ca5",
+    "v4/src/reml.py": "6e610b32153d2627bda328e9f7dc7f5b",
+    "v4/src/polygenic.py": "b84f018c17bd6eed9483064b7cf8c5ef",
+    "v4/src/export_finemap.py": "9b65ed4ae4b1b0544a80f296c168a877",
+    "v4/src/finemap.R": "6fff5b6d1ed13cd5ac4774a133df2283",
+    "v4/src/finemap_summary.py": "8a96ab6663ed2e075f3e6f303d8c0743",
+    "v4/reference/kernel_LWK_n1200.csv": "18a9150cfc6bbc4bd3c1893432354d4b",
+    "v4/reference/kernel_LWK_n600.csv": "6907e0f0d08874b2cf6137c5fe15bee1",
+    "v4/reference/kernel_YRI_n1200.csv": "20f04c82cfe7de514676c578b3623a66",
+    "v4/reference/kernel_YRI_n600.csv": "cf6b22c31f71de0d14fc64b3ef0d7064",
+    "v4/reference/polygenic_haplotypes.npz": "9e4882b3fe62cd09589ebec3b5da9d18",
+    "v4/reference/polygenic_provenance.json": "ab3160b9b82a98cbd889548ba1975369",
+    "v4/reference/polygenic_qc.csv": "14c720e7152d1d428f609f273eb77fab",
+    "v4/reference/polygenic_variants.csv": "f8caf0cd2426d57c4b677d4b38cf56ca"
+  },
+  "parent_commit": "599959165bd13b6b572735caeee1e26607de3669",
+  "stage": "Before version four fine-mapping and polygenic experiments"
+}

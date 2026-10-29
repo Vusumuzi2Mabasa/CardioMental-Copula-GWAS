@@ -1,0 +1,97 @@
+{
+  "source": "Same checksum-verified public Phase 3 GRCh37 VCF and disjoint study donor pools as version three",
+  "windows": [
+    [
+      20000000,
+      20100000
+    ],
+    [
+      21000000,
+      21100000
+    ],
+    [
+      22000000,
+      22100000
+    ],
+    [
+      23000000,
+      23100000
+    ],
+    [
+      24000000,
+      24100000
+    ],
+    [
+      25000000,
+      25100000
+    ],
+    [
+      26000000,
+      26100000
+    ],
+    [
+      27000000,
+      27100000
+    ],
+    [
+      28000000,
+      28100000
+    ],
+    [
+      29000000,
+      29100000
+    ],
+    [
+      30000000,
+      30100000
+    ],
+    [
+      31000000,
+      31100000
+    ],
+    [
+      32000000,
+      32100000
+    ],
+    [
+      33000000,
+      33100000
+    ],
+    [
+      34000000,
+      34100000
+    ],
+    [
+      35000000,
+      35100000
+    ],
+    [
+      36000000,
+      36100000
+    ],
+    [
+      37000000,
+      37100000
+    ],
+    [
+      38000000,
+      38100000
+    ],
+    [
+      39000000,
+      39100000
+    ],
+    [
+      40000000,
+      40100000
+    ],
+    [
+      41000000,
+      41100000
+    ]
+  ],
+  "synthetic_blocks": 22,
+  "markers_per_block": 32,
+  "source_chromosome": 22,
+  "important": "Independent sampling across these windows defines a synthetic polygenic genome. These are not real chromosome 1 through 22 data; no real whole-genome African LD validation is claimed."
+}
